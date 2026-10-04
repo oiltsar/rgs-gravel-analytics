@@ -1,0 +1,29 @@
+event_id,race_date,date_quality,venue,region,macro_region,lat,lon,coord_quality,source
+sport-marafon-fest-2023,2023-06-03,fest_middle_day,арт-парк Никола-Ленивец,Калужская обл.,Центр,54.7476,35.6036,approx,https://marathonec.ru/sport-marafon-fest-2023/
+sport-marafon-fest-2024,2024-06-08,fest_middle_day,арт-парк Никола-Ленивец,Калужская обл.,Центр,54.7476,35.6036,approx,https://allfest.ru/festival-2024/sport-marafon-fest
+sport-marafon-fest-2025,2025-06-07,fest_middle_day,арт-парк Никола-Ленивец,Калужская обл.,Центр,54.7476,35.6036,approx,https://live.myrace.info/bases/2025/060625_SMF/SMF25.clax
+sport-marafon-fest-2026,2026-06-13,fest_middle_day,арт-парк Никола-Ленивец,Калужская обл.,Центр,54.7476,35.6036,approx,https://sportmarafonfest.ru/
+tsar-grader-2023,2023-07-15,exact,Великий Новгород / Батецкий округ,Новгородская обл.,Северо-Запад,58.64,30.31,approx,https://fatracing.ru/events/106
+tsar-grader-2024,2024-06-29,exact,Батецкий округ,Новгородская обл.,Северо-Запад,58.64,30.31,approx,https://velomania.ru/17610–gravijnaya-gonka-na-180-kilometrov-czar-grejder.html
+tsar-grader-2025,2025-06-21,exact,Батецкий округ,Новгородская обл.,Северо-Запад,58.64,30.31,approx,https://velo.gravelo.ru/2025/02/26/car-grejder-2025/
+tsar-grader-2026,2026-06-20,exact,Батецкий округ,Новгородская обл.,Северо-Запад,58.64,30.31,approx,https://gpvn.ru/130090
+shulz-gravel-weekend-2023,2023-08-19,exact,озеро у ст. Лейпясуо,Ленинградская обл.,Северо-Запад,60.5329,29.2146,exact,https://shulz.club/shulz-gravel-weekend-2023/
+shulz-gravel-weekend-2024,2024-07-20,exact,Карельский перешеек (место не найдено),Ленинградская обл.,Северо-Запад,60.5329,29.2146,approx,https://www.youtube.com/watch?v=vxHkgWEiptw
+shulz-gravel-weekend-2025,2025-07-12,exact,Заовражные озёра (Выборгский р-н),Ленинградская обл.,Северо-Запад,60.2160,29.1632,exact,https://shulz.club/shulz-gravel-weekend-2025/
+shulz-gravel-weekend-2026,2026-07-11,exact,Смоляное озеро (Приозерский р-н),Ленинградская обл.,Северо-Запад,60.78,29.85,approx,https://shulz.ru/events/sgw
+gravel-instinct-2023,2023-09-02,exact,Подмосковье (место не найдено),Московский регион,Центр,,,unknown,https://t.me/instinctracing
+gravel-instinct-2024,2024-07-20,exact,берег Клязьмы у г. Покров,Владимирская обл.,Центр,55.8632,39.2048,exact,https://t.me/instinctracing
+gravel-instinct-2025,2025-07-19,exact,берег Клязьмы у г. Покров,Владимирская обл.,Центр,55.8632,39.2048,exact,https://t.me/instinctracing/664
+gravel-instinct-2026,2026-07-18,exact,берег р. Тьма,Тверская обл.,Центр,56.95,35.65,approx,https://t.me/instinctracing/1003
+modder-2023,2023-07-29,exact,кемп у ст. Петяярви,Ленинградская обл.,Северо-Запад,60.6067,30.1046,exact,https://t.me/s/ardorbymaskakult?before=456
+modder-2024,2024-07-27,exact,кемп у ст. Петяярви,Ленинградская обл.,Северо-Запад,60.6067,30.1046,approx,https://t.me/FuryRoadRace/142
+ardor-2025,2025-07-26,exact,кемп у ст. Петяярви,Ленинградская обл.,Северо-Запад,60.6067,30.1046,approx,http://vsefixirui.ru/ardorgravelrace
+ardor-2026,2026-07-25,exact,кемп у ст. Петяярви,Ленинградская обл.,Северо-Запад,60.6067,30.1046,approx,https://reg.o-time.ru/race/26556
+pokrova-2023,2023-07-29,approx_late_july,кемп у озера севернее Владимира,Владимирская обл.,Центр,56.2933,39.9958,approx,https://knife.media/grevel-ozero-polya/
+pokrova-2024,2024-08-03,exact,кемп у озера севернее Владимира,Владимирская обл.,Центр,56.2933,39.9958,approx,https://t.me/instinctracing
+pokrova-2025,2025-08-02,exact,кемп у озера (Юрьев-Польский р-н),Владимирская обл.,Центр,56.2933,39.9958,approx,https://velo.gravelo.ru/2025/03/12/velogonka-pokrova-2025/
+pokrova-2026,2026-08-01,exact,кемп у озера (Юрьев-Польский р-н),Владимирская обл.,Центр,56.2933,39.9958,exact,https://www.pokrovarace.ru/
+fury-road-2024,2024-07-13,exact,Карельский перешеек,Ленинградская обл.,Северо-Запад,60.6312,30.1078,approx,https://t.me/FuryRoadRace/17
+fury-road-2025,2025-08-16,exact,северо-запад Ленобласти,Ленинградская обл.,Северо-Запад,60.6312,30.1078,exact,https://t.me/s/FuryRoadRace/428
+fury-road-2026,2026-08-15,exact,Ленинградская обл.,Ленинградская обл.,Северо-Запад,60.6312,30.1078,approx,https://furyroad.ru/
+redline-2026,2026-07-04,exact,место не найдено,,,,,unknown,https://41time.ru/results/rezultaty-velonki-redline/

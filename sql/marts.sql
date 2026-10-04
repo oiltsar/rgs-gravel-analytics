@@ -116,3 +116,31 @@ SELECT a.rider_id, a.year AS year_from, b.year AS year_to,
        a.med_pct AS pct_from, b.med_pct AS pct_to,
        b.med_pct - a.med_pct AS delta   -- < 0 = стал быстрее относительно поля
 FROM best a JOIN best b ON a.rider_id = b.rider_id AND b.year = a.year + 1;
+
+-- 7. Пары этапов одного сезона: общая аудитория, расстояние между площадками, интервал в днях ------
+-- Только 2023+ (для этих лет собран справочник площадок data/reference/venues.csv).
+CREATE OR REPLACE VIEW mart_event_pairs AS
+WITH a AS (
+    SELECT DISTINCT r.year, e.series_key, e.event_name, r.rider_id
+    FROM fct_result r JOIN dim_event e ON e.event_id = r.event_id
+    WHERE r.status <> 'dns' AND r.year >= 2023
+),
+size AS (SELECT year, series_key, ANY_VALUE(event_name) AS ev_name, COUNT(*) AS riders FROM a GROUP BY ALL),
+v AS (SELECT e.year, e.series_key, v.* FROM dim_venue v JOIN dim_event e ON e.event_id = v.event_id),
+p AS (
+    SELECT x.year, x.series_key AS key_a, y.series_key AS key_b, COUNT(*) AS shared_riders
+    FROM a x JOIN a y ON x.year = y.year AND x.rider_id = y.rider_id AND x.series_key < y.series_key
+    GROUP BY ALL
+)
+SELECT p.year, sa.ev_name AS event_a, sb.ev_name AS event_b, p.shared_riders,
+       sa.riders AS riders_a, sb.riders AS riders_b,
+       p.shared_riders / LEAST(sa.riders, sb.riders)          AS share_of_smaller,  -- доля аудитории меньшего этапа
+       va.macro_region AS region_a, vb.macro_region AS region_b,
+       ABS(DATEDIFF('day', va.race_date, vb.race_date))       AS gap_days,
+       2 * 6371 * ASIN(SQRT(POWER(SIN(RADIANS(vb.lat - va.lat) / 2), 2)
+             + COS(RADIANS(va.lat)) * COS(RADIANS(vb.lat)) * POWER(SIN(RADIANS(vb.lon - va.lon) / 2), 2))) AS km
+FROM p
+JOIN size sa ON sa.year = p.year AND sa.series_key = p.key_a
+JOIN size sb ON sb.year = p.year AND sb.series_key = p.key_b
+JOIN v va ON va.year = p.year AND va.series_key = p.key_a
+JOIN v vb ON vb.year = p.year AND vb.series_key = p.key_b;

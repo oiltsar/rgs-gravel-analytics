@@ -8,53 +8,61 @@ md = lambda s: cells.append(("md", s.strip()))
 code = lambda s: cells.append(("code", s.strip()))
 
 md("""
-# Русская гравийная серия как продукт: рост, удержание и точки роста
+# Русская гравийная серия как продукт: рост, удержание, география
 
-**Автор:** Царегородский Александр · **Данные:** открытый архив протоколов [gravelseries.ru](https://gravelseries.ru/results), 2018–2026
+**Автор:** Царегородский Александр · **Данные:** открытый архив протоколов [gravelseries.ru](https://gravelseries.ru/results) + справочник площадок, собранный по сайтам и каналам гонок
 
 Русская гравийная серия (РГС) объединяет независимых организаторов гревел-гонок: у них общий рейтинг и общий календарь.
-Я смотрю на серию **как на продукт**: гонщик — пользователь, старт — сессия, сезон — период.
+Серия рассматривается **как продукт**: гонщик — пользователь, старт — сессия, сезон — период.
 
 **Заказчик** — объединение организаторов серии. **Решение**, которое он принимает: куда вкладывать усилия между сезонами —
-в привлечение новичков, в их удержание или в связку этапов между собой.
+в привлечение новичков, в их удержание, в календарь или в связку этапов между собой.
 
-Продуктовые вопросы:
+**Период анализа — 2023–2026.** Серия официально запущена в 2025 году ([gravelo.ru](https://velo.gravelo.ru/russkaya-gravijnaya-seriya-2026/)),
+но тот же набор гонок (6–8 этапов) проходит с 2023-го, и сайт серии считает рейтинг за эти годы задним числом.
+2018–2022 — одна-две гонки в год, сравнивать их с серией некорректно; эти годы используются только как предыстория
+и чтобы отличить настоящих новичков от вернувшихся ветеранов.
 
-1. **Рост.** Как растёт аудитория и за счёт чего: новички или вернувшиеся?
-2. **Удержание.** Сколько новичков возвращается на следующий сезон? Как это менялось?
-3. **Aha-момент.** Что в первом сезоне отличает тех, кто вернулся?
-4. **Точки входа.** После каких этапов новички возвращаются чаще?
-5. **Экосистема.** Как пересекаются аудитории этапов?
-6. **Прогрессия.** Переходят ли гонщики с коротких дистанций на длинные?
-7. **Аудитория и трассы.** Доля женщин, сходы, скорость.
-8. **Проверка.** Как подтвердить главный вывод экспериментом.
+Вопросы:
+1. **Календарь и география.** Где и когда проходят этапы? Как это связано с тем, кто куда ездит?
+2. **Рост.** За счёт чего растёт аудитория: новичков, вернувшихся, частоты стартов?
+3. **Удержание.** Сколько новичков возвращается на следующий сезон?
+4. **Aha-момент.** Что в первом сезоне отличает вернувшихся? Как это проверить экспериментом?
+5. **Точки входа и экосистема.** После каких этапов новички возвращаются чаще? Как пересекаются аудитории?
+6. **Дистанции и трассы.** Переходят ли с короткой дистанции на длинную? Сходы, скорость.
 
-> Пайплайн: `extract` (API сайта) → `transform` (очистка, сведение гонщиков) → `load` (DuckDB + SQL-витрины) → этот ноутбук.
+> Пайплайн: `extract` (API сайта) → `transform` (очистка, сведение гонщиков) → `load` (DuckDB + справочник площадок + SQL-витрины) → этот ноутбук.
 """)
 
 code("""
-import duckdb
+import json
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import statsmodels.formula.api as smf
+from statsmodels.stats.power import NormalIndPower
+from statsmodels.stats.proportion import proportion_effectsize
 
 from gravel import viz
 from gravel.load import connect
-from gravel.viz import BLUE, ORANGE, AQUA, YELLOW, GRAY, TEXT, TEXT_2, TEXT_3, SURFACE
+from gravel.transform import name_keys
+from gravel.viz import BLUE, ORANGE, AQUA, GRAY, TEXT, TEXT_2, TEXT_3, SURFACE
 
 viz.setup()
 pd.set_option("display.max_columns", 30)
 con = connect()
 q = lambda sql: con.sql(sql).df()
+REGION_COLOR = {"Северо-Запад": BLUE, "Центр": ORANGE}
+FROM_YEAR = 2023
 """)
 
 md("""
 ## 1. Данные и их качество
 
-Архив содержит все протоколы этапов серии и её предшественников («Gravel King» 2018, «Обратная сторона» 2019–2021).
-Сырые данные грязные, и большая часть работы ушла на очистку (`src/gravel/transform.py`):
+**Протоколы.** Архив содержит все протоколы этапов серии и её предшественников. Основная работа — очистка (`src/gravel/transform.py`):
 
 | Проблема | Решение |
 |---|---|
@@ -63,30 +71,29 @@ md("""
 | Пустой статус в старых протоколах | с очками → финиш без времени, без очков → сход |
 | Километраж указан не везде | парсим из названия; уровень «длинная / короткая» берём из `maxPoints` (1000 = главная дистанция) |
 | Места считаются то в абсолюте, то по полу | перцентиль среди финишёров своего пола внутри гонки |
+
+**Справочник площадок** (`data/reference/venues.csv`). В архиве нет ни мест, ни (кроме 2026 года) дат гонок. Для 2023–2026 они собраны вручную
+по сайтам и Telegram-каналам организаторов; у каждой строки есть ссылка на источник и флаги точности даты и координат.
 """)
 
 code("""
 q('''
 SELECT
-    (SELECT COUNT(*) FROM dim_event)                         AS events,
-    (SELECT COUNT(*) FROM dim_race)                          AS races,
-    (SELECT COUNT(*) FROM fct_result)                        AS results,
-    (SELECT COUNT(DISTINCT name_raw) FROM fct_result)        AS raw_names,
-    (SELECT COUNT(*) FROM dim_rider)                         AS riders_after_resolution,
-    (SELECT MIN(year) || '–' || MAX(year) FROM dim_event)    AS period
+    (SELECT COUNT(*) FROM dim_event)                                  AS events_all,
+    (SELECT COUNT(*) FROM dim_event WHERE year >= 2023)               AS events_2023_2026,
+    (SELECT COUNT(*) FROM fct_result WHERE year >= 2023)              AS results_2023_2026,
+    (SELECT COUNT(DISTINCT rider_id) FROM fct_result WHERE year >= 2023) AS riders_2023_2026,
+    (SELECT COUNT(*) FROM dim_venue)                                  AS venues_rows,
+    (SELECT COUNT(*) FROM dim_venue WHERE coord_quality = 'unknown')  AS venues_no_coords
 ''')
 """)
 
 md("""
-**Проверка качества сведения.** В API рейтингов сайта у гонщиков есть собственные ID (сезоны 2024–2026, 2 450 гонщиков).
+**Проверка качества сведения гонщиков.** В API рейтингов сайта у гонщиков есть собственные ID (сезоны 2024–2026, 2 450 человек).
 Сверяю с ними свои ключи:
 """)
 
 code("""
-import json
-from pathlib import Path
-from gravel.transform import name_keys
-
 raw = Path("../data/raw")
 site = pd.DataFrame(
     [(e["racer"]["id"], e["displayName"]) for y in (2024, 2025, 2026)
@@ -94,99 +101,209 @@ site = pd.DataFrame(
     columns=["site_id", "name"]).drop_duplicates()
 site["my_key"] = site["name"].map(lambda n: name_keys(n)[0])
 
-missed = (site.groupby("site_id")["my_key"].nunique() > 1).sum()       # один человек -> у меня два ключа
+missed = (site.groupby("site_id")["my_key"].nunique() > 1).sum()
 merged = site.groupby("my_key")["site_id"].nunique()
 merged = merged[merged > 1]
 print(f"ID на сайте: {site.site_id.nunique()}")
 print(f"Не склеил (один ID сайта -> несколько моих ключей): {missed}")
 print(f"Склеил в один ключ несколько ID сайта: {len(merged)}")
-site[site.my_key.isin(merged.index)].groupby("my_key")["name"].agg(" | ".join).head(12).to_frame()
+site[site.my_key.isin(merged.index)].groupby("my_key")["name"].agg(" | ".join).head(10).to_frame()
 """)
 
 md("""
-Не склеился **один** человек из 2 450: у гонщицы сменилась фамилия, по имени такое не поймать.
-29 случаев, где я объединил несколько ID сайта, — это в основном **дубли, которые пропустил сам сайт** («Саша/Александр», «Слава/Вячеслав»).
-Около 8 — настоящие тёзки (сайт помечает их номером «· №286»). Это ~0.3% гонщиков, на агрегаты не влияет.
+Не склеился **один** человек из 2 450 (сменилась фамилия). 29 объединений нескольких ID сайта — в основном **дубли, которые пропустил сам сайт**
+(«Саша/Александр», «Слава/Вячеслав»); около 8 — настоящие тёзки. Это ~0,3% гонщиков, на агрегаты не влияет.
 """)
 
-md("## 2. Рост: аудитория выросла в 12 раз, и растёт она за счёт удержания")
+md("## 2. Предыстория и выбор периода")
 
 code("""
-season = q("SELECT * FROM mart_season")
-season[["year", "n_events", "riders", "starts", "starts_per_rider", "new_riders",
-        "retained_from_prev", "resurrected", "female_share", "multi_event_share"]]
-""")
-
-code("""
+season = q("SELECT * FROM mart_season ORDER BY year")
 fig, ax = plt.subplots(figsize=(10, 4.6))
 s = season.set_index("year")
+hist = s.index < FROM_YEAR
+ax.bar(s.index[hist], s.riders[hist], color=GRAY, width=0.68, label="предыстория: 1–2 гонки в год")
 parts = [("retained_from_prev", "вернулись с прошлого сезона", BLUE),
          ("resurrected", "вернулись после перерыва", AQUA),
          ("new_riders", "новички", ORANGE)]
-bottom = np.zeros(len(s))
+bottom = np.zeros((~hist).sum())
 for col, label, color in parts:
-    ax.bar(s.index, s[col], bottom=bottom, color=color, width=0.68, label=label,
+    ax.bar(s.index[~hist], s.loc[~hist, col], bottom=bottom, color=color, width=0.68, label=label,
            edgecolor=SURFACE, linewidth=1.5)
-    bottom += s[col].values
+    bottom += s.loc[~hist, col].values
 for x, total, ev in zip(s.index, s["riders"], s["n_events"]):
     ax.text(x, total + 25, f"{total:,}".replace(",", " "), ha="center", color=TEXT, fontsize=10, weight="bold")
     ax.text(x, -150, f"{ev} эт.", ha="center", color=TEXT_3, fontsize=8.5)
+ax.axvline(FROM_YEAR - 0.5, color=TEXT_3, lw=1, ls=(0, (3, 3)))
+ax.text(FROM_YEAR - 0.42, s.riders.max() * 1.02, "период анализа →", color=TEXT_2, fontsize=9.5)
 ax.set_ylim(-190, s["riders"].max() * 1.12)
 ax.set_xticks(s.index)
-ax.set_title("Уникальные участники серии по сезонам")
-viz.subtitle(ax, "С 2023 года, когда сложилась серия из 6+ этапов, аудитория выросла в 3,9 раза")
-ax.legend(loc="upper left", ncols=3, bbox_to_anchor=(0, 1.0))
+ax.set_title("Уникальные участники по сезонам")
+viz.subtitle(ax, "С 2023 года проходят те же 6–8 гонок; с 2025-го они официально объединены в серию")
+ax.legend(loc="upper left", ncols=2, bbox_to_anchor=(0, 0.98), fontsize=9)
 ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda v, _: f"{v:,.0f}".replace(",", " ") if v >= 0 else ""))
-viz.save(fig, "01_growth"); plt.show()
+viz.save(fig, "01_history"); plt.show()
 """)
 
 md("""
-**Выводы:**
-- В 2018 году был один старт на 145 человек, в 2026-м — 8 этапов, **1 814 уникальных гонщиков и 2 786 стартов**.
-- Растёт не только число людей, но и **частота**: число стартов на гонщика выросло с 1,01 до 1,54. В 2026 году **31%** гонщиков проехали 2+ этапа (в 2023-м — 12%).
-- Структура роста поменялась. В 2026 году впервые **больше трети аудитории (691 из 1 814) — вернувшиеся с прошлого сезона**. Серия перестаёт зависеть только от притока новичков.
-- 2022 год — провал: всего 2 этапа (Спорт-Марафон Фест и SHULZ), 204 участника. Главная гревел-гонка страны, [«Обратная сторона дороги»](https://shchepinov.pro/reverse-race-5/) под Петербургом, прошла в последний раз в 2021-м, а общая серия ещё не сложилась.
+- **2018–2022** — одна-две гонки в год: Gravel King (2018) и [«Обратная сторона дороги»](https://shchepinov.pro/reverse-race-5/) под Петербургом (2019–2021),
+  в 2022-м — Спорт-Марафон Фест и SHULZ. Это другой продукт: одно событие, а не серия.
+- **С 2023 года** календарь стабилен: те же 6–8 гонок каждый сезон. Поэтому все метрики ниже считаются **с 2023 года**.
+  Ранние годы используются только чтобы не считать новичком ветерана «Обратной стороны», вернувшегося в 2023-м.
 """)
 
-md("## 3. Удержание: обвал 2022 года и восстановление до ~50%")
+md("## 3. Календарь и география: серия — это два региональных кластера")
 
 code("""
-cohort = q("SELECT cohort, season_n, retention, riders FROM mart_cohort WHERE cohort BETWEEN 2019 AND 2025")
-heat = cohort.pivot(index="cohort", columns="season_n", values="retention")
-sizes = cohort[cohort.season_n == 0].set_index("cohort")["riders"]
+venues = q('''
+SELECT e.year, e.series_key, e.event_name, v.*
+FROM dim_venue v JOIN dim_event e ON e.event_id = v.event_id
+ORDER BY v.race_date
+''')
+venues[["year", "event_name", "race_date", "date_quality", "venue", "region", "macro_region", "coord_quality"]]
+""")
 
-fig, ax = plt.subplots(figsize=(9, 4.4))
-data = heat.drop(columns=0)
-im = ax.imshow(data.values, cmap=viz.BLUES, vmin=0, vmax=0.6, aspect="auto")
-for i in range(data.shape[0]):
-    for j in range(data.shape[1]):
-        v = data.values[i, j]
-        if not np.isnan(v):
-            ax.text(j, i, f"{v:.0%}", ha="center", va="center", fontsize=10,
-                    color="white" if v > 0.33 else TEXT)
-ax.set_xticks(range(data.shape[1]), [f"+{c}" for c in data.columns])
-ax.set_yticks(range(data.shape[0]), [f"{c}  (n={sizes[c]})" for c in data.index])
-ax.set_xlabel("сезонов после первого старта")
-ax.grid(False)
-ax.set_title("Когортный retention: доля когорты, стартовавшая в сезоне N")
-viz.subtitle(ax, "Когорта = год первого старта. После провала 2022 года каждая новая когорта удерживается лучше предыдущей")
-viz.save(fig, "02_cohorts"); plt.show()
+code("""
+fig, ax = plt.subplots(figsize=(10, 4.4))
+years = [2023, 2024, 2025, 2026]
+for i, y in enumerate(years):
+    g = venues[venues.year == y].sort_values("race_date")
+    yy = len(years) - 1 - i
+    ax.axhline(yy, color="#e6e5e0", lw=1, zorder=0)
+    doy = g.race_date.dt.dayofyear
+    clash = doy.duplicated(keep=False)          # два этапа в один день — разводим по вертикали
+    for j, (d, name, reg, dq, c) in enumerate(zip(doy, g.event_name, g.macro_region, g.date_quality, clash)):
+        color = REGION_COLOR.get(reg, GRAY)
+        dy = (0.13 if reg == "Северо-Запад" else -0.13) if c else 0
+        ax.scatter(d, yy + dy, s=90, color=color, edgecolor=SURFACE, linewidth=2, zorder=3,
+                   marker="D" if dq == "approx_late_july" else "o")
+        short = name.replace(" Gravel Weekend", "").replace("Спортмарафон Фест", "Спортмарафон").replace("Gravel Instinct", "G. Instinct")
+        up = (dy > 0) if c else (j % 2 == 0)
+        ax.annotate(short, (float(d), yy + dy), xytext=(0, 9 if up else -16), textcoords="offset points",
+                    ha="center", fontsize=8.5, color=TEXT_2)
+ax.set_yticks(range(len(years)), years[::-1])
+months = {"июнь": 152, "июль": 182, "август": 213, "сентябрь": 244}
+ax.set_xticks(list(months.values()), list(months.keys()))
+ax.set_xlim(148, 252); ax.set_ylim(-0.7, len(years) - 0.4)
+ax.grid(axis="y", visible=False); ax.grid(axis="x", visible=True)
+ax.scatter([], [], color=BLUE, label="Северо-Запад"); ax.scatter([], [], color=ORANGE, label="Центр")
+ax.scatter([], [], color=GRAY, label="место не найдено")
+ax.scatter([], [], color=TEXT_3, marker="D", label="дата приблизительна")
+ax.legend(loc="lower center", ncols=4, fontsize=9, bbox_to_anchor=(0.5, -0.32))
+ax.set_title("Календарь этапов по сезонам")
+viz.subtitle(ax, "С 2025 года этапы идут каждую неделю, чередуя регионы. В 2024-м SHULZ и Gravel Instinct совпали по дате")
+viz.save(fig, "02_calendar"); plt.show()
+""")
+
+code("""
+cities = {"Москва": (55.756, 37.617), "Санкт-Петербург": (59.934, 30.335), "Великий Новгород": (58.522, 31.276),
+          "Владимир": (56.129, 40.407), "Тверь": (56.859, 35.918), "Калуга": (54.529, 36.275)}
+pts = (venues.dropna(subset=["lat"]).groupby(["series_key", "event_name", "lat", "lon", "macro_region"])["year"]
+       .agg(lambda s: "–".join(map(str, sorted(set(s))))).reset_index())
+fig, ax = plt.subplots(figsize=(9.5, 7.4))
+for name, (la, lo) in cities.items():
+    ax.scatter(lo, la, s=18, color=TEXT_3, zorder=2)
+    ax.text(lo + 0.12, la - 0.05, name, fontsize=8.5, color=TEXT_3)
+# на Северо-Западе площадки в десятках км друг от друга — подписи выносим в сторону с выносками
+callouts = {("Fury Road", 60.6312): (32.2, 61.05), ("Моддер / Ардор", 60.6067): (32.2, 60.72),
+            ("SHULZ Gravel Weekend", 60.78): (24.6, 61.1), ("SHULZ Gravel Weekend", 60.5329): (24.6, 60.7),
+            ("SHULZ Gravel Weekend", 60.216): (24.6, 60.3)}
+for _, r in pts.iterrows():
+    ax.scatter(r.lon, r.lat, s=110, color=REGION_COLOR[r.macro_region], edgecolor=SURFACE, linewidth=2, zorder=3)
+    label = f"{r.event_name.replace(' Gravel Weekend', '')} ({r.year})"
+    key = (r.event_name, round(r.lat, 4))
+    if key in callouts:
+        tx, ty = callouts[key]
+        ax.annotate(label, (r.lon, r.lat), xytext=(tx, ty), textcoords="data", fontsize=9, color=TEXT, weight="bold",
+                    ha="left" if tx > r.lon else "right", va="center",
+                    arrowprops=dict(arrowstyle="-", color=TEXT_3, lw=0.8))
+    else:
+        ax.text(r.lon + 0.15, r.lat + 0.05, label, fontsize=9, color=TEXT, weight="bold")
+ax.set_aspect(1 / np.cos(np.radians(57)))
+ax.set_xlim(21.5, 43); ax.set_ylim(54.2, 61.5)
+ax.set_xticks([]); ax.set_yticks([]); ax.grid(False)
+ax.spines["bottom"].set_visible(False)
+ax.set_title("Где проходят этапы (2023–2026)")
+viz.subtitle(ax, "Два кластера в ~600 км друг от друга. Fury Road и Ардор — в 3 км друг от друга")
+viz.save(fig, "03_map"); plt.show()
 """)
 
 md("""
 **Выводы:**
-- **Эпоха одной гонки (2019–2020):** retention +1 сезона ~45%. Небольшая лояльная аудитория ежегодно ездила одно событие, «Обратную сторону».
-- **Обвал 2022 года:** «Обратная сторона» больше не проводилась, и у когорты 2021 года на следующий сезон вернулись лишь **7%**. Пользователей удерживало не «гревел вообще», а конкретное событие.
-- **Восстановление серии:** с появлением общего календаря retention +1 вырос с 27% (когорта 2022) до 35% (2023) и **51% (2024)**, превзойдя уровень эпохи одной гонки, хотя когорты стали в 2–3 раза больше.
-- Старые когорты «оживают»: у когорты 2021 года retention растёт со временем (7% → 20%). **Регулярность продукта сама по себе возвращает ушедших пользователей.**
-- Небольшая просадка 2025 → 2026 (51% → 45%) объясняется размером когорты. Когорта 2025 года в 2,2 раза больше (854 новичка против 386), в ней больше «случайных» людей. Пока это не тревожный сигнал, но метрику стоит мониторить.
+- Серия — это **два региональных кластера**. **Северо-Запад**: Царь Грейдер (Новгородская обл.), SHULZ, Моддер/Ардор и Fury Road (Карельский перешеек).
+  **Центр**: Спортмарафон Фест («Никола-Ленивец», Калужская обл.), Gravel Instinct (2024–2025 — у Покрова, 2026 — Тверская обл.), Покрова (север Владимирской обл.).
+- **Моддер и Ардор — одна и та же гонка.** В 2023–2024 годах гравийная гонка на MODDER CX CAMP у станции Петяярви (организаторы — Maskakult и веломастерская MODDER),
+  с 2025-го — ARDOR GRAVEL RACE на том же месте в последние выходные июля. В 2026 году на сайте серии этап называется «Моддер и Ардор».
+- **Fury Road и Ардор — фактически одна площадка** (около 3 км между кемпами).
+- **Календарь уплотнился.** В 2025–2026 годах с середины июня до середины августа этапы идут каждую неделю, и регионы чередуются:
+  Северо-Запад → Центр → Северо-Запад… В 2024 году SHULZ и Gravel Instinct прошли в один день (20 июля), а Fury Road стоял за неделю до SHULZ;
+  с 2025-го Fury Road перенесли на середину августа.
+""")
+
+md("## 4. Рост 2023–2026: аудитория ×3,9, частота стартов ×1,3")
+
+code("""
+cross = q('''
+SELECT r.year,
+       COUNT(DISTINCT r.rider_id) AS riders,
+       COUNT(DISTINCT r.rider_id) FILTER (WHERE n_reg >= 2) AS cross_region
+FROM fct_result r
+JOIN (SELECT r.year, r.rider_id, COUNT(DISTINCT v.macro_region) AS n_reg
+      FROM fct_result r JOIN dim_venue v ON v.event_id = r.event_id
+      WHERE r.status <> 'dns' GROUP BY ALL) x ON x.year = r.year AND x.rider_id = r.rider_id
+WHERE r.status <> 'dns' AND r.year >= 2023
+GROUP BY 1 ORDER BY 1
+''')
+growth = season[season.year >= FROM_YEAR][["year", "n_events", "riders", "starts", "starts_per_rider", "new_riders",
+                                           "retained_from_prev", "resurrected", "female_share", "multi_event_share"]]
+growth = growth.merge(cross[["year", "cross_region"]], on="year")
+growth["cross_region_share"] = (growth.cross_region / growth.riders).round(3)
+growth
 """)
 
 md("""
-## 4. Aha-момент: вторая гонка в первом сезоне
+**Выводы:**
+- Уникальных участников: **468 → 1 814** (×3,9), стартов: 538 → 2 786. Число стартов на гонщика выросло с 1,15 до **1,54**.
+- В 2026 году **691** участник (38%) вернулся с прошлого сезона; в 2023-м — 67 (14%). Рост всё меньше зависит от одних новичков.
+- Доля проехавших 2+ этапа: 12% → **31%**. Доля ездящих **в оба региона**: 3% → **12–13%**. Самый заметный скачок пришёлся на 2025 год,
+  год официального запуска серии с общим рейтингом (6,5% → 11,2%). Рост начался ещё до запуска, поэтому эффект самой серии отделить нельзя.
+- Доля женщин стабильна: 17–19%.
+""")
 
-Беру всех новичков 2022–2025 годов (n = 1 729) и смотрю, вернулись ли они в следующем сезоне.
-Что в первом сезоне отличает вернувшихся?
+md("## 5. Удержание: 35% → 51% → 45%")
+
+code("""
+cohort = q(f"SELECT cohort, season_n, retention, riders FROM mart_cohort WHERE cohort BETWEEN {FROM_YEAR} AND 2025")
+heat = cohort.pivot(index="cohort", columns="season_n", values="retention").drop(columns=0)
+sizes = cohort[cohort.season_n == 0].set_index("cohort")["riders"]
+
+fig, ax = plt.subplots(figsize=(7, 3.2))
+ax.imshow(heat.values, cmap=viz.BLUES, vmin=0, vmax=0.6, aspect="auto")
+for i in range(heat.shape[0]):
+    for j in range(heat.shape[1]):
+        v = heat.values[i, j]
+        if not np.isnan(v):
+            ax.text(j, i, f"{v:.0%}", ha="center", va="center", fontsize=11, color="white" if v > 0.33 else TEXT)
+ax.set_xticks(range(heat.shape[1]), [f"+{c}" for c in heat.columns])
+ax.set_yticks(range(heat.shape[0]), [f"{c}  (n={sizes[c]})" for c in heat.index])
+ax.set_xlabel("сезонов после первого старта"); ax.grid(False)
+ax.set_title("Когортный retention, новички 2023–2025")
+viz.subtitle(ax, "Новичок = первый старт в архиве с 2018 года; когорта = год первого старта")
+viz.save(fig, "04_cohorts"); plt.show()
+""")
+
+md("""
+**Выводы:**
+- Retention на следующий сезон: **35%** (когорта 2023) → **51%** (2024) → **45%** (2025). Удержание выросло, хотя когорты стали в 2,5 раза больше.
+- Просадку 2025 года (−6 п.п.) объясняет размер когорты: 854 новичка против 386, среди них больше «случайных» людей.
+  Это не тревожный сигнал, но метрику стоит мониторить.
+- Кто остался на второй сезон, тот держится: у когорты 2023 года 35% → 32% → 31%.
+""")
+
+md("""
+## 6. Aha-момент: вторая гонка в первом сезоне
+
+Новички когорт 2023–2025 (первый старт в архиве — в этом году). Вернулся ли человек в следующем сезоне и что отличало его первый сезон?
 """)
 
 code("""
@@ -198,19 +315,22 @@ WITH act AS (
 first AS (SELECT rider_id, MIN(year) AS fy FROM act GROUP BY 1),
 fs AS (
     SELECT a.rider_id, f.fy,
-           ANY_VALUE(a.gender)            AS gender,
-           COUNT(*)                       AS starts,
-           BOOL_OR(a.is_long)             AS any_long,
-           MEDIAN(a.pct_rank)             AS med_pct,
-           ARG_MIN(a.event_id, a.result_id) AS first_event
+           ANY_VALUE(a.gender)              AS gender,
+           COUNT(*)                         AS starts,
+           BOOL_OR(a.is_long)               AS any_long,
+           MEDIAN(a.pct_rank)               AS med_pct,
+           ARG_MIN(a.event_id, a.result_id) AS first_event,
+           MODE(v.macro_region)             AS macro_region
     FROM act a JOIN first f ON f.rider_id = a.rider_id AND a.year = f.fy
+    LEFT JOIN dim_venue v ON v.event_id = a.event_id
     GROUP BY 1, 2
 ),
 ret AS (SELECT DISTINCT rider_id, year FROM act)
 SELECT fs.*, (r.rider_id IS NOT NULL)::INT AS returned
 FROM fs LEFT JOIN ret r ON r.rider_id = fs.rider_id AND r.year = fs.fy + 1
-WHERE fy BETWEEN 2022 AND 2025
+WHERE fy BETWEEN 2023 AND 2025
 ''')
+newbies = newbies.merge(q("SELECT event_id, series_key, event_name FROM dim_event"), left_on="first_event", right_on="event_id")
 newbies["starts_cat"] = newbies["starts"].clip(upper=3).map({1: "1", 2: "2", 3: "3+"})
 newbies["pct_q"] = pd.cut(newbies["med_pct"], [-0.01, 0.25, 0.5, 0.75, 1.0],
                           labels=["топ-25%", "25–50%", "50–75%", "хвост"])
@@ -226,7 +346,7 @@ panels = [
     ("Стартов в первом сезоне", rate("starts_cat", ["1", "2", "3+"])),
     ("Первая дистанция", rate("any_long").rename(index={False: "только короткая", True: "длинная"})),
     ("Место среди финишёров (квартиль)", rate("pct_q")),
-    ("Пол", rate("gender").rename(index={"F": "женщины", "M": "мужчины"})),
+    ("Регион первого сезона", rate("macro_region")),
 ]
 fig, axes = plt.subplots(1, 4, figsize=(13, 4), sharey=True)
 base = newbies.returned.mean()
@@ -234,7 +354,7 @@ for ax, (title, g) in zip(axes, panels):
     colors = [BLUE if v >= base else GRAY for v in g["mean"]]
     ax.bar(range(len(g)), g["mean"], color=colors, width=0.62)
     ax.axhline(base, color=TEXT_3, lw=1, ls=(0, (3, 3)))
-    for i, (v, n) in enumerate(zip(g["mean"], g["size"])):
+    for i, v in enumerate(g["mean"]):
         ax.text(i, v + 0.015, f"{v:.0%}", ha="center", weight="bold", fontsize=10.5)
     ax.set_xticks(range(len(g)), [f"{i}\\nn={n}" for i, n in zip(g.index, g["size"])], fontsize=9)
     ax.set_title(title, fontsize=11, pad=8)
@@ -242,15 +362,14 @@ axes[0].yaxis.set_major_formatter(mtick.PercentFormatter(1, decimals=0))
 axes[0].set_ylim(0, 1)
 axes[-1].text(1.02, base, f"среднее\\n{base:.0%}", transform=axes[-1].get_yaxis_transform(),
               color=TEXT_3, fontsize=8.5, va="center")
-fig.suptitle("Доля новичков, вернувшихся в следующем сезоне", x=0.125, ha="left",
+fig.suptitle("Доля новичков 2023–2025, вернувшихся в следующем сезоне", x=0.125, ha="left",
              fontsize=13, weight="bold", y=1.04)
-viz.save(fig, "03_aha_moment"); plt.show()
+viz.save(fig, "05_aha_moment"); plt.show()
 """)
 
 md("""
-Вторая гонка в первом сезоне поднимает возврат с 39% до 65%, третья и далее — до 82%.
-Но это корреляция: те, кто сразу проехал две гонки, могут быть просто более мотивированными.
-Проверяю, держатся ли эффекты вместе, в логистической регрессии. Две спецификации:
+Вторая гонка в первом сезоне поднимает возврат с 40% до 65%, третья и далее — до 82%. Регион на возврат не влияет (45% против 44%).
+Но это корреляция. Проверяю эффекты вместе в логистической регрессии, в двух спецификациях:
 1. фиксированный эффект года — убирает общий тренд роста серии;
 2. плюс фиксированный эффект первого этапа — альтернативное объяснение «дело не в числе стартов, а в том, на какой этап человек попал».
 """)
@@ -260,8 +379,6 @@ newbies["multi_start"] = (newbies.starts >= 2).astype(int)
 newbies["female"] = (newbies.gender == "F").astype(int)
 newbies["bottom_q"] = (newbies.med_pct > 0.75).astype(int)
 newbies["long"] = newbies.any_long.astype(int)
-
-newbies = newbies.merge(q("SELECT event_id, series_key FROM dim_event"), left_on="first_event", right_on="event_id")
 d = newbies.dropna(subset=["med_pct"])
 specs = {
     "1: год": "returned ~ multi_start + long + bottom_q + female + C(fy)",
@@ -279,48 +396,43 @@ pd.DataFrame(rows).pivot(index="фактор", columns="модель", values=["
 
 md("""
 **Выводы:**
-- **Вторая гонка в первом сезоне — главный предиктор возврата.** При прочих равных шансы вернуться выше в **2,7 раза** (OR = 2,66, 95% ДИ 1,96–3,60). С поправкой на первый этап эффект не исчезает, а даже растёт: OR = 2,92 [2,11–4,03]. Это продуктовый «aha-момент»: человек, проехавший два этапа, начинает воспринимать серию как серию, а не как разовое событие.
-- **Длинная дистанция на старте** тоже связана с возвратом: 50% против 35%, OR = 1,55. С поправкой на этап эффект слабее и на грани значимости (OR = 1,34, p = 0,047): часть его объясняется тем, на какие этапы приходят новички.
-- **Финиш в последней четверти** снижает шансы на возврат на ~30% (OR = 0,69). Негативный первый опыт стоит отдельно отрабатывать.
-- Женщины возвращаются реже (37% против 45%), но после контроля других факторов разница **статистически незначима** (p = 0,10–0,12). Разрыв объясняется тем, что женщины чаще выбирают короткую дистанцию: 39% их стартов на длинной против 55% у мужчин.
+- **Вторая гонка в первом сезоне — главный и устойчивый предиктор возврата:** OR = 2,69 [1,98–3,64]; с поправкой на первый этап — **2,92** [2,12–4,03].
+- **Финиш в последней четверти** снижает шансы на возврат примерно на треть (OR = 0,67–0,68) в обеих моделях. Негативный первый опыт стоит отрабатывать отдельно.
+- **Длинная дистанция** связана с возвратом (51% против 37%, OR = 1,50), но с поправкой на этап эффект незначим (p = 0,12):
+  его в основном объясняет то, на какие этапы приходят новички.
+- **Пол** незначим в обеих моделях. Женщины чаще едут короткую дистанцию: 39% стартов на длинной против 55% у мужчин.
 
-⚠️ Одно альтернативное объяснение исключить нельзя: в первый же сезон две гонки едут просто более мотивированные люди. Мотивацию в протоколах не видно. Поэтому вывод нужно проверить экспериментом (раздел 4а).
-
-💡 **Рекомендация организаторам:** главный рычаг удержания — довести новичка до **второго старта в том же сезоне**.
-Варианты: скидка на следующий этап для финишёров первого, «паспорт серии», общий зачёт новичков.
+⚠️ Одно альтернативное объяснение исключить нельзя: в первый же сезон две гонки едут просто более мотивированные люди. Поэтому — эксперимент.
 """)
 
 md("""
-## 4а. Как проверить причинность: дизайн A/B-теста
+## 6а. Как проверить причинность: дизайн A/B-теста
 
-**Гипотеза:** промокод на следующий этап для финишёров первого старта увеличит долю новичков, сделавших второй старт в том же сезоне,
-а через это — возврат на следующий сезон.
+**Гипотеза:** промокод на следующий этап для финишёров первого старта увеличит долю новичков со вторым стартом в том же сезоне,
+а через это — возврат на следующий сезон. Календарь это позволяет: в 2025–2026 годах этапы идут каждую неделю,
+и у новичка почти всегда есть следующий этап через 2–3 недели в своём регионе.
 
 | | |
 |---|---|
 | Единица рандомизации | новичок-финишёр (первый старт в серии) |
-| Группы | A — обычное письмо после гонки; B — письмо + промокод на любой следующий этап сезона |
+| Группы | A — обычное письмо после гонки; B — письмо + промокод на следующий этап своего региона |
 | Основная метрика | доля сделавших 2+ стартов в сезоне |
 | Вторичная метрика | возврат в следующем сезоне (результат через год) |
 | Защитная метрика | выручка с новичка (скидка не должна «съесть» доход) |
-
-Базовый уровень основной метрики — доля новичков сезона 2025 года, проехавших 2+ этапа. Сколько нужно людей, чтобы заметить прирост:
+| Стратификация | по региону и первому этапу |
 """)
 
 code("""
-from statsmodels.stats.power import NormalIndPower
-from statsmodels.stats.proportion import proportion_effectsize
-
 p0 = newbies.loc[newbies.fy == 2025, "multi_start"].mean()
 power = NormalIndPower()
 plan = pd.DataFrame([
-    {"прирост, п.п.": int(d * 100), "целевой уровень": p0 + d,
-     "нужно на группу": int(np.ceil(power.solve_power(proportion_effectsize(p0 + d, p0), alpha=0.05, power=0.8)))}
-    for d in (0.04, 0.05, 0.06, 0.08)
+    {"прирост, п.п.": int(dd * 100), "целевой уровень": p0 + dd,
+     "нужно на группу": int(np.ceil(power.solve_power(proportion_effectsize(p0 + dd, p0), alpha=0.05, power=0.8)))}
+    for dd in (0.04, 0.05, 0.06, 0.08, 0.10)
 ])
 n_season = int((newbies.fy == 2025).sum())
-mde = next(d / 100 for d in range(1, 30)
-           if power.solve_power(proportion_effectsize(p0 + d / 100, p0), alpha=0.05, power=0.8) <= n_season / 2)
+mde = next(dd / 100 for dd in range(1, 30)
+           if power.solve_power(proportion_effectsize(p0 + dd / 100, p0), alpha=0.05, power=0.8) <= n_season / 2)
 print(f"Базовый уровень p0 = {p0:.1%}; новичков за сезон ~{n_season}")
 print(f"MDE при 50/50 за один сезон: +{mde:.0%} (п.п.)")
 plan.round(3)
@@ -328,20 +440,16 @@ plan.round(3)
 
 md("""
 **Вывод:** при ~850 новичках за сезон и сплите 50/50 тест заметит прирост от ~9 п.п. (с 19% до 28%) с мощностью 80%.
-Для более тонкого эффекта (+5 п.п.) нужно ~2 120 новичков, то есть тест на два сезона или на всех новичках 2026–2027 годов.
-Тест дешёвый: стоимость — только скидка для группы B. Это реальный следующий шаг для заказчика.
+Для эффекта в +5 п.п. нужно ~2 120 новичков, то есть два сезона. Тест дешёвый: стоимость — только скидка для группы B.
 """)
 
-md("## 5. Точки входа: после каких этапов новички возвращаются")
+md("## 7. Точки входа: после каких этапов новички возвращаются")
 
 code("""
-entry = newbies[newbies.fy >= 2023].merge(q("SELECT event_id, event_name FROM dim_event"),
-                                          left_on="first_event", right_on="event_id")
-e = (entry.groupby("event_name")["returned"].agg(["mean", "size"])
+e = (newbies.groupby("event_name")["returned"].agg(["mean", "size"])
      .query("size >= 40").sort_values("mean"))
-
+avg = newbies.returned.mean()
 fig, ax = plt.subplots(figsize=(9, 4.2))
-avg = entry.returned.mean()
 colors = [BLUE if v >= avg else GRAY for v in e["mean"]]
 ax.barh(e.index, e["mean"], color=colors, height=0.62)
 ax.axvline(avg, color=TEXT_3, lw=1, ls=(0, (3, 3)))
@@ -351,27 +459,73 @@ for i, (v, n) in enumerate(zip(e["mean"], e["size"])):
 ax.xaxis.set_major_formatter(mtick.PercentFormatter(1, decimals=0))
 ax.grid(axis="y", visible=False); ax.grid(axis="x", visible=True)
 ax.set_xlim(0, e["mean"].max() + 0.12)
-ax.set_title("Возврат новичков по первому этапу (2023–2025)")
+ax.set_title("Возврат новичков по первому этапу (когорты 2023–2025)")
 viz.subtitle(ax, f"Доля вернувшихся на следующий сезон; пунктир — среднее {avg:.0%}")
-viz.save(fig, "04_entry_points"); plt.show()
+viz.save(fig, "06_entry_points"); plt.show()
 e.round(3)
 """)
 
 md("""
-**Вывод:** разброс между этапами — 21 п.п. Лучшие «точки входа» — **Покрова (55%)** и **Царь Грейдер (51%)**.
-Хуже всех удерживает **Спортмарафон Фест (34%)**: это фестиваль массового бренда с короткими дистанциями 40/65 км, и он привлекает разовых участников, а не гревел-аудиторию.
-Причины на этих данных не установить, это гипотезы для проверки: формат (фестиваль или гонка), доля коротких дистанций, коммуникация после гонки.
+**Вывод:** разброс между этапами — 21 п.п. Лучшие «точки входа» — **Покрова (55%)** и **Царь Грейдер (51%)**, хуже всех — **Спортмарафон Фест (34%)**.
+Регион здесь ни при чём: лидеры есть в обоих регионах. Спортмарафон — мультиспортивный фестиваль массового бренда с короткими дистанциями 40/65 км,
+он привлекает разовых участников, а не гревел-аудиторию. Это гипотеза для проверки, а не установленная причина.
 """)
 
-md("## 6. Экосистема: как пересекаются аудитории этапов (2026)")
+md("## 8. Экосистема: общую аудиторию этапов определяет расстояние")
+
+code("""
+pairs = q("SELECT * FROM mart_event_pairs WHERE km IS NOT NULL")
+pairs["same_region"] = (pairs.region_a == pairs.region_b).astype(int)
+pairs["log_km"] = np.log10(pairs.km + 1)
+print(f"Пар этапов одного сезона с известными координатами: {len(pairs)}")
+models = {
+    "расстояние": "share_of_smaller ~ log_km + C(year)",
+    "расстояние + интервал": "share_of_smaller ~ log_km + gap_days + C(year)",
+}
+out = []
+for name, f in models.items():
+    m = smf.ols(f, data=pairs).fit(cov_type="HC1")
+    out.append({"модель": name, "R²": m.rsquared, "коэф. log10(км)": m.params["log_km"],
+                "коэф. интервал, дни": m.params.get("gap_days", np.nan), "p интервала": m.pvalues.get("gap_days", np.nan)})
+print(pairs.groupby("same_region")["share_of_smaller"].median().rename({0: "разные регионы", 1: "один регион"}).round(3))
+pd.DataFrame(out).round(4)
+""")
+
+code("""
+fig, ax = plt.subplots(figsize=(9.5, 5))
+for same, color, label in [(1, BLUE, "этапы одного региона"), (0, ORANGE, "этапы разных регионов")]:
+    g = pairs[pairs.same_region == same]
+    ax.scatter(g.km, g.share_of_smaller, s=46, color=color, edgecolor=SURFACE, linewidth=1.5, label=label, zorder=3)
+ax.set_xscale("log")
+ax.xaxis.set_major_formatter(mtick.FuncFormatter(lambda v, _: f"{v:,.0f}".replace(",", " ")))
+ax.yaxis.set_major_formatter(mtick.PercentFormatter(1, decimals=0))
+notes = [("Fury Road", "Моддер / Ардор", 2026, "Fury Road – Ардор, 2026", (8, 6)),
+         ("Fury Road", "SHULZ Gravel Weekend", 2024, "Fury Road – SHULZ, 2024\\n(через неделю)", (-150, -40)),
+         ("Fury Road", "SHULZ Gravel Weekend", 2026, "Fury Road – SHULZ, 2026", (8, 6)),
+         ("Gravel Instinct", "Покрова", 2025, "G. Instinct – Покрова, 2025", (8, 6)),
+         ("Gravel Instinct", "Покрова", 2026, "G. Instinct – Покрова, 2026\\n(гонка переехала в Тверскую обл.)", (-360, -35))]
+for a, b, y, text, off in notes:
+    r = pairs[(pairs.year == y) & (pairs.event_a.isin([a, b])) & (pairs.event_b.isin([a, b]))]
+    if len(r):
+        r = r.iloc[0]
+        ax.annotate(text, (r.km, r.share_of_smaller), xytext=off, textcoords="offset points", fontsize=8.5, color=TEXT_2,
+                    arrowprops=dict(arrowstyle="-", color=TEXT_3, lw=0.8) if off != (8, 6) else None)
+ax.set_xlabel("расстояние между площадками, км (лог. шкала)")
+ax.set_ylabel("общих участников, % аудитории меньшего этапа")
+ax.legend(loc="upper right", fontsize=9)
+ax.set_title("Чем ближе этапы, тем больше у них общих гонщиков")
+viz.subtitle(ax, "Пары этапов одного сезона, 2023–2026. Расстояние объясняет ~70% разброса")
+viz.save(fig, "07_distance_overlap"); plt.show()
+""")
 
 code("""
 ov = q("SELECT event_a, event_b, share_of_a FROM mart_event_overlap WHERE year = 2026")
 sizes26 = q('''SELECT e.event_name, COUNT(DISTINCT r.rider_id) n FROM fct_result r
                JOIN dim_event e ON e.event_id = r.event_id WHERE r.year = 2026 AND r.status <> 'dns' GROUP BY 1''')
-order = sizes26.sort_values("n", ascending=False)["event_name"].tolist()
+region = venues[venues.year == 2026].set_index("event_name")["macro_region"]
+order = (sizes26.assign(reg=sizes26.event_name.map(region).fillna("я"))
+         .sort_values(["reg", "n"], ascending=[True, False])["event_name"].tolist())
 mat = ov.pivot(index="event_a", columns="event_b", values="share_of_a").reindex(index=order, columns=order)
-
 fig, ax = plt.subplots(figsize=(8.6, 6.6))
 ax.imshow(mat.values, cmap=viz.BLUES, vmin=0, vmax=0.65)
 for i in range(len(order)):
@@ -380,30 +534,40 @@ for i in range(len(order)):
         if i == j:
             ax.text(j, i, "—", ha="center", va="center", color=TEXT_3)
         elif not np.isnan(v):
-            ax.text(j, i, f"{v:.0%}", ha="center", va="center", fontsize=9,
-                    color="white" if v > 0.35 else TEXT)
+            ax.text(j, i, f"{v:.0%}", ha="center", va="center", fontsize=9, color="white" if v > 0.35 else TEXT)
 n = sizes26.set_index("event_name")["n"]
 ax.set_yticks(range(len(order)), [f"{o}  ({n[o]})" for o in order])
 ax.set_xticks(range(len(order)), order, rotation=35, ha="right")
+for lbl in ax.get_yticklabels() + ax.get_xticklabels():
+    lbl.set_color(REGION_COLOR.get(region.get(lbl.get_text().split("  (")[0]), TEXT_2))
 ax.grid(False)
 ax.set_title("Какая доля участников этапа (строка) была и на этапе (столбец)")
-viz.subtitle(ax, "Сезон 2026. В скобках — уникальные участники этапа")
-viz.save(fig, "05_overlap"); plt.show()
+viz.subtitle(ax, "Сезон 2026. Цвет подписи — регион: синий — Северо-Запад, оранжевый — Центр")
+viz.save(fig, "08_overlap_matrix"); plt.show()
 """)
 
 md("""
 **Выводы:**
-- Есть плотное **ядро**: Моддер/Ардор, Fury Road и SHULZ. **64%** участников Ардора в том же сезоне ехали Fury Road, 51% — SHULZ.
-  Это одна и та же аудитория, которая ездит «по кругу».
-- Аудитории «Покровы» (Владимир) и Gravel Instinct пересекаются между собой, но слабее связаны с ядром. Это вторая точка притяжения.
-- Fury Road — крупнейший этап (641 человек), но лишь 23% его участников были на Ардоре. **Большой этап — главный «вход» в серию**, его аудиторию стоит целенаправленно вести на другие этапы.
+- **Расстояние объясняет ~70% разброса** общей аудитории пар этапов. Внутри региона у этапов обычно треть общих участников, между регионами — около 10%.
+- **Ядро серии — Карельский перешеек.** Ардор и Fury Road в 3 км друг от друга: 64% участников Ардора в 2026 году ехали и Fury Road.
+  SHULZ проходит там же — 47–52% общих участников.
+- **Интервал между этапами** при учёте расстояния почти ничего не добавляет (p = 0,08), но есть сигнал. В 2024 году Fury Road стоял
+  за неделю до SHULZ, и общих участников было 19%. После переноса Fury Road на август — 34% (2025) и 47% (2026). Перенос совпал
+  с запуском серии, поэтому эффект календаря отделить нельзя.
+- **Второй «естественный эксперимент» — переезд Gravel Instinct.** В 2024–2025 годах он проходил у Покрова, в 70 км от Покровы, и общих участников было 38–39%.
+  В 2026-м гонка переехала в Тверскую область (~280 км), и доля упала до 28%.
+- Спортмарафон почти изолирован: 8–18% общих участников с остальными этапами Центра.
+
+💡 **Рекомендации:** ставить этапы одного региона минимум через 2–3 недели друг от друга и не допускать совпадений, как SHULZ и Gravel Instinct 20 июля 2024 года.
+Главный резерв роста частоты стартов — переходы **между** регионами (сейчас 12% гонщиков): совместный трансфер или пакет «два этапа в другом регионе».
 """)
 
-md("## 7. Прогрессия: переходят ли с короткой дистанции на длинную")
+md("## 9. Дистанции: короткая — отдельный продукт, а не ступенька")
 
 code("""
 # окно наблюдения одинаковое для всех когорт: первый сезон + следующий
-path = q("SELECT * FROM mart_distance_path WHERE first_year BETWEEN 2022 AND 2025")
+path = q("SELECT * FROM mart_distance_path WHERE first_year BETWEEN 2023 AND 2025")
+print(path.groupby("first_season_long")["returned_next"].mean().rename({False: "короткая", True: "длинная"}).round(3))
 short = path[~path.first_season_long]
 funnel = pd.Series({
     "Первый сезон — только короткая": len(short),
@@ -415,62 +579,42 @@ ax.barh(funnel.index[::-1], funnel.values[::-1], color=[BLUE, BLUE, ORANGE][::-1
 for i, v in enumerate(funnel.values[::-1]):
     ax.text(v + 15, i, f"{v}  ({v / funnel.iloc[0]:.0%})", va="center", weight="bold")
 ax.grid(axis="y", visible=False); ax.set_xlim(0, funnel.max() * 1.25)
-ax.set_title("Воронка дистанций: новички 2022–2025, начавшие с короткой")
+ax.set_title("Воронка дистанций: новички 2023–2025, начавшие с короткой")
 viz.subtitle(ax, "Окно: первый сезон + следующий. Из вернувшихся на длинную выходит лишь каждый пятый")
-viz.save(fig, "06_distance_funnel"); plt.show()
+viz.save(fig, "09_distance_funnel"); plt.show()
 funnel
 """)
 
 md("""
-**Вывод:** из начавших с короткой на следующий сезон возвращаются **35%** (у начавших с длинной — 50%), и из вернувшихся
-на длинную выходит только **21%**. Короткая дистанция — **отдельный продукт со своей аудиторией**, а не ступенька к главной.
-Её удержание нужно растить отдельно, а не рассчитывать, что люди «дорастут» до длинной.
+**Вывод:** с короткой дистанции на следующий сезон возвращаются **37%** (с длинной — 51%), и из вернувшихся на длинную выходит только **21%**.
+Короткая дистанция — **отдельный продукт со своей аудиторией**. Её удержание нужно растить отдельно, а не рассчитывать, что люди «дорастут» до длинной.
 
-> **Методическая заметка.** Первая версия этой воронки считала переход за всё время наблюдения и давала 53%. Это завышение:
-> у когорты 2022 года было четыре сезона на переход, у когорты 2025-го — один. При одинаковом окне получается 21%.
+> **Методическая заметка.** Первая версия воронки считала переход за всё время наблюдения и давала 53%. Это завышение:
+> у ранних когорт было больше лет на переход. При одинаковом окне (первый сезон + следующий) — 21%.
 """)
 
-md("## 8. Аудитория: женщин стало в 2,5 раза больше")
-
-code("""
-fig, ax = plt.subplots(figsize=(9, 3.6))
-ax.plot(season.year, season.female_share, color=ORANGE, marker="o", ms=7, mec=SURFACE, mew=2)
-for x, v in zip(season.year, season.female_share):
-    ax.text(x, v + 0.012, f"{v:.0%}", ha="center", fontsize=9.5, color=TEXT)
-ax.yaxis.set_major_formatter(mtick.PercentFormatter(1, decimals=0))
-ax.set_ylim(0, 0.27); ax.set_xticks(season.year)
-ax.set_title("Доля женщин среди участников")
-viz.subtitle(ax, "Рост с 8% до ~19%, с 2022 года плато.")
-viz.save(fig, "07_female_share"); plt.show()
-""")
-
-md("""
-Доля женщин выросла с 8% до 17–22% и с 2022 года держится на плато. Сырой retention у женщин ниже (37% против 45%), но после контроля дистанции разница незначима (раздел 4).
-Значит, задача — не «удержать женщин», а **снова запустить привлечение**: отдельные зачёты, призы и женские группы на коротких дистанциях.
-""")
-
-md("## 9. Трассы: скорость и сходы (2026)")
+md("## 10. Трассы: скорость и сходы (2026)")
 
 code("""
 sp = q('''
-SELECT e.event_name || ' · ' || d.race_title AS race, d.distance_km, r.speed_kmh, r.gender
+SELECT e.event_name || ' · ' || d.race_title AS race, d.distance_km, r.speed_kmh
 FROM fct_result r JOIN dim_race d ON d.race_id = r.race_id JOIN dim_event e ON e.event_id = r.event_id
 WHERE r.year = 2026 AND r.status = 'finished' AND r.speed_kmh IS NOT NULL AND d.bike_class = 'multi'
 ''')
 order = sp.groupby("race")["speed_kmh"].median().sort_values().index
 fig, ax = plt.subplots(figsize=(10, 5.2))
 data = [sp.loc[sp.race == r, "speed_kmh"] for r in order]
-bp = ax.boxplot(data, orientation="horizontal", widths=0.55, patch_artist=True, showfliers=False,
-                medianprops=dict(color=TEXT, lw=2), whiskerprops=dict(color=TEXT_3),
-                capprops=dict(color=TEXT_3), boxprops=dict(facecolor="#cde2fb", edgecolor=BLUE))
+ax.boxplot(data, orientation="horizontal", widths=0.55, patch_artist=True, showfliers=False,
+           medianprops=dict(color=TEXT, lw=2), whiskerprops=dict(color=TEXT_3),
+           capprops=dict(color=TEXT_3), boxprops=dict(facecolor="#cde2fb", edgecolor=BLUE))
 ax.set_yticks(range(1, len(order) + 1), order, fontsize=9)
-for i, d in enumerate(data, 1):
-    ax.text(d.median(), i + 0.38, f"{d.median():.1f}", ha="center", fontsize=8, color=TEXT_2)
+for i, dd in enumerate(data, 1):
+    ax.text(dd.median(), i + 0.38, f"{dd.median():.1f}", ha="center", fontsize=8.5, color=TEXT_2)
 ax.grid(axis="y", visible=False); ax.grid(axis="x", visible=True)
 ax.set_xlabel("средняя скорость финишёра, км/ч")
 ax.set_title("Скорость на дистанциях 2026 года (там, где известен километраж)")
-viz.subtitle(ax, "Медиана и межквартильный размах. Царь Грейдер — почти шоссе: медиана 34 км/ч на 180 км")
-viz.save(fig, "08_speed"); plt.show()
+viz.subtitle(ax, "Медиана и межквартильный размах. Царь Грейдер — почти шоссе: 40% асфальта, медиана 34 км/ч на 180 км")
+viz.save(fig, "10_speed"); plt.show()
 """)
 
 code("""
@@ -479,23 +623,24 @@ q('''SELECT event_name, year, race_title, starters, dnf, dnf_rate, dns_rate
 """)
 
 md("""
-Сход и неявка фиксируются не во всех протоколах (только у части организаторов), поэтому сравниваю внутри доступных:
-- Самый высокий сход — **BIKE 125 на Спортмарафон Фест 2026 (32%)**, втрое выше прошлогоднего (12%). Вероятно, погода или трасса, стоит разобрать с организатором.
-- **Неявка (DNS) на короткие дистанции фестиваля — 23–27%.** Это потерянные слоты и деньги: напоминания перед стартом, лист ожидания.
+Сходы и неявки фиксируются не во всех протоколах, поэтому сравниваю только доступные:
+- Самый высокий сход — **BIKE 125 на Спортмарафон Фест 2026 (32%)**, втрое выше прошлогоднего (12%). Стоит разобрать с организатором: погода или трасса.
+- **Неявка (DNS) на короткие дистанции фестиваля — 23–27%.** Это потерянные слоты: напоминания перед стартом, лист ожидания.
 
-## 10. Итоги
+## 11. Итоги
 
 | # | Инсайт | Что делать |
 |---|---|---|
-| 1 | Аудитория выросла в 12 раз (145 → 1 814), частота — с 1,0 до 1,5 старта на гонщика | Серия работает, растить календарь |
-| 2 | После обвала 2022 года (7%) retention +1 сезона восстановился до 45–51%, выше эпохи одной гонки | Мониторить: у когорты 2025 года просадка на 6 п.п. |
-| 3 | **Второй старт в первом сезоне: шансы вернуться ×2,7** (устойчиво к поправке на этап) | Проверить A/B-тестом промокода на второй этап: ~850 новичков за сезон дают MDE ≈ 9 п.п. |
-| 4 | Короткая удерживает 35% против 50% у длинной; на длинную за сезон переходит лишь 21% вернувшихся | Растить удержание короткой как отдельного продукта |
-| 5 | Ядро аудитории — 3 этапа с пересечением 47–64%; лучшие «входы» — Покрова и Царь Грейдер (51–55% возврата), худший — Спортмарафон (34%) | Вести аудиторию крупнейшего этапа (Fury Road) на остальные; разобрать практики лидеров |
-| 6 | Доля женщин на плато ~19% | Отдельные зачёты и коммьюнити, затем замер эффекта |
+| 1 | 2023–2026: аудитория ×3,9 (468 → 1 814), 1,54 старта на гонщика; 38% аудитории 2026 года — вернувшиеся | Серия работает, растить календарь |
+| 2 | Retention +1 сезона: 35% → 51% → 45% | Мониторить: у когорты 2025 года просадка на 6 п.п. |
+| 3 | **Второй старт в первом сезоне: шансы вернуться ×2,7–2,9** (устойчиво к поправке на этап) | A/B-тест промокода на следующий этап своего региона: MDE ≈ 9 п.п. за сезон |
+| 4 | Серия — два кластера в ~600 км; общую аудиторию этапов определяет расстояние (R² ≈ 0,7) | Разводить этапы одного региона на 2–3 недели; растить переходы между регионами (сейчас 12%) |
+| 5 | Лучшие входы — Покрова и Царь Грейдер (51–55%), худший — Спортмарафон (34%) | Разобрать и перенести практики лидеров |
+| 6 | Короткая удерживает 37% против 51% у длинной; на длинную за сезон переходит 21% вернувшихся | Растить удержание короткой как отдельного продукта |
 
-**Ограничения:** гонщики сведены по имени (тёзки ~0.3%); DNF/DNS есть не во всех протоколах; километраж известен для части дистанций;
-в данных нет возраста, региона и цены слота, поэтому рекомендации — гипотезы для A/B-проверки, а не доказанная причинность.
+**Ограничения:** гонщики сведены по имени (тёзки ~0,3%); DNF/DNS есть не во всех протоколах; часть координат и одна дата (Покрова 2023)
+приблизительны, место Gravel Instinct 2023 и Redline 2026 не найдено; нет возраста, места жительства и цены слота. Поэтому рекомендации —
+гипотезы для проверки, а не доказанная причинность.
 """)
 
 nb = nbf.v4.new_notebook()

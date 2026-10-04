@@ -28,7 +28,7 @@ fs AS (
 ret AS (SELECT DISTINCT rider_id, year FROM act)
 SELECT fs.*, (r.rider_id IS NOT NULL)::INT AS returned
 FROM fs LEFT JOIN ret r ON r.rider_id = fs.rider_id AND r.year = fs.fy + 1
-WHERE fy BETWEEN 2022 AND 2025
+WHERE fy BETWEEN 2023 AND 2025
 """
 
 
@@ -41,7 +41,7 @@ def build() -> dict:
     q = lambda s: con.sql(s).df()
 
     season = q("SELECT * FROM mart_season ORDER BY year")
-    cohort = q("SELECT cohort, season_n, riders, retention FROM mart_cohort WHERE cohort BETWEEN 2019 AND 2025")
+    cohort = q("SELECT cohort, season_n, riders, retention FROM mart_cohort WHERE cohort BETWEEN 2023 AND 2025")
 
     nb = q(NEWBIES_SQL)
     nb["starts_cat"] = nb["starts"].clip(upper=3).map({1: "1", 2: "2", 3: "3+"})
@@ -86,7 +86,7 @@ def build() -> dict:
         WHERE r.year = 2026 AND r.status = 'finished' AND r.speed_kmh IS NOT NULL AND d.bike_class = 'multi'
         GROUP BY ALL ORDER BY med DESC""").round(2)
 
-    path = q("SELECT * FROM mart_distance_path WHERE first_year BETWEEN 2022 AND 2025 AND NOT first_season_long")
+    path = q("SELECT * FROM mart_distance_path WHERE first_year BETWEEN 2023 AND 2025 AND NOT first_season_long")
     funnel = [
         {"step": "Первый сезон — только короткая", "n": int(len(path))},
         {"step": "Вернулись в следующем сезоне", "n": int(path.returned_next.sum())},
@@ -97,7 +97,18 @@ def build() -> dict:
                          (SELECT COUNT(*) FROM dim_rider) AS riders,
                          (SELECT COUNT(*) FROM dim_event) AS events""")
 
+    venues = q("""SELECT e.year, e.event_name AS event, strftime(v.race_date, '%Y-%m-%d') AS date, v.date_quality,
+                          v.venue, v.region, v.macro_region, v.lat, v.lon
+                   FROM dim_venue v JOIN dim_event e ON e.event_id = v.event_id ORDER BY v.race_date""")
+    pairs = q("""SELECT year, event_a, event_b, shared_riders, share_of_smaller, region_a, region_b, gap_days, km
+                 FROM mart_event_pairs WHERE km IS NOT NULL""").round(3)
+    cross = q("""SELECT year, AVG((n_reg >= 2)::INT) AS cross_region_share FROM (
+                   SELECT r.year, r.rider_id, COUNT(DISTINCT v.macro_region) AS n_reg
+                   FROM fct_result r JOIN dim_venue v ON v.event_id = r.event_id
+                   WHERE r.status <> 'dns' GROUP BY ALL) GROUP BY 1 ORDER BY 1""").round(4)
+
     return {
+        "venues": records(venues), "pairs": records(pairs), "cross": records(cross),
         "season": records(season), "cohort": records(cohort), "aha": aha,
         "entry": entry_points, "overlap": records(overlap), "eventSizes": records(sizes),
         "speed": records(speed), "funnel": funnel, "totals": records(totals)[0],

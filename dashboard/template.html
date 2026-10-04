@@ -61,7 +61,7 @@ header { display: grid; gap: 22px; padding-top: 40px; }
 .route ol::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; border-top: 2px dashed var(--ink-3); opacity: .55; }
 .route li { position: relative; display: grid; gap: 2px; padding-top: 22px; font-size: 13px; }
 .route li::before { content: ""; position: absolute; top: 1px; left: 0; width: 14px; height: 14px; border-radius: 50%;
-                    background: var(--surface); border: 3px solid var(--accent); }
+                    background: var(--surface); border: 3px solid var(--dot, var(--accent)); }
 .route .km { font-family: var(--f-mono); font-size: 11.5px; color: var(--ink-3); }
 .route b { font-weight: 600; line-height: 1.2; }
 
@@ -137,10 +137,11 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
 
 <div class="wrap">
   <header>
-    <div class="eyebrow">Продуктовая аналитика · архив протоколов 2018–2026</div>
+    <div class="eyebrow">Продуктовая аналитика · сезоны 2023–2026</div>
     <h1>Русская гравийная серия<br>в цифрах</h1>
-    <p class="lede">Серия как продукт: гонщик — пользователь, старт — сессия, сезон — период. Откуда растёт аудитория, кто возвращается
-      и что в первом сезоне отличает тех, кто остаётся.</p>
+    <p class="lede">Серия как продукт: гонщик — пользователь, старт — сессия, сезон — период. Откуда растёт аудитория, кто возвращается,
+      что в первом сезоне отличает тех, кто остаётся, и как на всё это влияют календарь и география. Период — 2023–2026: с 2023 года проходит
+      тот же набор гонок, а в 2025-м они официально объединены в серию.</p>
     <div class="route" aria-label="Календарь этапов 2026">
       <ol id="route"></ol>
     </div>
@@ -150,35 +151,62 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
   <section id="growth">
     <div class="head">
       <div class="eyebrow">Рост</div>
-      <h2>Аудитория выросла в 12 раз, и всё больше её возвращается</h2>
+      <h2>За четыре сезона аудитория выросла в 3,9 раза, и всё больше её возвращается</h2>
     </div>
     <div class="card">
       <div class="chart-title">Уникальные участники по сезонам</div>
-      <div class="chart-sub">Наведите на столбец, чтобы увидеть разбивку. Под годом — число этапов в сезоне</div>
+      <div class="chart-sub">Наведите на столбец, чтобы увидеть разбивку. Серые столбцы — предыстория (1–2 гонки в год), в анализ не входят</div>
       <div class="legend"><span><i style="background:var(--s1)"></i>вернулись с прошлого сезона</span><span><i style="background:var(--s3)"></i>вернулись после перерыва</span><span><i style="background:var(--s2)"></i>новички</span></div>
       <div class="scroll"><svg id="growthChart" role="img" aria-label="Участники по сезонам"></svg></div>
     </div>
     <ul class="takeaways">
       <li>В 2026 году <b>691 из 1 814</b> участников вернулись с прошлого сезона. В 2023-м таких было 67 из 468.</li>
-      <li>Растёт и частота: <b>1,54 старта</b> на гонщика против 1,01 в эпоху одной гонки. 31% проехали 2+ этапа.</li>
-      <li>Провал 2022 года: «Обратная сторона» больше не проводилась, а общий календарь ещё не сложился.</li>
+      <li>Растёт и частота: <b>1,54 старта</b> на гонщика против 1,15 в 2023-м. 2+ этапа проехали 31% (было 12%).</li>
+      <li>В оба региона ездят уже <b>12%</b> гонщиков против 3% в 2023-м. Самый большой скачок — в 2025-м, год официального запуска серии.</li>
+    </ul>
+  </section>
+
+
+  <section id="geo">
+    <div class="head">
+      <div class="eyebrow">Календарь и география</div>
+      <h2>Серия — это два кластера в 600 км друг от друга</h2>
+      <p class="lede">Северо-Запад: Царь Грейдер, SHULZ, Моддер/Ардор, Fury Road. Центр: Спортмарафон Фест, Gravel Instinct, Покрова.
+        Моддер и Ардор — одна гонка у станции Петяярви, сменившая название в 2025 году; Fury Road проходит в 3 км от неё.</p>
+    </div>
+    <div class="card">
+      <div class="chart-title">Календарь этапов по сезонам</div>
+      <div class="legend"><span><i style="background:var(--s1)"></i>Северо-Запад</span><span><i style="background:var(--s2)"></i>Центр</span><span><i style="background:var(--muted-bar)"></i>место не найдено</span></div>
+      <div class="scroll"><svg id="calChart" role="img" aria-label="Календарь этапов"></svg></div>
+    </div>
+    <div class="card">
+      <div class="chart-title">Чем ближе этапы, тем больше у них общих гонщиков</div>
+      <div class="chart-sub">Пары этапов одного сезона, 2023–2026. По горизонтали — расстояние между площадками (лог. шкала), по вертикали — доля общих участников от аудитории меньшего этапа</div>
+      <div class="legend"><span><i style="background:var(--s1);border-radius:50%"></i>этапы одного региона</span><span><i style="background:var(--s2);border-radius:50%"></i>этапы разных регионов</span></div>
+      <div class="scroll"><svg id="pairsChart" role="img" aria-label="Расстояние и общая аудитория"></svg></div>
+    </div>
+    <ul class="takeaways">
+      <li><b>Расстояние объясняет ~70% разброса</b> общей аудитории: внутри региона — около трети общих участников, между регионами — около 10%.</li>
+      <li>В 2024 году Fury Road стоял за неделю до SHULZ — общих участников было 19%. После переноса на август — 34% и 47%. Перенос совпал с запуском серии, поэтому эффект календаря не доказан.</li>
+      <li>Gravel Instinct в 2026 году переехал из-под Покрова в Тверскую область, и общая аудитория с Покровой упала с 39% до 28%.</li>
+      <li><b>Рекомендации:</b> разводить этапы одного региона на 2–3 недели, не допускать совпадений (SHULZ и Gravel Instinct 20.07.2024), растить переходы между регионами: совместный трансфер, пакет «два этапа в другом регионе».</li>
     </ul>
   </section>
 
   <section id="retention">
     <div class="head">
       <div class="eyebrow">Удержание</div>
-      <h2>После обвала 2022 года каждая когорта держится лучше</h2>
+      <h2>На следующий сезон возвращается почти каждый второй новичок</h2>
     </div>
     <div class="card scroll">
       <div class="chart-title">Когортный retention</div>
-      <div class="chart-sub">Доля когорты (год первого старта), стартовавшая через N сезонов</div>
+      <div class="chart-sub">Доля когорты (год первого старта), стартовавшая через N сезонов. Новичок — первый старт в архиве с 2018 года</div>
       <table class="heat" id="cohortTable"></table>
     </div>
     <ul class="takeaways">
-      <li>В эпоху одной гонки (2019–2020) на следующий сезон возвращались ~45%: небольшая лояльная аудитория одного события.</li>
-      <li>Когорта 2021 года: <b>7%</b>. Людей держало конкретное событие, а не «гревел вообще».</li>
-      <li>Общий календарь восстановил удержание: 27% → 35% → <b>51%</b>, хотя когорты выросли в 2–3 раза.</li>
+      <li>Retention +1 сезона: <b>35% → 51% → 45%</b>. Удержание выросло, хотя когорты стали в 2,5 раза больше.</li>
+      <li>Просадка у когорты 2025 года (−6 п.п.) объясняется её размером: 854 новичка против 386. Метрику стоит мониторить.</li>
+      <li>Кто остался на второй сезон, тот держится: у когорты 2023 года 35% → 32% → 31%.</li>
     </ul>
   </section>
 
@@ -191,11 +219,11 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
     <div class="card">
       <div class="panels" id="ahaPanels"></div>
       <p class="note" style="margin-top:16px">Пунктир — средний возврат. Логистическая регрессия с фиксированным эффектом года:
-        2+ старта <b>OR 2,66</b> [1,96–3,60], с поправкой на первый этап — <b>2,92</b> [2,11–4,03]; финиш в последней четверти OR 0,69; пол незначим.</p>
+        2+ старта <b>OR 2,69</b> [1,98–3,64], с поправкой на первый этап — <b>2,92</b> [2,12–4,03]; финиш в последней четверти OR 0,67–0,68; длинная дистанция и пол с поправкой на этап незначимы.</p>
     </div>
     <ul class="takeaways">
       <li><b>Рычаг удержания</b> — довести новичка до второго старта в том же сезоне: скидка финишёрам на следующий этап, паспорт серии, зачёт новичков.</li>
-      <li><b>Как проверить:</b> A/B-тест промокода на второй этап. При ~850 новичках за сезон и сплите 50/50 тест заметит прирост доли 2+ стартов от 9 п.п. (19% → 28%).</li>
+      <li><b>Как проверить:</b> A/B-тест промокода на следующий этап своего региона. При ~850 новичках за сезон и сплите 50/50 тест заметит прирост доли 2+ стартов от 9 п.п. (19% → 28%).</li>
       <li>Разрыв между мужчинами и женщинами объясняется выбором дистанции: женщины чаще едут короткую (39% стартов на длинной против 55% у мужчин).</li>
     </ul>
   </section>
@@ -213,9 +241,9 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
       </div>
       <div class="card">
         <div class="chart-title">Воронка дистанций</div>
-        <div class="chart-sub">Новички 2022–2025, в первом сезоне ехавшие только короткую. Окно: первый сезон + следующий</div>
+        <div class="chart-sub">Новички 2023–2025, в первом сезоне ехавшие только короткую. Окно: первый сезон + следующий</div>
         <div class="hbars" id="funnelBars"></div>
-        <p class="note" style="margin-top:14px">Короткая дистанция — отдельный продукт, а не ступенька: возвращаются 35% (на длинной — 50%), и лишь каждый пятый из вернувшихся переходит на длинную.</p>
+        <p class="note" style="margin-top:14px">Короткая дистанция — отдельный продукт, а не ступенька: возвращаются 37% (на длинной — 51%), и лишь каждый пятый из вернувшихся переходит на длинную.</p>
       </div>
     </div>
     <div class="card">
@@ -224,9 +252,8 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
       <div class="scroll"><table class="heat ov" id="overlapTable"></table></div>
     </div>
     <ul class="takeaways">
-      <li>Ядро серии — <b>Моддер/Ардор, Fury Road и SHULZ</b>: 64% участников Ардора в том же сезоне ехали Fury Road.</li>
-      <li>Fury Road — крупнейший вход (641 человек), но лишь 23% его участников были на Ардоре. Это главный резерв для роста частоты стартов.</li>
-      <li>Спортмарафон Фест приводит много разовых участников: возвращаются 34% против 55% у Покровы.</li>
+      <li>Лучшие «точки входа» — <b>Покрова (55%)</b> и <b>Царь Грейдер (51%)</b>, худшая — Спортмарафон Фест (34%). Лидеры есть в обоих регионах.</li>
+      <li>Спортмарафон — мультиспортивный фестиваль с короткими дистанциями, он приводит много разовых участников.</li>
     </ul>
   </section>
 
@@ -247,8 +274,9 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
       <p><b>Данные.</b> Открытый архив протоколов <a href="https://gravelseries.ru/results" target="_blank" rel="noopener">gravelseries.ru</a>:
         <span id="totals"></span>. Гонщики сведены по нормализованному имени: регистр, ё/е, отчества, «Дима → Дмитрий». Проверка по ID сайта:
         не склеен 1 гонщик из 2 450.</p>
-      <p><b>Ограничения.</b> Тёзки (~0,3%) считаются одним человеком. Сходы и неявки есть не во всех протоколах. Возраста, региона и цены слота в данных нет,
-        поэтому рекомендации — гипотезы для A/B-проверки, а не доказанная причинность.</p>
+      <p><b>Ограничения.</b> Тёзки (~0,3%) считаются одним человеком. Сходы и неявки есть не во всех протоколах. Места и даты этапов собраны вручную
+        по сайтам и каналам гонок; часть координат приблизительна, место Gravel Instinct 2023 и Redline 2026 не найдено. Возраста, места жительства
+        и цены слота в данных нет, поэтому рекомендации — гипотезы для проверки, а не доказанная причинность.</p>
     </div>
     <p class="eyebrow">Царегородский Александр · пет-проект аналитика данных · Python · DuckDB · SQL · statsmodels</p>
   </footer>
@@ -287,22 +315,23 @@ const svgEl = (tag, attrs, parent) => {
 };
 
 /* ---------- route + KPIs ---------- */
-const stages = [
-  ["11–14.06", "Спортмарафон Фест", "40 · 65 · 125 км"], ["20.06", "Царь Грейдер", "110 · 150 · 180 км"],
-  ["04.07", "Redline", "88 км"], ["11.07", "SHULZ", "60 · 111 км"], ["18.07", "Gravel Instinct", "88 · 170 км"],
-  ["25–26.07", "Моддер и Ардор", "75 · 110 км"], ["01.08", "Покрова", "основной круг"], ["15.08", "Fury Road", "40 · 80 · 130 км"],
-];
-document.getElementById("route").innerHTML = stages.map(([d, n, km]) =>
-  `<li><span class="eyebrow" style="font-size:11px">${d}</span><b>${n}</b><span class="km">${km}</span></li>`).join("");
+const regColor = r => r === "Северо-Запад" ? "var(--s1)" : r === "Центр" ? "var(--s2)" : "var(--muted-bar)";
+const kmByEvent = { "Спортмарафон Фест": "40 · 65 · 125 км", "Царь Грейдер": "110 · 150 · 180 км", "Redline": "88 км",
+  "SHULZ Gravel Weekend": "60 · 111 км", "Gravel Instinct": "88 · 170 км", "Моддер / Ардор": "75 · 110 км",
+  "Покрова": "основной круг", "Fury Road": "40 · 80 · 130 км" };
+const dm = d => d.slice(8, 10) + "." + d.slice(5, 7);
+document.getElementById("route").innerHTML = D.venues.filter(v => v.year === 2026).map(v =>
+  `<li style="--dot:${regColor(v.macro_region)}"><span class="eyebrow" style="font-size:11px">${dm(v.date)}</span><b>${v.event.replace(" Gravel Weekend", "")}</b><span class="km">${v.region || "место не найдено"} · ${kmByEvent[v.event] || ""}</span></li>`).join("");
 
-const S = D.season, last = S[S.length - 1], prev = S[S.length - 2];
+const SALL = D.season, S = SALL.filter(s => s.year >= 2023), last = S[S.length - 1], prev = S[S.length - 2];
+const crossOf = y => (D.cross.find(c => c.year === y) || {}).cross_region_share;
 const coh25 = D.cohort.find(c => c.cohort === 2025 && c.season_n === 1);
 const kpis = [
   [fmt(last.riders), "уникальных участников в 2026", `+${Math.round((last.riders / prev.riders - 1) * 100)}% к 2025`],
   [fmt(last.starts), "стартов за сезон", `${last.starts_per_rider.toString().replace(".", ",")} на гонщика`],
   [pct(coh25.retention), "новичков 2025 вернулись в 2026", "retention +1 сезона"],
   [pct(last.multi_event_share), "проехали 2+ этапа", "в 2023 было " + pct(S.find(s => s.year === 2023).multi_event_share)],
-  [pct(last.female_share), "доля женщин", "в 2018 было " + pct(S[0].female_share)],
+  [pct(crossOf(2026)), "ездят в оба региона", "в 2023 было " + pct(crossOf(2023))],
 ];
 document.getElementById("kpis").innerHTML = kpis.map(([v, l, d]) =>
   `<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div class="d">${d}</div></div>`).join("");
@@ -315,14 +344,15 @@ document.getElementById("totals").textContent =
   const W = 1040, H = 320, m = { t: 26, r: 8, b: 46, l: 44 };
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.style.width = "100%"; svg.style.minWidth = "560px";
   const max = 2000, iw = W - m.l - m.r, ih = H - m.t - m.b;
-  const y = v => m.t + ih - v / max * ih, bw = iw / S.length;
+  const y = v => m.t + ih - v / max * ih, bw = iw / SALL.length;
   for (let v = 0; v <= max; v += 500) {
     svgEl("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: "var(--line)" }, svg);
     svgEl("text", { x: m.l - 8, y: y(v) + 4, "text-anchor": "end", "font-size": 12, fill: "var(--ink-3)" }, svg).textContent = fmt(v);
   }
-  S.forEach((s, i) => {
+  SALL.forEach((s, i) => {
     const x = m.l + i * bw + bw * .18, w = bw * .64;
-    const parts = [["retained_from_prev", "var(--s1)"], ["resurrected", "var(--s3)"], ["new_riders", "var(--s2)"]];
+    const hist = s.year < 2023;
+    const parts = hist ? [["riders", "var(--muted-bar)"]] : [["retained_from_prev", "var(--s1)"], ["resurrected", "var(--s3)"], ["new_riders", "var(--s2)"]];
     let acc = 0;
     const g = svgEl("g", { "data-tip": 1 }, svg);
     parts.forEach(([k, c], j) => {
@@ -336,6 +366,11 @@ document.getElementById("totals").textContent =
     svgEl("text", { x: x + w / 2, y: y(s.riders) - 8, "text-anchor": "middle", "font-size": 13.5, "font-weight": 700, fill: "var(--ink)" }, svg).textContent = fmt(s.riders);
     svgEl("text", { x: x + w / 2, y: H - m.b + 20, "text-anchor": "middle", "font-size": 13, fill: "var(--ink-2)" }, svg).textContent = s.year;
     svgEl("text", { x: x + w / 2, y: H - m.b + 37, "text-anchor": "middle", "font-size": 11, fill: "var(--ink-3)" }, svg).textContent = s.n_events + " эт.";
+    if (i === SALL.findIndex(t => t.year === 2023)) {
+      svgEl("line", { x1: x - bw * .18, x2: x - bw * .18, y1: m.t, y2: H - m.b, stroke: "var(--ink-3)", "stroke-dasharray": "4 4" }, svg);
+      svgEl("text", { x: x - bw * .18 + 8, y: m.t + 10, "font-size": 12, fill: "var(--ink-2)" }, svg).textContent = "период анализа →";
+    }
+    if (hist) { bindTip(g, `<b>${s.year}</b> · предыстория, ${s.n_events} эт.<br>Участников: <b>${fmt(s.riders)}</b>`); return; }
     bindTip(g, `<b>${s.year}</b> · ${s.n_events} эт.<br>Участников: <b>${fmt(s.riders)}</b> · стартов: ${fmt(s.starts)}<br>
       Вернулись с прошлого: ${fmt(s.retained_from_prev)}<br>После перерыва: ${fmt(s.resurrected)}<br>Новички: ${fmt(s.new_riders)}<br>
       2+ этапа: ${pct(s.multi_event_share)} · женщины: ${pct(s.female_share)}`);
@@ -439,6 +474,62 @@ function hbars(el, rows, max, base) {
         (c.dataset.i === td.dataset.i && c.dataset.j === td.dataset.j) || (c.dataset.i === td.dataset.j && c.dataset.j === td.dataset.i)));
     });
     td.addEventListener("mouseleave", () => t.classList.remove("hl"));
+  });
+})();
+
+
+/* ---------- calendar ---------- */
+(function () {
+  const svg = document.getElementById("calChart");
+  const years = [2023, 2024, 2025, 2026];
+  const W = 1040, rowH = 62, m = { t: 22, r: 20, b: 34, l: 60 }, H = m.t + m.b + rowH * years.length;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.style.width = "100%"; svg.style.minWidth = "720px";
+  const doy = d => { const t = new Date(d + "T00:00:00Z"); return (t - Date.UTC(t.getUTCFullYear(), 0, 0)) / 864e5; };
+  const lo = 150, hi = 250, x = v => m.l + (v - lo) / (hi - lo) * (W - m.l - m.r);
+  [["июнь", 152], ["июль", 182], ["август", 213], ["сентябрь", 244]].forEach(([n, d]) => {
+    svgEl("line", { x1: x(d), x2: x(d), y1: m.t - 10, y2: H - m.b, stroke: "var(--line)" }, svg);
+    svgEl("text", { x: x(d), y: H - m.b + 22, "text-anchor": "middle", "font-size": 12, fill: "var(--ink-3)" }, svg).textContent = n;
+  });
+  years.forEach((yr, i) => {
+    const cy = m.t + i * rowH + rowH / 2;
+    svgEl("line", { x1: m.l, x2: W - m.r, y1: cy, y2: cy, stroke: "var(--line)" }, svg);
+    svgEl("text", { x: m.l - 12, y: cy + 4, "text-anchor": "end", "font-size": 13, fill: "var(--ink-2)" }, svg).textContent = yr;
+    const vs = D.venues.filter(v => v.year === yr);
+    const count = {}; vs.forEach(v => count[v.date] = (count[v.date] || 0) + 1);
+    vs.forEach((v, j) => {
+      const clash = count[v.date] > 1, dy = clash ? (v.macro_region === "Северо-Запад" ? -7 : 7) : 0;
+      const g = svgEl("g", { "data-tip": 1 }, svg);
+      const cx = x(doy(v.date));
+      if (v.date_quality === "approx_late_july")
+        svgEl("rect", { x: cx - 6, y: cy + dy - 6, width: 12, height: 12, transform: `rotate(45 ${cx} ${cy + dy})`, fill: regColor(v.macro_region), stroke: "var(--surface)", "stroke-width": 2 }, g);
+      else
+        svgEl("circle", { cx, cy: cy + dy, r: 7, fill: regColor(v.macro_region), stroke: "var(--surface)", "stroke-width": 2 }, g);
+      const up = clash ? dy < 0 : j % 2 === 0;
+      svgEl("text", { x: cx, y: cy + dy + (up ? -13 : 22), "text-anchor": "middle", "font-size": 11.5, fill: "var(--ink-2)" }, g)
+        .textContent = v.event.replace(" Gravel Weekend", "").replace("Спортмарафон Фест", "Спортмарафон").replace("Gravel Instinct", "G. Instinct");
+      bindTip(g, `<b>${v.event}</b> · ${dm(v.date)}.${yr}${v.date_quality === "approx_late_july" ? " (приблизительно)" : ""}<br>${v.venue}<br>${v.region || ""}${clash ? "<br><b>В этот день был ещё один этап</b>" : ""}`);
+    });
+  });
+})();
+
+/* ---------- distance vs shared audience ---------- */
+(function () {
+  const svg = document.getElementById("pairsChart"), P = D.pairs;
+  const W = 1040, H = 380, m = { t: 14, r: 20, b: 44, l: 56 };
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.style.width = "100%"; svg.style.minWidth = "620px";
+  const lx = v => Math.log10(v + 1), x0 = lx(1), x1 = lx(1000);
+  const x = v => m.l + (lx(v) - x0) / (x1 - x0) * (W - m.l - m.r), y = v => m.t + (1 - v / 0.7) * (H - m.t - m.b);
+  [0, .1, .2, .3, .4, .5, .6, .7].forEach(v => {
+    svgEl("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: "var(--line)" }, svg);
+    svgEl("text", { x: m.l - 8, y: y(v) + 4, "text-anchor": "end", "font-size": 12, fill: "var(--ink-3)" }, svg).textContent = pct(v);
+  });
+  [1, 3, 10, 30, 100, 300, 1000].forEach(v =>
+    svgEl("text", { x: x(v), y: H - m.b + 20, "text-anchor": "middle", "font-size": 12, fill: "var(--ink-3)" }, svg).textContent = fmt(v) + " км");
+  P.forEach(p => {
+    const same = p.region_a === p.region_b, g = svgEl("g", { "data-tip": 1 }, svg);
+    svgEl("circle", { cx: x(p.km), cy: y(p.share_of_smaller), r: 11, fill: "transparent" }, g);
+    svgEl("circle", { cx: x(p.km), cy: y(p.share_of_smaller), r: 6, fill: same ? "var(--s1)" : "var(--s2)", stroke: "var(--surface)", "stroke-width": 1.5 }, g);
+    bindTip(g, `<b>${p.event_a} – ${p.event_b}</b>, ${p.year}<br>${fmt(Math.round(p.km))} км · ${p.gap_days} дн. между этапами<br>Общих гонщиков: <b>${fmt(p.shared_riders)}</b> (${pct(p.share_of_smaller)} аудитории меньшего этапа)`);
   });
 })();
 
