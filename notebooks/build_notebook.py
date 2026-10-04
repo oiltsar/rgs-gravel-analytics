@@ -342,33 +342,34 @@ def rate(col, order=None):
     g = newbies.groupby(col, observed=True)["returned"].agg(["mean", "size"])
     return g.loc[order] if order else g
 
-panels = [
-    ("Стартов в первом сезоне", rate("starts_cat", ["1", "2", "3+"])),
-    ("Первая дистанция", rate("any_long").rename(index={False: "только короткая", True: "длинная"})),
-    ("Место среди финишёров (квартиль)", rate("pct_q")),
-    ("Регион первого сезона", rate("macro_region")),
-]
-fig, axes = plt.subplots(1, 4, figsize=(13, 4), sharey=True)
-base = newbies.returned.mean()
-for ax, (title, g) in zip(axes, panels):
-    colors = [BLUE if v >= base else GRAY for v in g["mean"]]
-    ax.bar(range(len(g)), g["mean"], color=colors, width=0.62)
-    ax.axhline(base, color=TEXT_3, lw=1, ls=(0, (3, 3)))
-    for i, v in enumerate(g["mean"]):
-        ax.text(i, v + 0.015, f"{v:.0%}", ha="center", weight="bold", fontsize=10.5)
-    ax.set_xticks(range(len(g)), [f"{i}\\nn={n}" for i, n in zip(g.index, g["size"])], fontsize=9)
-    ax.set_title(title, fontsize=11, pad=8)
-axes[0].yaxis.set_major_formatter(mtick.PercentFormatter(1, decimals=0))
-axes[0].set_ylim(0, 1)
-axes[-1].text(1.02, base, f"среднее\\n{base:.0%}", transform=axes[-1].get_yaxis_transform(),
-              color=TEXT_3, fontsize=8.5, va="center")
-fig.suptitle("Доля новичков 2023–2025, вернувшихся в следующем сезоне", x=0.125, ha="left",
-             fontsize=13, weight="bold", y=1.04)
+# главный вывод — одним графиком
+main = rate("starts_cat", ["1", "2", "3+"]).rename(index={"1": "1 гонка", "2": "2 гонки", "3+": "3 и больше"})
+fig, ax = plt.subplots(figsize=(9, 3.4))
+colors = [GRAY, BLUE, BLUE]
+ax.barh(main.index[::-1], main["mean"][::-1], color=colors[::-1], height=0.62)
+for i, (v, n) in enumerate(zip(main["mean"][::-1], main["size"][::-1])):
+    ax.text(v - 0.015, i, f"{v:.0%}", va="center", ha="right", color="white", fontsize=15, weight="bold")
+    ax.text(v + 0.015, i, f"{n:,} чел.".replace(",", " "), va="center", color=TEXT_3, fontsize=9)
+ax.set_xlim(0, 1); ax.xaxis.set_major_formatter(mtick.PercentFormatter(1, decimals=0))
+ax.grid(axis="y", visible=False); ax.grid(axis="x", visible=True)
+ax.tick_params(axis="y", labelsize=12)
+ax.set_title("Кто в первом сезоне проехал вторую гонку, тот почти наверняка вернётся")
+viz.subtitle(ax, "Доля новичков 2023–2025, вернувшихся на следующий сезон, по числу гонок в первом сезоне")
 viz.save(fig, "05_aha_moment"); plt.show()
+
+# остальные факторы — таблицей, без отдельных графиков
+other = pd.concat({
+    "Первая дистанция": rate("any_long").rename(index={False: "только короткая", True: "длинная"}),
+    "Место среди финишёров": rate("pct_q"),
+    "Регион первого сезона": rate("macro_region"),
+    "Пол": rate("gender").rename(index={"F": "женщины", "M": "мужчины"}),
+}).rename(columns={"mean": "вернулись", "size": "новичков"})
+other["вернулись"] = other["вернулись"].map("{:.0%}".format)
+other
 """)
 
 md("""
-Вторая гонка в первом сезоне поднимает возврат с 40% до 65%, третья и далее — до 82%. Регион на возврат не влияет (45% против 44%).
+Вторая гонка в первом сезоне поднимает возврат с 40% до 65%, третья и далее — до 82%. Остальные факторы различаются куда слабее (таблица выше), а регион не влияет совсем (45% против 44%).
 Но это корреляция. Проверяю эффекты вместе в логистической регрессии, в двух спецификациях:
 1. фиксированный эффект года — убирает общий тренд роста серии;
 2. плюс фиксированный эффект первого этапа — альтернативное объяснение «дело не в числе стартов, а в том, на какой этап человек попал».
