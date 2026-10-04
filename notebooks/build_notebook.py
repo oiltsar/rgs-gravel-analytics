@@ -240,6 +240,96 @@ md("""
   с 2025-го Fury Road перенесли на середину августа.
 """)
 
+md("""
+## 3а. Регионы: два разных продукта под одним рейтингом
+
+Регион гонщика определяю по его стартам: «домашний» регион — тот, где он проехал больше этапов за сезон.
+Дальше — как устроен общий рейтинг. По [правилам серии](https://gravelseries.ru/rating/2026) место считается по сумме лучших 4 гонок,
+полный зачёт — минимум 4 гонки из 6 рейтинговых. В 2026 году рейтинговые этапы — Царь Грейдер, SHULZ, Ардор, Fury Road (**4 на Северо-Западе**)
+и Спортмарафон, Gravel Instinct (**2 в Центре**); Покрова и Redline в рейтинг не входят. В 2025-м — те же 4 на Северо-Западе и Gravel Instinct с Покровой в Центре.
+""")
+
+code("""
+RATING = {
+    2025: ["Fury Road", "Моддер / Ардор", "SHULZ Gravel Weekend", "Царь Грейдер", "Gravel Instinct", "Покрова"],
+    2026: ["Fury Road", "Моддер / Ардор", "SHULZ Gravel Weekend", "Царь Грейдер", "Gravel Instinct", "Спортмарафон Фест"],
+}
+starts = q(
+    "SELECT r.year, r.rider_id, e.event_name, v.macro_region "
+    "FROM fct_result r JOIN dim_event e ON e.event_id = r.event_id JOIN dim_venue v ON v.event_id = r.event_id "
+    "WHERE r.status <> 'dns' AND r.year >= 2023 AND v.macro_region IS NOT NULL"
+).drop_duplicates()
+per = (starts.groupby(["year", "rider_id", "macro_region"])["event_name"].nunique()
+       .unstack(fill_value=0).rename(columns={"Северо-Запад": "nw", "Центр": "c"}).reset_index())
+per["home"] = np.select([per.nw > per.c, per.c > per.nw], ["Северо-Запад", "Центр"], "поровну")
+per["own"] = np.where(per.home == "Северо-Запад", per.nw, np.where(per.home == "Центр", per.c, 0))
+is_rated = [e in RATING.get(y, []) for y, e in zip(starts.year, starts.event_name)]
+rated = starts[is_rated].groupby(["year", "rider_id"])["event_name"].nunique().rename("rated")
+per = per.merge(rated, on=["year", "rider_id"], how="left").fillna({"rated": 0})
+per["full"] = per.rated >= 4
+
+audience = per.pivot_table(index="year", columns="home", values="rider_id", aggfunc="count")
+print("Гонщиков по домашнему региону:")
+display(audience)
+p26 = per[per.year == 2026]
+compare = pd.DataFrame({
+    "гонщиков": p26.groupby("home").size(),
+    "полный зачёт (4+ рейтинговые)": p26.groupby("home")["full"].sum(),
+    "2+ этапа в своём регионе": p26.groupby("home")["own"].apply(lambda s: (s >= 2).sum()),
+    "3+ этапа в своём регионе": p26.groupby("home")["own"].apply(lambda s: (s >= 3).sum()),
+})
+compare
+""")
+
+code("""
+fig, axes = plt.subplots(1, 2, figsize=(12, 4.2), gridspec_kw={"width_ratios": [1.3, 1]})
+ax = axes[0]
+yrs = audience.index.values
+for k, (reg, color) in enumerate([("Северо-Запад", BLUE), ("Центр", ORANGE)]):
+    ax.bar(yrs + (k - 0.5) * 0.36, audience[reg], width=0.34, color=color, label=reg)
+    for x, v in zip(yrs, audience[reg]):
+        ax.text(x + (k - 0.5) * 0.36, v + 15, f"{v}", ha="center", fontsize=9.5, weight="bold")
+ax.set_xticks(yrs); ax.legend(loc="upper left", fontsize=9)
+ax.set_title("Гонщиков по домашнему региону", fontsize=12)
+viz.subtitle(ax, "Северо-Запад вырос в 5 раз, Центр — в 2,7 раза")
+
+ax = axes[1]
+c26 = compare.loc[["Северо-Запад", "Центр"]]
+cats = ["гонщиков", "полный зачёт (4+ рейтинговые)", "2+ этапа в своём регионе"]
+labels = ["все гонщики", "сейчас в полном\\nзачёте", "2+ этапа в своём\\nрегионе"]
+for i, c in enumerate(cats):
+    tot = c26[c].sum(); left = 0
+    for reg, color in [("Северо-Запад", BLUE), ("Центр", ORANGE)]:
+        share = c26.loc[reg, c] / tot
+        ax.barh(i, share, left=left, color=color, height=0.6, edgecolor=SURFACE, linewidth=1.5)
+        ax.text(left + share / 2, i, f"{c26.loc[reg, c]}", ha="center", va="center", color="white", fontsize=10, weight="bold")
+        left += share
+ax.set_yticks(range(len(cats)), labels, fontsize=9.5); ax.invert_yaxis()
+ax.xaxis.set_major_formatter(mtick.PercentFormatter(1, decimals=0)); ax.set_xlim(0, 1)
+ax.grid(axis="y", visible=False); ax.grid(axis="x", visible=True)
+ax.set_title("2026: доля регионов", fontsize=12)
+viz.subtitle(ax, "В Центре 41% гонщиков, но 7% полного зачёта")
+fig.tight_layout()
+viz.save(fig, "03a_regions"); plt.show()
+""")
+
+md("""
+**Выводы:**
+- Аудитория серии **сместилась на Северо-Запад**: в 2023 году большинство было в Центре (257 против 199), в 2026-м Северо-Запад впереди (992 против 695).
+- В другой регион ездят лишь ~7% гонщиков, и это симметрично: из Центра на Северо-Запад и обратно ездят одинаково редко.
+- **Общий рейтинг структурно недоступен Центру.** Для полного зачёта нужно 4 рейтинговые гонки, а в Центре их две. В 2026 году в полном зачёте
+  65 гонщиков Северо-Запада и **5 из Центра**, хотя в Центре 41% гонщиков (без учёта «поровну»).
+- Внутри регионов гонщики ездят: **2+ этапа в своём регионе** проехали 338 человек на Северо-Западе и **108 в Центре**.
+
+💡 **Предложение: региональные зачёты.**
+- **«Север»** — Царь Грейдер, SHULZ, Ардор, Fury Road. **«Центр»** — Спортмарафон, Gravel Instinct, Покрова (+ Redline, если подтвердится, что он в Подмосковье).
+- Порог — **2 этапа своего региона**. Он совпадает с aha-моментом из раздела 6: вторая гонка в первом сезоне — главный предиктор возврата.
+  Региональный зачёт даёт новичку понятную цель «вторая гонка рядом с домом».
+- Общий зачёт по 4 гонкам остаётся «абсолютом» для тех, кто ездит по всей стране.
+- Эффект: в борьбе за зачёт в Центре окажется ~108 человек вместо 5, на Северо-Западе — ~338 вместо 65. Сработает ли это на удержание, можно проверить,
+  сравнив возврат и долю вторых стартов до и после введения зачёта (лучше — вводя его поэтапно по регионам).
+""")
+
 md("## 4. Рост 2023–2026: аудитория ×3,9, частота стартов ×1,3")
 
 code("""
@@ -636,6 +726,7 @@ md("""
 | 2 | Retention +1 сезона: 35% → 51% → 45% | Мониторить: у когорты 2025 года просадка на 6 п.п. |
 | 3 | **Второй старт в первом сезоне: шансы вернуться ×2,7–2,9** (устойчиво к поправке на этап) | A/B-тест промокода на следующий этап своего региона: MDE ≈ 9 п.п. за сезон |
 | 4 | Серия — два кластера в ~600 км; общую аудиторию этапов определяет расстояние (R² ≈ 0,7) | Разводить этапы одного региона на 2–3 недели; растить переходы между регионами (сейчас 12%) |
+| 4а | В полном зачёте 65 гонщиков Северо-Запада и 5 из Центра: в Центре всего 2 рейтинговых этапа | Региональные зачёты «Север» и «Центр» с порогом 2 этапа своего региона |
 | 5 | Лучшие входы — Покрова и Царь Грейдер (51–55%), худший — Спортмарафон (34%) | Разобрать и перенести практики лидеров |
 | 6 | Короткая удерживает 37% против 51% у длинной; на длинную за сезон переходит 21% вернувшихся | Растить удержание короткой как отдельного продукта |
 

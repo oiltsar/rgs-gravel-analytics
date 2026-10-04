@@ -141,6 +141,22 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
 .checks .mk { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #fff; }
 .checks b { color: var(--ink); }
 
+
+/* regions */
+.reg-years { display: flex; gap: 18px; align-items: flex-end; height: 220px; border-bottom: 1px solid var(--line); padding-top: 18px; }
+.ry { flex: 1; display: flex; flex-direction: column; height: 100%; }
+.ry-bars { flex: 1; display: flex; gap: 6px; align-items: flex-end; }
+.ry-col { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; cursor: default; }
+.ry-col span { font-size: 12px; font-weight: 700; margin-bottom: 3px; }
+.ry-col i { display: block; width: 100%; border-radius: 4px 4px 0 0; }
+.ry-y { text-align: center; font-size: 12.5px; color: var(--ink-2); padding-top: 6px; margin-bottom: -26px; }
+.reg-years { margin-bottom: 28px; }
+.reg-rows { display: grid; gap: 16px; margin-top: 8px; }
+.rr { display: grid; grid-template-columns: 130px 1fr; gap: 12px; align-items: center; cursor: default; }
+.rr-l { font-size: 13px; color: var(--ink-2); text-align: right; line-height: 1.25; }
+.rr-bar { display: flex; height: 38px; border-radius: 6px; overflow: hidden; gap: 2px; }
+.rr-bar i { display: flex; align-items: center; justify-content: center; color: #fff; font-style: normal; font-weight: 700; font-size: 13px; min-width: 26px; }
+
 #tip { position: fixed; z-index: 10; pointer-events: none; background: var(--tip-bg); color: var(--tip-fg); padding: 8px 10px; border-radius: 6px;
        font-size: 12.5px; line-height: 1.4; max-width: 260px; opacity: 0; transition: opacity .12s; }
 #tip b { font-weight: 600; }
@@ -206,6 +222,36 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
       <li>В 2024 году Fury Road стоял за неделю до SHULZ — общих участников было 19%. После переноса на август — 34% и 47%. Перенос совпал с запуском серии, поэтому эффект календаря не доказан.</li>
       <li>Gravel Instinct в 2026 году переехал из-под Покрова в Тверскую область, и общая аудитория с Покровой упала с 39% до 28%.</li>
       <li><b>Рекомендации:</b> разводить этапы одного региона на 2–3 недели, не допускать совпадений (SHULZ и Gravel Instinct 20.07.2024), растить переходы между регионами: совместный трансфер, пакет «два этапа в другом регионе».</li>
+    </ul>
+  </section>
+
+
+  <section id="regions">
+    <div class="head">
+      <div class="eyebrow">Регионы</div>
+      <h2>Общий рейтинг почти недоступен Центру — нужны региональные зачёты</h2>
+      <p class="lede">Домашний регион гонщика — тот, где он проехал больше этапов за сезон. Полный зачёт серии — 4 рейтинговые гонки, а в 2026 году
+        4 рейтинговых этапа на Северо-Западе и только 2 в Центре (Спортмарафон и Gravel Instinct; Покрова и Redline вне рейтинга).</p>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="chart-title">Гонщиков по домашнему региону</div>
+        <div class="chart-sub">Северо-Запад вырос в 5 раз, Центр — в 2,7 раза</div>
+        <div class="legend"><span><i style="background:var(--s1)"></i>Северо-Запад</span><span><i style="background:var(--s2)"></i>Центр</span></div>
+        <div class="reg-years" id="regYears"></div>
+      </div>
+      <div class="card">
+        <div class="chart-title">2026: доля регионов</div>
+        <div class="chart-sub">Число гонщиков в каждой группе</div>
+        <div class="reg-rows" id="regRows"></div>
+      </div>
+    </div>
+    <ul class="takeaways">
+      <li>В 2026 году в полном зачёте <b>65 гонщиков Северо-Запада и 5 из Центра</b>, хотя в Центре 41% аудитории. В другой регион ездят лишь ~7% гонщиков.</li>
+      <li><b>Предложение:</b> региональные зачёты «Север» (Царь Грейдер, SHULZ, Ардор, Fury Road) и «Центр» (Спортмарафон, Gravel Instinct, Покрова) с порогом <b>2 этапа своего региона</b>.
+        Общий зачёт по 4 гонкам остаётся «абсолютом».</li>
+      <li>Порог «2 этапа» совпадает с aha-моментом: в борьбе за зачёт окажутся ~108 гонщиков Центра вместо 5 и ~338 на Северо-Западе вместо 65.
+        Эффект на удержание стоит проверить, вводя зачёт поэтапно по регионам.</li>
     </ul>
   </section>
 
@@ -558,6 +604,31 @@ function hbars(el, rows, max, base) {
     svgEl("circle", { cx: x(p.km), cy: y(p.share_of_smaller), r: 6, fill: same ? "var(--s1)" : "var(--s2)", stroke: "var(--surface)", "stroke-width": 1.5 }, g);
     bindTip(g, `<b>${p.event_a} – ${p.event_b}</b>, ${p.year}<br>${fmt(Math.round(p.km))} км · ${p.gap_days} дн. между этапами<br>Общих гонщиков: <b>${fmt(p.shared_riders)}</b> (${pct(p.share_of_smaller)} аудитории меньшего этапа)`);
   });
+})();
+
+
+/* ---------- regions ---------- */
+(function () {
+  const R = D.regions, regs = [["Северо-Запад", "var(--s1)"], ["Центр", "var(--s2)"]];
+  const get = (y, h) => R.find(r => r.year === y && r.home === h) || { riders: 0, full_standing: 0, own2: 0 };
+  const years = [...new Set(R.map(r => r.year))];
+  const max = Math.max(...R.filter(r => r.home !== "поровну").map(r => r.riders));
+  const box = document.getElementById("regYears");
+  box.innerHTML = years.map(y => `<div class="ry"><div class="ry-bars">${regs.map(([h, c]) => {
+      const v = get(y, h).riders;
+      return `<div class="ry-col" data-tip data-y="${y}" data-h="${h}" data-v="${v}"><span>${fmt(v)}</span><i style="height:${v / max * 100}%;background:${c}"></i></div>`;
+    }).join("")}</div><div class="ry-y">${y}</div></div>`).join("");
+  box.querySelectorAll(".ry-col").forEach(el => bindTip(el, `<b>${el.dataset.h}, ${el.dataset.y}</b><br>${fmt(+el.dataset.v)} гонщиков с этим домашним регионом`));
+
+  const rows = [["все гонщики", "riders"], ["сейчас в полном зачёте", "full_standing"], ["2+ этапа в своём регионе", "own2"]];
+  const rb = document.getElementById("regRows");
+  rb.innerHTML = rows.map(([label, k]) => {
+    const nw = get(2026, "Северо-Запад")[k], c = get(2026, "Центр")[k], tot = nw + c;
+    return `<div class="rr" data-tip data-l="${label}" data-nw="${nw}" data-c="${c}"><div class="rr-l">${label}</div><div class="rr-bar">
+      <i style="width:${nw / tot * 100}%;background:var(--s1)">${fmt(nw)}</i><i style="width:${c / tot * 100}%;background:var(--s2)">${fmt(c)}</i></div></div>`;
+  }).join("");
+  rb.querySelectorAll(".rr").forEach(el => bindTip(el,
+    `<b>${el.dataset.l}, 2026</b><br>Северо-Запад: ${fmt(+el.dataset.nw)}<br>Центр: ${fmt(+el.dataset.c)} (${pct(+el.dataset.c / (+el.dataset.nw + +el.dataset.c))})`));
 })();
 
 /* ---------- speed dot plot ---------- */

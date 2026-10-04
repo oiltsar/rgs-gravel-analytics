@@ -107,7 +107,30 @@ def build() -> dict:
                    FROM fct_result r JOIN dim_venue v ON v.event_id = r.event_id
                    WHERE r.status <> 'dns' GROUP BY ALL) GROUP BY 1 ORDER BY 1""").round(4)
 
+    # домашний регион гонщика = регион, где он проехал больше этапов за сезон
+    rating_2026 = ("Fury Road", "Моддер / Ардор", "SHULZ Gravel Weekend", "Царь Грейдер", "Gravel Instinct", "Спортмарафон Фест")
+    home = q(f"""
+        WITH st AS (
+            SELECT DISTINCT r.year, r.rider_id, e.event_name, v.macro_region
+            FROM fct_result r JOIN dim_event e ON e.event_id = r.event_id JOIN dim_venue v ON v.event_id = r.event_id
+            WHERE r.status <> 'dns' AND r.year >= 2023 AND v.macro_region IS NOT NULL
+        ),
+        per AS (
+            SELECT year, rider_id,
+                   COUNT(*) FILTER (WHERE macro_region = 'Северо-Запад') AS nw,
+                   COUNT(*) FILTER (WHERE macro_region = 'Центр')        AS c,
+                   COUNT(*) FILTER (WHERE year = 2026 AND event_name IN {rating_2026}) AS rated
+            FROM st GROUP BY ALL
+        )
+        SELECT year,
+               CASE WHEN nw > c THEN 'Северо-Запад' WHEN c > nw THEN 'Центр' ELSE 'поровну' END AS home,
+               COUNT(*)                                   AS riders,
+               COUNT(*) FILTER (WHERE rated >= 4)         AS full_standing,
+               COUNT(*) FILTER (WHERE GREATEST(nw, c) >= 2 AND nw <> c) AS own2
+        FROM per GROUP BY ALL ORDER BY 1, 2""")
+
     return {
+        "regions": records(home),
         "venues": records(venues), "pairs": records(pairs), "cross": records(cross),
         "season": records(season), "cohort": records(cohort), "aha": aha,
         "entry": entry_points, "overlap": records(overlap), "eventSizes": records(sizes),
