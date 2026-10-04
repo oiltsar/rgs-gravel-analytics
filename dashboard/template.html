@@ -57,13 +57,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 /* ---------- header ---------- */
 header { display: grid; gap: 22px; padding-top: 40px; }
 .route { position: relative; padding: 26px 0 4px; overflow-x: auto; }
-.route ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(92px, 1fr)); position: relative; min-width: 760px; }
+.route ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(92px, 1fr)); position: relative; min-width: 660px; }
 .route ol::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; border-top: 2px dashed var(--ink-3); opacity: .55; }
 .route li { position: relative; display: grid; gap: 2px; padding-top: 22px; font-size: 13px; }
 .route li::before { content: ""; position: absolute; top: 1px; left: 0; width: 14px; height: 14px; border-radius: 50%;
                     background: var(--surface); border: 3px solid var(--dot, var(--accent)); }
 .route .km { font-family: var(--f-mono); font-size: 11.5px; color: var(--ink-3); }
 .route b { font-weight: 600; line-height: 1.2; }
+.route li.off::before { background: var(--surface); border-style: dashed; }
+.route .tag { font-size: 11px; color: var(--ink-3); }
+.route-legend { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 12.5px; color: var(--ink-3); margin-top: 10px; }
+.route-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
 
 .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
 .kpi { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; display: grid; gap: 4px; align-content: start; }
@@ -157,6 +161,14 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
 .rr-bar { display: flex; height: 38px; border-radius: 6px; overflow: hidden; gap: 2px; }
 .rr-bar i { display: flex; align-items: center; justify-content: center; color: #fff; font-style: normal; font-weight: 700; font-size: 13px; min-width: 26px; }
 
+/* summary */
+.sum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.sum { display: grid; gap: 6px; align-content: start; }
+.sum-n { font-family: var(--f-display); font-size: 34px; line-height: 1; color: var(--accent); }
+.sum b { font-size: 15px; }
+.sum p { font-size: 13.5px; color: var(--ink-2); }
+.sum.idea { border-style: dashed; }
+
 #tip { position: fixed; z-index: 10; pointer-events: none; background: var(--tip-bg); color: var(--tip-fg); padding: 8px 10px; border-radius: 6px;
        font-size: 12.5px; line-height: 1.4; max-width: 260px; opacity: 0; transition: opacity .12s; }
 #tip b { font-weight: 600; }
@@ -176,6 +188,8 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
       тот же набор гонок, а в 2025-м они официально объединены в серию.</p>
     <div class="route" aria-label="Календарь этапов 2026">
       <ol id="route"></ol>
+      <div class="route-legend"><span><i style="background:var(--s1)"></i>Северо-Запад</span><span><i style="background:var(--s2)"></i>Центр</span>
+        <span><i style="border:2px dashed var(--ink-3)"></i>вне рейтинга серии</span></div>
     </div>
     <div class="kpis" id="kpis"></div>
   </header>
@@ -208,7 +222,7 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
     </div>
     <div class="card">
       <div class="chart-title">Календарь этапов по сезонам</div>
-      <div class="legend"><span><i style="background:var(--s1)"></i>Северо-Запад</span><span><i style="background:var(--s2)"></i>Центр</span><span><i style="background:var(--muted-bar)"></i>место не найдено</span></div>
+      <div class="legend"><span><i style="background:var(--s1)"></i>Северо-Запад</span><span><i style="background:var(--s2)"></i>Центр</span><span><i style="background:var(--muted-bar)"></i>место не найдено</span><span><i style="background:var(--surface);border:2px solid var(--ink-3);border-radius:50%"></i>вне рейтинга</span></div>
       <div class="scroll"><svg id="calChart" role="img" aria-label="Календарь этапов"></svg></div>
     </div>
     <div class="card">
@@ -221,7 +235,8 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
       <li><b>Расстояние объясняет ~70% разброса</b> общей аудитории: внутри региона — около трети общих участников, между регионами — около 10%.</li>
       <li>В 2024 году Fury Road стоял за неделю до SHULZ — общих участников было 19%. После переноса на август — 34% и 47%. Перенос совпал с запуском серии, поэтому эффект календаря не доказан.</li>
       <li>Gravel Instinct в 2026 году переехал из-под Покрова в Тверскую область, и общая аудитория с Покровой упала с 39% до 28%.</li>
-      <li><b>Рекомендации:</b> разводить этапы одного региона на 2–3 недели, не допускать совпадений (SHULZ и Gravel Instinct 20.07.2024), растить переходы между регионами: совместный трансфер, пакет «два этапа в другом регионе».</li>
+      <li><b>Календарь:</b> нынешнее чередование регионов правильное — в каждом регионе этап раз в 2–3 недели. Если поставить подряд сначала один регион, потом другой,
+        этапы одного региона окажутся через неделю, как в 2024 году (19–42% общих участников против 47–64% сейчас). Закрепить: этапы одного региона не чаще раза в 2 недели, без совпадений дат.</li>
     </ul>
   </section>
 
@@ -248,7 +263,7 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
     </div>
     <ul class="takeaways">
       <li>В 2026 году в полном зачёте <b>65 гонщиков Северо-Запада и 5 из Центра</b>, хотя в Центре 41% аудитории. В другой регион ездят лишь ~7% гонщиков.</li>
-      <li><b>Предложение:</b> региональные зачёты «Север» (Царь Грейдер, SHULZ, Ардор, Fury Road) и «Центр» (Спортмарафон, Gravel Instinct, Покрова) с порогом <b>2 этапа своего региона</b>.
+      <li><b>Предложение:</b> региональные зачёты «Север» (Царь Грейдер, SHULZ, Ардор, Fury Road) и «Центр» (Спортмарафон, Gravel Instinct и Покрова — вернув её в рейтинг, как в 2025 году) с порогом <b>2 этапа своего региона</b>.
         Общий зачёт по 4 гонкам остаётся «абсолютом».</li>
       <li>Порог «2 этапа» совпадает с aha-моментом: в борьбе за зачёт окажутся ~108 гонщиков Центра вместо 5 и ~338 на Северо-Западе вместо 65.
         Эффект на удержание стоит проверить, вводя зачёт поэтапно по регионам.</li>
@@ -326,6 +341,31 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
     </ul>
   </section>
 
+
+  <section id="gender">
+    <div class="head">
+      <div class="eyebrow">Кто гоняется</div>
+      <h2>Женщин 17–19%, и на короткой дистанции они возвращаются реже</h2>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="chart-title">Доля женщин среди стартов, 2023–2026</div>
+        <div class="hbars" id="gDist" style="margin-top:14px"></div>
+      </div>
+      <div class="card">
+        <div class="chart-title">Возврат новичков на следующий сезон</div>
+        <div class="chart-sub">по первой дистанции и полу</div>
+        <div class="hbars" id="gRet"></div>
+      </div>
+    </div>
+    <ul class="takeaways">
+      <li>На длинной дистанции женщины возвращаются так же, как мужчины (<b>51% и 50%</b>). Разрыв только на короткой: <b>31% против 39%</b>.</li>
+      <li>Точка роста — удержание женщин, пришедших на короткую: отдельный зачёт, женские группы, понятная следующая цель после первой гонки.</li>
+      <li>Возраст проанализировать нельзя: в протоколах его нет, а в карточках гонщиков год рождения не заполнен.</li>
+    </ul>
+  </section>
+
+
   <section id="speed">
     <div class="head">
       <div class="eyebrow">Трассы</div>
@@ -335,6 +375,22 @@ footer .cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(mi
       <div class="chart-title">Средняя скорость финишёров, 2026</div>
       <div class="chart-sub">Медиана (точка) и межквартильный размах (полоса), км/ч. Только дистанции с известным километражем</div>
       <div class="scroll"><svg id="speedChart" role="img" aria-label="Скорость по дистанциям"></svg></div>
+    </div>
+  </section>
+
+  <section id="summary">
+    <div class="head">
+      <div class="eyebrow">Итоги</div>
+      <h2>Что делать организаторам</h2>
+    </div>
+    <div class="sum-grid">
+      <div class="card sum"><div class="sum-n">×2,7</div><b>Второй старт в первом сезоне</b><p>Главный рычаг удержания. Проверить A/B-тестом промокода на следующий этап своего региона.</p></div>
+      <div class="card sum"><div class="sum-n">5 из 75</div><b>Гонщиков Центра в полном зачёте</b><p>Ввести региональные зачёты «Север» и «Центр» с порогом 2 этапа и вернуть Покрову в рейтинг.</p></div>
+      <div class="card sum"><div class="sum-n">2–3 нед.</div><b>Между этапами одного региона</b><p>Сохранить чередование регионов в календаре, не ставить этапы одного региона подряд.</p></div>
+      <div class="card sum"><div class="sum-n">34% vs 55%</div><b>Возврат после Спортмарафона и Покровы</b><p>Разобрать, что лидеры делают после гонки, и перенести практики на остальные этапы.</p></div>
+      <div class="card sum"><div class="sum-n">31% vs 39%</div><b>Женщины на короткой дистанции</b><p>Растить удержание короткой дистанции как отдельного продукта, в первую очередь — у женщин.</p></div>
+      <div class="card sum idea"><div class="sum-n">идея</div><b>Онлайн-квалификации для других регионов</b><p>Сезон онлайн-гонок в Strava (например, «Поволжская гравийная серия»), победители получают бесплатный слот на этап РГС.
+        Цель — привести гонщиков из регионов, где этапов нет. Метрики: сколько победителей приехали и вернулись ли они на второй этап.</p></div>
     </div>
   </section>
 
@@ -385,12 +441,11 @@ const svgEl = (tag, attrs, parent) => {
 
 /* ---------- route + KPIs ---------- */
 const regColor = r => r === "Северо-Запад" ? "var(--s1)" : r === "Центр" ? "var(--s2)" : "var(--muted-bar)";
-const kmByEvent = { "Спортмарафон Фест": "40 · 65 · 125 км", "Царь Грейдер": "110 · 150 · 180 км", "Redline": "88 км",
-  "SHULZ Gravel Weekend": "60 · 111 км", "Gravel Instinct": "88 · 170 км", "Моддер / Ардор": "75 · 110 км",
-  "Покрова": "основной круг", "Fury Road": "40 · 80 · 130 км" };
 const dm = d => d.slice(8, 10) + "." + d.slice(5, 7);
-document.getElementById("route").innerHTML = D.venues.filter(v => v.year === 2026).map(v =>
-  `<li style="--dot:${regColor(v.macro_region)}"><span class="eyebrow" style="font-size:11px">${dm(v.date)}</span><b>${v.event.replace(" Gravel Weekend", "")}</b><span class="km">${v.region || "место не найдено"} · ${kmByEvent[v.event] || ""}</span></li>`).join("");
+const rated = (y, e) => !D.rating[y] || D.rating[y].includes(e);   // 2023: рейтинга ещё не было
+// Redline есть в архиве протоколов, но не входит ни в рейтинг, ни в календарь серии — в шапку не выводим
+document.getElementById("route").innerHTML = D.venues.filter(v => v.year === 2026 && v.event !== "Redline").map(v =>
+  `<li class="${rated(2026, v.event) ? "" : "off"}" style="--dot:${regColor(v.macro_region)}"><span class="eyebrow" style="font-size:11px">${dm(v.date)}</span><b>${v.event.replace(" Gravel Weekend", "")}</b>${rated(2026, v.event) ? "" : '<span class="tag">вне рейтинга</span>'}</li>`).join("");
 
 const SALL = D.season, S = SALL.filter(s => s.year >= 2023), last = S[S.length - 1], prev = S[S.length - 2];
 const crossOf = y => (D.cross.find(c => c.year === y) || {}).cross_region_share;
@@ -509,7 +564,7 @@ function hbars(el, rows, max, base) {
   const E = D.entry;
   document.getElementById("entrySub").textContent = `Новички 2023–2025, доля вернувшихся на следующий сезон. Пунктир — среднее ${pct(E.base)}`;
   hbars(document.getElementById("entryBars"), E.rows.map(r => ({
-    name: r.event, v: r.rate, label: pct(r.rate), small: "n=" + fmt(r.n),
+    name: r.event === "Покрова" ? "Покрова · вне рейтинга с 2026" : r.event, v: r.rate, label: pct(r.rate), small: "n=" + fmt(r.n),
     color: r.rate >= E.base ? "var(--s1)" : "var(--muted-bar)",
     tip: `<b>${r.event}</b> как первый этап<br>Вернулись: <b>${pct(r.rate, 1)}</b> из ${fmt(r.n)} новичков`,
   })), .75, E.base);
@@ -576,11 +631,13 @@ function hbars(el, rows, max, base) {
       if (v.date_quality === "approx_late_july")
         svgEl("rect", { x: cx - 6, y: cy + dy - 6, width: 12, height: 12, transform: `rotate(45 ${cx} ${cy + dy})`, fill: regColor(v.macro_region), stroke: "var(--surface)", "stroke-width": 2 }, g);
       else
-        svgEl("circle", { cx, cy: cy + dy, r: 7, fill: regColor(v.macro_region), stroke: "var(--surface)", "stroke-width": 2 }, g);
+        svgEl("circle", rated(yr, v.event)
+          ? { cx, cy: cy + dy, r: 7, fill: regColor(v.macro_region), stroke: "var(--surface)", "stroke-width": 2 }
+          : { cx, cy: cy + dy, r: 6, fill: "var(--surface)", stroke: regColor(v.macro_region), "stroke-width": 2.5 }, g);
       const up = clash ? dy < 0 : j % 2 === 0;
       svgEl("text", { x: cx, y: cy + dy + (up ? -13 : 22), "text-anchor": "middle", "font-size": 11.5, fill: "var(--ink-2)" }, g)
         .textContent = v.event.replace(" Gravel Weekend", "").replace("Спортмарафон Фест", "Спортмарафон").replace("Gravel Instinct", "G. Instinct");
-      bindTip(g, `<b>${v.event}</b> · ${dm(v.date)}.${yr}${v.date_quality === "approx_late_july" ? " (приблизительно)" : ""}<br>${v.venue}<br>${v.region || ""}${clash ? "<br><b>В этот день был ещё один этап</b>" : ""}`);
+      bindTip(g, `<b>${v.event}</b> · ${dm(v.date)}.${yr}${v.date_quality === "approx_late_july" ? " (приблизительно)" : ""}${rated(yr, v.event) ? "" : " · вне рейтинга"}<br>${v.venue}<br>${v.region || ""}${clash ? "<br><b>В этот день был ещё один этап</b>" : ""}`);
     });
   });
 })();
@@ -629,6 +686,25 @@ function hbars(el, rows, max, base) {
   }).join("");
   rb.querySelectorAll(".rr").forEach(el => bindTip(el,
     `<b>${el.dataset.l}, 2026</b><br>Северо-Запад: ${fmt(+el.dataset.nw)}<br>Центр: ${fmt(+el.dataset.c)} (${pct(+el.dataset.c / (+el.dataset.nw + +el.dataset.c))})`));
+})();
+
+
+/* ---------- gender ---------- */
+(function () {
+  const gd = D.genderDist, gr = D.genderRet;
+  hbars(document.getElementById("gDist"), ["короткая", "длинная"].map(k => {
+    const r = gd.find(x => x.distance === k);
+    return { name: k + " дистанция", v: r.female_share, label: pct(r.female_share), small: "", color: "var(--s2)",
+             tip: `<b>${k} дистанция</b><br>Женщин среди стартов: ${pct(r.female_share, 1)}` };
+  }), 0.4);
+  const rows = [];
+  ["длинная", "короткая"].forEach(dist => ["F", "M"].forEach(g => {
+    const r = gr.find(x => x.distance === dist && x.gender === g);
+    rows.push({ name: `${dist}, ${g === "F" ? "женщины" : "мужчины"}`, v: r.rate, label: pct(r.rate), small: "n=" + fmt(r.n),
+                color: g === "F" ? "var(--s2)" : "var(--s1)",
+                tip: `<b>${dist} дистанция, ${g === "F" ? "женщины" : "мужчины"}</b><br>Вернулись: ${pct(r.rate, 1)} из ${fmt(r.n)}` });
+  }));
+  hbars(document.getElementById("gRet"), rows, 0.75);
 })();
 
 /* ---------- speed dot plot ---------- */

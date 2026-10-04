@@ -1,4 +1,67 @@
 {
+ "rating": {
+  "2024": [
+   "Fury Road",
+   "Gravel Instinct",
+   "SHULZ Gravel Weekend",
+   "Моддер / Ардор",
+   "Покрова",
+   "Спортмарафон Фест",
+   "Царь Грейдер"
+  ],
+  "2025": [
+   "Fury Road",
+   "Gravel Instinct",
+   "SHULZ Gravel Weekend",
+   "Моддер / Ардор",
+   "Покрова",
+   "Царь Грейдер"
+  ],
+  "2026": [
+   "Fury Road",
+   "Gravel Instinct",
+   "SHULZ Gravel Weekend",
+   "Моддер / Ардор",
+   "Спортмарафон Фест",
+   "Царь Грейдер"
+  ]
+ },
+ "genderDist": [
+  {
+   "distance": "длинная",
+   "female_share": 0.1318
+  },
+  {
+   "distance": "короткая",
+   "female_share": 0.2257
+  }
+ ],
+ "genderRet": [
+  {
+   "distance": "длинная",
+   "gender": "F",
+   "rate": 0.512,
+   "n": 125
+  },
+  {
+   "distance": "длинная",
+   "gender": "M",
+   "rate": 0.504,
+   "n": 758
+  },
+  {
+   "distance": "короткая",
+   "gender": "F",
+   "rate": 0.3102,
+   "n": 187
+  },
+  {
+   "distance": "короткая",
+   "gender": "M",
+   "rate": 0.3933,
+   "n": 506
+  }
+ ],
  "regions": [
   {
    "year": 2023,
@@ -397,6 +460,149 @@
  ],
  "pairs": [
   {
+   "year": 2025,
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 76,
+   "share_of_smaller": 0.236,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 21,
+   "km": 186.853
+  },
+  {
+   "year": 2024,
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 43,
+   "share_of_smaller": 0.267,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 21,
+   "km": 219.319
+  },
+  {
+   "year": 2024,
+   "event_a": "Gravel Instinct",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 9,
+   "share_of_smaller": 0.2,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 21,
+   "km": 617.03
+  },
+  {
+   "year": 2023,
+   "event_a": "Покрова",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 14,
+   "share_of_smaller": 0.131,
+   "region_a": "Центр",
+   "region_b": "Центр",
+   "gap_days": 56,
+   "km": 325.46
+  },
+  {
+   "year": 2023,
+   "event_a": "Моддер / Ардор",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 13,
+   "share_of_smaller": 0.302,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 14,
+   "km": 218.992
+  },
+  {
+   "year": 2026,
+   "event_a": "Fury Road",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 91,
+   "share_of_smaller": 0.259,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 28,
+   "km": 518.789
+  },
+  {
+   "year": 2023,
+   "event_a": "Моддер / Ардор",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 15,
+   "share_of_smaller": 0.349,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 21,
+   "km": 49.314
+  },
+  {
+   "year": 2026,
+   "event_a": "Моддер / Ардор",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 78,
+   "share_of_smaller": 0.338,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 35,
+   "km": 218.992
+  },
+  {
+   "year": 2026,
+   "event_a": "Fury Road",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 122,
+   "share_of_smaller": 0.332,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 56,
+   "km": 221.703
+  },
+  {
+   "year": 2024,
+   "event_a": "Fury Road",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 20,
+   "share_of_smaller": 0.385,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 14,
+   "km": 2.73
+  },
+  {
+   "year": 2026,
+   "event_a": "Моддер / Ардор",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 118,
+   "share_of_smaller": 0.511,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 14,
+   "km": 23.735
+  },
+  {
+   "year": 2026,
+   "event_a": "Fury Road",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 210,
+   "share_of_smaller": 0.469,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 35,
+   "km": 21.691
+  },
+  {
+   "year": 2024,
+   "event_a": "Моддер / Ардор",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 1,
+   "share_of_smaller": 0.019,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 49,
+   "km": 728.351
+  },
+  {
    "year": 2024,
    "event_a": "Покрова",
    "event_b": "Спортмарафон Фест",
@@ -406,17 +612,6 @@
    "region_b": "Центр",
    "gap_days": 56,
    "km": 325.46
-  },
-  {
-   "year": 2023,
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 12,
-   "share_of_smaller": 0.174,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 35,
-   "km": 219.319
   },
   {
    "year": 2023,
@@ -430,26 +625,81 @@
    "km": 747.819
   },
   {
-   "year": 2024,
-   "event_a": "Fury Road",
-   "event_b": "Gravel Instinct",
-   "shared_riders": 2,
-   "share_of_smaller": 0.044,
+   "year": 2023,
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 12,
+   "share_of_smaller": 0.174,
    "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 7,
-   "km": 750.058
+   "region_b": "Северо-Запад",
+   "gap_days": 35,
+   "km": 219.319
   },
   {
-   "year": 2026,
-   "event_a": "Fury Road",
+   "year": 2024,
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 10,
+   "share_of_smaller": 0.062,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 21,
+   "km": 539.841
+  },
+  {
+   "year": 2025,
+   "event_a": "SHULZ Gravel Weekend",
    "event_b": "Спортмарафон Фест",
-   "shared_riders": 42,
-   "share_of_smaller": 0.118,
+   "shared_riders": 10,
+   "share_of_smaller": 0.037,
    "region_a": "Северо-Запад",
    "region_b": "Центр",
-   "gap_days": 63,
-   "km": 730.651
+   "gap_days": 35,
+   "km": 718.947
+  },
+  {
+   "year": 2023,
+   "event_a": "Покрова",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 9,
+   "share_of_smaller": 0.13,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 14,
+   "km": 634.516
+  },
+  {
+   "year": 2024,
+   "event_a": "Gravel Instinct",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 8,
+   "share_of_smaller": 0.178,
+   "region_a": "Центр",
+   "region_b": "Центр",
+   "gap_days": 42,
+   "km": 259.453
+  },
+  {
+   "year": 2023,
+   "event_a": "Покрова",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 4,
+   "share_of_smaller": 0.029,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 21,
+   "km": 783.634
+  },
+  {
+   "year": 2024,
+   "event_a": "Моддер / Ардор",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 18,
+   "share_of_smaller": 0.346,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 28,
+   "km": 218.992
   },
   {
    "year": 2025,
@@ -474,26 +724,15 @@
    "km": 539.841
   },
   {
-   "year": 2024,
-   "event_a": "Моддер / Ардор",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 22,
-   "share_of_smaller": 0.423,
+   "year": 2026,
+   "event_a": "Fury Road",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 42,
+   "share_of_smaller": 0.118,
    "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 7,
-   "km": 49.314
-  },
-  {
-   "year": 2024,
-   "event_a": "Моддер / Ардор",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 18,
-   "share_of_smaller": 0.346,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 28,
-   "km": 218.992
+   "region_b": "Центр",
+   "gap_days": 63,
+   "km": 730.651
   },
   {
    "year": 2025,
@@ -507,6 +746,17 @@
    "km": 2.73
   },
   {
+   "year": 2024,
+   "event_a": "Моддер / Ардор",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 22,
+   "share_of_smaller": 0.423,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 7,
+   "km": 49.314
+  },
+  {
    "year": 2026,
    "event_a": "Моддер / Ардор",
    "event_b": "Спортмарафон Фест",
@@ -516,6 +766,292 @@
    "region_b": "Центр",
    "gap_days": 42,
    "km": 728.351
+  },
+  {
+   "year": 2024,
+   "event_a": "Покрова",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 18,
+   "share_of_smaller": 0.135,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 35,
+   "km": 634.516
+  },
+  {
+   "year": 2024,
+   "event_a": "Покрова",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 5,
+   "share_of_smaller": 0.038,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 14,
+   "km": 783.634
+  },
+  {
+   "year": 2023,
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 4,
+   "share_of_smaller": 0.037,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 77,
+   "km": 746.503
+  },
+  {
+   "year": 2026,
+   "event_a": "Покрова",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 50,
+   "share_of_smaller": 0.153,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 42,
+   "km": 634.516
+  },
+  {
+   "year": 2026,
+   "event_a": "Gravel Instinct",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 48,
+   "share_of_smaller": 0.137,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 7,
+   "km": 540.48
+  },
+  {
+   "year": 2025,
+   "event_a": "Fury Road",
+   "event_b": "Покрова",
+   "shared_riders": 63,
+   "share_of_smaller": 0.251,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 14,
+   "km": 749.263
+  },
+  {
+   "year": 2026,
+   "event_a": "Покрова",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 25,
+   "share_of_smaller": 0.077,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 21,
+   "km": 770.315
+  },
+  {
+   "year": 2025,
+   "event_a": "Gravel Instinct",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 24,
+   "share_of_smaller": 0.126,
+   "region_a": "Центр",
+   "region_b": "Центр",
+   "gap_days": 42,
+   "km": 259.453
+  },
+  {
+   "year": 2026,
+   "event_a": "Gravel Instinct",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 90,
+   "share_of_smaller": 0.256,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 28,
+   "km": 367.891
+  },
+  {
+   "year": 2025,
+   "event_a": "Моддер / Ардор",
+   "event_b": "Покрова",
+   "shared_riders": 18,
+   "share_of_smaller": 0.13,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 7,
+   "km": 747.819
+  },
+  {
+   "year": 2024,
+   "event_a": "Fury Road",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 2,
+   "share_of_smaller": 0.044,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 7,
+   "km": 750.058
+  },
+  {
+   "year": 2026,
+   "event_a": "Gravel Instinct",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 39,
+   "share_of_smaller": 0.169,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 7,
+   "km": 516.83
+  },
+  {
+   "year": 2024,
+   "event_a": "Моддер / Ардор",
+   "event_b": "Покрова",
+   "shared_riders": 3,
+   "share_of_smaller": 0.058,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 7,
+   "km": 747.819
+  },
+  {
+   "year": 2025,
+   "event_a": "Покрова",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 20,
+   "share_of_smaller": 0.08,
+   "region_a": "Центр",
+   "region_b": "Центр",
+   "gap_days": 56,
+   "km": 325.46
+  },
+  {
+   "year": 2025,
+   "event_a": "Моддер / Ардор",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 72,
+   "share_of_smaller": 0.522,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 14,
+   "km": 67.519
+  },
+  {
+   "year": 2025,
+   "event_a": "Fury Road",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 109,
+   "share_of_smaller": 0.339,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 35,
+   "km": 69.42
+  },
+  {
+   "year": 2026,
+   "event_a": "Gravel Instinct",
+   "event_b": "Покрова",
+   "shared_riders": 90,
+   "share_of_smaller": 0.276,
+   "region_a": "Центр",
+   "region_b": "Центр",
+   "gap_days": 14,
+   "km": 275.649
+  },
+  {
+   "year": 2026,
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 27,
+   "share_of_smaller": 0.076,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 28,
+   "km": 751.934
+  },
+  {
+   "year": 2025,
+   "event_a": "Fury Road",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 110,
+   "share_of_smaller": 0.326,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 56,
+   "km": 221.703
+  },
+  {
+   "year": 2024,
+   "event_a": "Fury Road",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 6,
+   "share_of_smaller": 0.05,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 35,
+   "km": 730.651
+  },
+  {
+   "year": 2025,
+   "event_a": "Моддер / Ардор",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 49,
+   "share_of_smaller": 0.355,
+   "region_a": "Северо-Запад",
+   "region_b": "Северо-Запад",
+   "gap_days": 35,
+   "km": 218.992
+  },
+  {
+   "year": 2026,
+   "event_a": "Gravel Instinct",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 61,
+   "share_of_smaller": 0.174,
+   "region_a": "Центр",
+   "region_b": "Центр",
+   "gap_days": 35,
+   "km": 244.913
+  },
+  {
+   "year": 2026,
+   "event_a": "Покрова",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 26,
+   "share_of_smaller": 0.08,
+   "region_a": "Центр",
+   "region_b": "Центр",
+   "gap_days": 49,
+   "km": 325.46
+  },
+  {
+   "year": 2025,
+   "event_a": "Gravel Instinct",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 63,
+   "share_of_smaller": 0.33,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 28,
+   "km": 617.03
+  },
+  {
+   "year": 2024,
+   "event_a": "Fury Road",
+   "event_b": "Покрова",
+   "shared_riders": 19,
+   "share_of_smaller": 0.158,
+   "region_a": "Северо-Запад",
+   "region_b": "Центр",
+   "gap_days": 21,
+   "km": 749.263
+  },
+  {
+   "year": 2025,
+   "event_a": "Gravel Instinct",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 19,
+   "share_of_smaller": 0.099,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 7,
+   "km": 762.553
   },
   {
    "year": 2025,
@@ -552,157 +1088,14 @@
   },
   {
    "year": 2026,
-   "event_a": "Fury Road",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 210,
-   "share_of_smaller": 0.469,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 35,
-   "km": 21.691
-  },
-  {
-   "year": 2024,
-   "event_a": "Fury Road",
-   "event_b": "Моддер / Ардор",
-   "shared_riders": 20,
-   "share_of_smaller": 0.385,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 14,
-   "km": 2.73
-  },
-  {
-   "year": 2026,
    "event_a": "Моддер / Ардор",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 78,
-   "share_of_smaller": 0.338,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 35,
-   "km": 218.992
-  },
-  {
-   "year": 2026,
-   "event_a": "Fury Road",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 122,
-   "share_of_smaller": 0.332,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 56,
-   "km": 221.703
-  },
-  {
-   "year": 2026,
-   "event_a": "Моддер / Ардор",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 118,
-   "share_of_smaller": 0.511,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 14,
-   "km": 23.735
-  },
-  {
-   "year": 2024,
-   "event_a": "Моддер / Ардор",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 1,
-   "share_of_smaller": 0.019,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 49,
-   "km": 728.351
-  },
-  {
-   "year": 2024,
-   "event_a": "Покрова",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 5,
-   "share_of_smaller": 0.038,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 14,
-   "km": 783.634
-  },
-  {
-   "year": 2024,
-   "event_a": "Покрова",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 18,
-   "share_of_smaller": 0.135,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 35,
-   "km": 634.516
-  },
-  {
-   "year": 2023,
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 4,
-   "share_of_smaller": 0.037,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 77,
-   "km": 746.503
-  },
-  {
-   "year": 2026,
-   "event_a": "Gravel Instinct",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 61,
-   "share_of_smaller": 0.174,
-   "region_a": "Центр",
-   "region_b": "Центр",
-   "gap_days": 35,
-   "km": 244.913
-  },
-  {
-   "year": 2025,
-   "event_a": "Gravel Instinct",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 63,
-   "share_of_smaller": 0.33,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 28,
-   "km": 617.03
-  },
-  {
-   "year": 2024,
-   "event_a": "Fury Road",
    "event_b": "Покрова",
    "shared_riders": 19,
-   "share_of_smaller": 0.158,
+   "share_of_smaller": 0.082,
    "region_a": "Северо-Запад",
    "region_b": "Центр",
-   "gap_days": 21,
-   "km": 749.263
-  },
-  {
-   "year": 2026,
-   "event_a": "Покрова",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 26,
-   "share_of_smaller": 0.08,
-   "region_a": "Центр",
-   "region_b": "Центр",
-   "gap_days": 49,
-   "km": 325.46
-  },
-  {
-   "year": 2025,
-   "event_a": "Gravel Instinct",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 19,
-   "share_of_smaller": 0.099,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
    "gap_days": 7,
-   "km": 762.553
+   "km": 747.819
   },
   {
    "year": 2026,
@@ -727,103 +1120,26 @@
    "km": 748.408
   },
   {
-   "year": 2026,
-   "event_a": "Моддер / Ардор",
-   "event_b": "Покрова",
-   "shared_riders": 19,
-   "share_of_smaller": 0.082,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 7,
-   "km": 747.819
-  },
-  {
    "year": 2025,
-   "event_a": "Моддер / Ардор",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 72,
-   "share_of_smaller": 0.522,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 14,
-   "km": 67.519
-  },
-  {
-   "year": 2025,
-   "event_a": "Fury Road",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 109,
-   "share_of_smaller": 0.339,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 35,
-   "km": 69.42
-  },
-  {
-   "year": 2025,
-   "event_a": "Моддер / Ардор",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 49,
-   "share_of_smaller": 0.355,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 35,
-   "km": 218.992
-  },
-  {
-   "year": 2025,
-   "event_a": "Fury Road",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 110,
-   "share_of_smaller": 0.326,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 56,
-   "km": 221.703
-  },
-  {
-   "year": 2026,
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 27,
-   "share_of_smaller": 0.076,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 28,
-   "km": 751.934
-  },
-  {
-   "year": 2026,
    "event_a": "Gravel Instinct",
    "event_b": "Покрова",
-   "shared_riders": 90,
-   "share_of_smaller": 0.276,
+   "shared_riders": 75,
+   "share_of_smaller": 0.393,
    "region_a": "Центр",
    "region_b": "Центр",
    "gap_days": 14,
-   "km": 275.649
-  },
-  {
-   "year": 2025,
-   "event_a": "Покрова",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 20,
-   "share_of_smaller": 0.08,
-   "region_a": "Центр",
-   "region_b": "Центр",
-   "gap_days": 56,
-   "km": 325.46
+   "km": 68.53
   },
   {
    "year": 2024,
    "event_a": "Fury Road",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 6,
-   "share_of_smaller": 0.05,
+   "event_b": "Царь Грейдер",
+   "shared_riders": 40,
+   "share_of_smaller": 0.333,
    "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 35,
-   "km": 730.651
+   "region_b": "Северо-Запад",
+   "gap_days": 14,
+   "km": 221.703
   },
   {
    "year": 2026,
@@ -850,6 +1166,17 @@
   {
    "year": 2025,
    "event_a": "Покрова",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 21,
+   "share_of_smaller": 0.084,
+   "region_a": "Центр",
+   "region_b": "Северо-Запад",
+   "gap_days": 21,
+   "km": 767.89
+  },
+  {
+   "year": 2025,
+   "event_a": "Покрова",
    "event_b": "Царь Грейдер",
    "shared_riders": 57,
    "share_of_smaller": 0.227,
@@ -868,39 +1195,6 @@
    "region_b": "Северо-Запад",
    "gap_days": 7,
    "km": 49.992
-  },
-  {
-   "year": 2025,
-   "event_a": "Gravel Instinct",
-   "event_b": "Покрова",
-   "shared_riders": 75,
-   "share_of_smaller": 0.393,
-   "region_a": "Центр",
-   "region_b": "Центр",
-   "gap_days": 14,
-   "km": 68.53
-  },
-  {
-   "year": 2024,
-   "event_a": "Fury Road",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 40,
-   "share_of_smaller": 0.333,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 14,
-   "km": 221.703
-  },
-  {
-   "year": 2025,
-   "event_a": "Покрова",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 21,
-   "share_of_smaller": 0.084,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 21,
-   "km": 767.89
   },
   {
    "year": 2025,
@@ -923,237 +1217,6 @@
    "region_b": "Центр",
    "gap_days": 49,
    "km": 728.351
-  },
-  {
-   "year": 2025,
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 76,
-   "share_of_smaller": 0.236,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 21,
-   "km": 186.853
-  },
-  {
-   "year": 2024,
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 43,
-   "share_of_smaller": 0.267,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 21,
-   "km": 219.319
-  },
-  {
-   "year": 2023,
-   "event_a": "Покрова",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 14,
-   "share_of_smaller": 0.131,
-   "region_a": "Центр",
-   "region_b": "Центр",
-   "gap_days": 56,
-   "km": 325.46
-  },
-  {
-   "year": 2024,
-   "event_a": "Gravel Instinct",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 9,
-   "share_of_smaller": 0.2,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 21,
-   "km": 617.03
-  },
-  {
-   "year": 2023,
-   "event_a": "Покрова",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 9,
-   "share_of_smaller": 0.13,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 14,
-   "km": 634.516
-  },
-  {
-   "year": 2024,
-   "event_a": "Спортмарафон Фест",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 10,
-   "share_of_smaller": 0.062,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 21,
-   "km": 539.841
-  },
-  {
-   "year": 2025,
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 10,
-   "share_of_smaller": 0.037,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 35,
-   "km": 718.947
-  },
-  {
-   "year": 2023,
-   "event_a": "Покрова",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 4,
-   "share_of_smaller": 0.029,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 21,
-   "km": 783.634
-  },
-  {
-   "year": 2024,
-   "event_a": "Gravel Instinct",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 8,
-   "share_of_smaller": 0.178,
-   "region_a": "Центр",
-   "region_b": "Центр",
-   "gap_days": 42,
-   "km": 259.453
-  },
-  {
-   "year": 2023,
-   "event_a": "Моддер / Ардор",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 15,
-   "share_of_smaller": 0.349,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 21,
-   "km": 49.314
-  },
-  {
-   "year": 2023,
-   "event_a": "Моддер / Ардор",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 13,
-   "share_of_smaller": 0.302,
-   "region_a": "Северо-Запад",
-   "region_b": "Северо-Запад",
-   "gap_days": 14,
-   "km": 218.992
-  },
-  {
-   "year": 2026,
-   "event_a": "Fury Road",
-   "event_b": "Gravel Instinct",
-   "shared_riders": 91,
-   "share_of_smaller": 0.259,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 28,
-   "km": 518.789
-  },
-  {
-   "year": 2026,
-   "event_a": "Покрова",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 50,
-   "share_of_smaller": 0.153,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 42,
-   "km": 634.516
-  },
-  {
-   "year": 2026,
-   "event_a": "Gravel Instinct",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 48,
-   "share_of_smaller": 0.137,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 7,
-   "km": 540.48
-  },
-  {
-   "year": 2025,
-   "event_a": "Моддер / Ардор",
-   "event_b": "Покрова",
-   "shared_riders": 18,
-   "share_of_smaller": 0.13,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 7,
-   "km": 747.819
-  },
-  {
-   "year": 2025,
-   "event_a": "Fury Road",
-   "event_b": "Покрова",
-   "shared_riders": 63,
-   "share_of_smaller": 0.251,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 14,
-   "km": 749.263
-  },
-  {
-   "year": 2026,
-   "event_a": "Gravel Instinct",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 90,
-   "share_of_smaller": 0.256,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 28,
-   "km": 367.891
-  },
-  {
-   "year": 2025,
-   "event_a": "Gravel Instinct",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 24,
-   "share_of_smaller": 0.126,
-   "region_a": "Центр",
-   "region_b": "Центр",
-   "gap_days": 42,
-   "km": 259.453
-  },
-  {
-   "year": 2026,
-   "event_a": "Покрова",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 25,
-   "share_of_smaller": 0.077,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 21,
-   "km": 770.315
-  },
-  {
-   "year": 2024,
-   "event_a": "Моддер / Ардор",
-   "event_b": "Покрова",
-   "shared_riders": 3,
-   "share_of_smaller": 0.058,
-   "region_a": "Северо-Запад",
-   "region_b": "Центр",
-   "gap_days": 7,
-   "km": 747.819
-  },
-  {
-   "year": 2026,
-   "event_a": "Gravel Instinct",
-   "event_b": "Моддер / Ардор",
-   "shared_riders": 39,
-   "share_of_smaller": 0.169,
-   "region_a": "Центр",
-   "region_b": "Северо-Запад",
-   "gap_days": 7,
-   "km": 516.83
   }
  ],
  "cross": [
@@ -1469,82 +1532,40 @@
    "share_of_a": 0.02
   },
   {
-   "event_a": "Царь Грейдер",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 97,
-   "share_of_a": 0.264
+   "event_a": "Покрова",
+   "event_b": "Redline",
+   "shared_riders": 9,
+   "share_of_a": 0.028
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Redline",
+   "shared_riders": 25,
+   "share_of_a": 0.071
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 26,
+   "share_of_a": 0.08
   },
   {
    "event_a": "Моддер / Ардор",
-   "event_b": "Gravel Instinct",
-   "shared_riders": 39,
-   "share_of_a": 0.169
+   "event_b": "Fury Road",
+   "shared_riders": 148,
+   "share_of_a": 0.641
   },
   {
-   "event_a": "Fury Road",
-   "event_b": "Gravel Instinct",
-   "shared_riders": 91,
-   "share_of_a": 0.142
-  },
-  {
-   "event_a": "Redline",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 12,
-   "share_of_a": 0.214
+   "event_a": "Gravel Instinct",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 61,
+   "share_of_a": 0.174
   },
   {
    "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Redline",
-   "shared_riders": 3,
-   "share_of_a": 0.007
-  },
-  {
-   "event_a": "Redline",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 3,
-   "share_of_a": 0.054
-  },
-  {
-   "event_a": "Покрова",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 50,
-   "share_of_a": 0.153
-  },
-  {
-   "event_a": "Покрова",
-   "event_b": "SHULZ Gravel Weekend",
+   "event_b": "Покрова",
    "shared_riders": 25,
-   "share_of_a": 0.077
-  },
-  {
-   "event_a": "Gravel Instinct",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 90,
-   "share_of_a": 0.256
-  },
-  {
-   "event_a": "Gravel Instinct",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 48,
-   "share_of_a": 0.137
-  },
-  {
-   "event_a": "Спортмарафон Фест",
-   "event_b": "Fury Road",
-   "shared_riders": 42,
-   "share_of_a": 0.118
-  },
-  {
-   "event_a": "Царь Грейдер",
-   "event_b": "Покрова",
-   "shared_riders": 50,
-   "share_of_a": 0.136
-  },
-  {
-   "event_a": "Redline",
-   "event_b": "Покрова",
-   "shared_riders": 9,
-   "share_of_a": 0.161
+   "share_of_a": 0.056
   },
   {
    "event_a": "Царь Грейдер",
@@ -1557,84 +1578,6 @@
    "event_b": "Fury Road",
    "shared_riders": 11,
    "share_of_a": 0.196
-  },
-  {
-   "event_a": "Царь Грейдер",
-   "event_b": "Моддер / Ардор",
-   "shared_riders": 78,
-   "share_of_a": 0.212
-  },
-  {
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Gravel Instinct",
-   "shared_riders": 48,
-   "share_of_a": 0.107
-  },
-  {
-   "event_a": "Fury Road",
-   "event_b": "Redline",
-   "shared_riders": 11,
-   "share_of_a": 0.017
-  },
-  {
-   "event_a": "Царь Грейдер",
-   "event_b": "Gravel Instinct",
-   "shared_riders": 90,
-   "share_of_a": 0.245
-  },
-  {
-   "event_a": "Моддер / Ардор",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 78,
-   "share_of_a": 0.338
-  },
-  {
-   "event_a": "Моддер / Ардор",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 118,
-   "share_of_a": 0.511
-  },
-  {
-   "event_a": "Fury Road",
-   "event_b": "Царь Грейдер",
-   "shared_riders": 122,
-   "share_of_a": 0.19
-  },
-  {
-   "event_a": "Fury Road",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 210,
-   "share_of_a": 0.328
-  },
-  {
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Моддер / Ардор",
-   "shared_riders": 118,
-   "share_of_a": 0.263
-  },
-  {
-   "event_a": "Redline",
-   "event_b": "Gravel Instinct",
-   "shared_riders": 25,
-   "share_of_a": 0.446
-  },
-  {
-   "event_a": "Gravel Instinct",
-   "event_b": "Redline",
-   "shared_riders": 25,
-   "share_of_a": 0.071
-  },
-  {
-   "event_a": "Покрова",
-   "event_b": "Redline",
-   "shared_riders": 9,
-   "share_of_a": 0.028
-  },
-  {
-   "event_a": "Покрова",
-   "event_b": "Gravel Instinct",
-   "shared_riders": 90,
-   "share_of_a": 0.276
   },
   {
    "event_a": "Моддер / Ардор",
@@ -1653,6 +1596,168 @@
    "event_b": "Fury Road",
    "shared_riders": 210,
    "share_of_a": 0.469
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 90,
+   "share_of_a": 0.276
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Redline",
+   "shared_riders": 11,
+   "share_of_a": 0.017
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 48,
+   "share_of_a": 0.107
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 78,
+   "share_of_a": 0.212
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 91,
+   "share_of_a": 0.142
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 97,
+   "share_of_a": 0.264
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 12,
+   "share_of_a": 0.214
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 39,
+   "share_of_a": 0.169
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Redline",
+   "shared_riders": 3,
+   "share_of_a": 0.007
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 3,
+   "share_of_a": 0.054
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Покрова",
+   "shared_riders": 26,
+   "share_of_a": 0.073
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 39,
+   "share_of_a": 0.111
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 19,
+   "share_of_a": 0.058
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Покрова",
+   "shared_riders": 50,
+   "share_of_a": 0.136
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "Покрова",
+   "shared_riders": 9,
+   "share_of_a": 0.161
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 148,
+   "share_of_a": 0.231
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 97,
+   "share_of_a": 0.217
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Redline",
+   "shared_riders": 12,
+   "share_of_a": 0.033
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Покрова",
+   "shared_riders": 90,
+   "share_of_a": 0.256
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 22,
+   "share_of_a": 0.062
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 27,
+   "share_of_a": 0.06
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Fury Road",
+   "shared_riders": 70,
+   "share_of_a": 0.215
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 42,
+   "share_of_a": 0.118
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 42,
+   "share_of_a": 0.066
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Fury Road",
+   "shared_riders": 91,
+   "share_of_a": 0.259
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 27,
+   "share_of_a": 0.076
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 22,
+   "share_of_a": 0.095
   },
   {
    "event_a": "Спортмарафон Фест",
@@ -1674,117 +1779,75 @@
   },
   {
    "event_a": "Gravel Instinct",
-   "event_b": "Покрова",
-   "shared_riders": 90,
-   "share_of_a": 0.256
-  },
-  {
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 27,
-   "share_of_a": 0.06
-  },
-  {
-   "event_a": "Спортмарафон Фест",
-   "event_b": "Моддер / Ардор",
-   "shared_riders": 22,
-   "share_of_a": 0.062
-  },
-  {
-   "event_a": "Gravel Instinct",
-   "event_b": "Моддер / Ардор",
-   "shared_riders": 39,
-   "share_of_a": 0.111
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 48,
+   "share_of_a": 0.137
   },
   {
    "event_a": "Покрова",
-   "event_b": "Моддер / Ардор",
-   "shared_riders": 19,
-   "share_of_a": 0.058
-  },
-  {
-   "event_a": "Спортмарафон Фест",
-   "event_b": "Покрова",
-   "shared_riders": 26,
-   "share_of_a": 0.073
-  },
-  {
-   "event_a": "Моддер / Ардор",
-   "event_b": "Fury Road",
-   "shared_riders": 148,
-   "share_of_a": 0.641
-  },
-  {
-   "event_a": "Покрова",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 26,
-   "share_of_a": 0.08
-  },
-  {
-   "event_a": "Gravel Instinct",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 61,
-   "share_of_a": 0.174
-  },
-  {
-   "event_a": "SHULZ Gravel Weekend",
-   "event_b": "Покрова",
-   "shared_riders": 25,
-   "share_of_a": 0.056
-  },
-  {
-   "event_a": "Fury Road",
-   "event_b": "Моддер / Ардор",
-   "shared_riders": 148,
-   "share_of_a": 0.231
-  },
-  {
-   "event_a": "SHULZ Gravel Weekend",
    "event_b": "Царь Грейдер",
-   "shared_riders": 97,
-   "share_of_a": 0.217
-  },
-  {
-   "event_a": "Царь Грейдер",
-   "event_b": "Redline",
-   "shared_riders": 12,
-   "share_of_a": 0.033
-  },
-  {
-   "event_a": "Покрова",
-   "event_b": "Fury Road",
-   "shared_riders": 70,
-   "share_of_a": 0.215
+   "shared_riders": 50,
+   "share_of_a": 0.153
   },
   {
    "event_a": "Спортмарафон Фест",
-   "event_b": "Царь Грейдер",
+   "event_b": "Fury Road",
    "shared_riders": 42,
    "share_of_a": 0.118
   },
   {
-   "event_a": "Спортмарафон Фест",
-   "event_b": "SHULZ Gravel Weekend",
-   "shared_riders": 27,
-   "share_of_a": 0.076
+   "event_a": "Gravel Instinct",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 90,
+   "share_of_a": 0.256
   },
   {
-   "event_a": "Gravel Instinct",
-   "event_b": "Fury Road",
-   "shared_riders": 91,
-   "share_of_a": 0.259
+   "event_a": "Покрова",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 25,
+   "share_of_a": 0.077
   },
   {
    "event_a": "Fury Road",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 42,
-   "share_of_a": 0.066
+   "event_b": "Царь Грейдер",
+   "shared_riders": 122,
+   "share_of_a": 0.19
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 90,
+   "share_of_a": 0.245
   },
   {
    "event_a": "Моддер / Ардор",
-   "event_b": "Спортмарафон Фест",
-   "shared_riders": 22,
-   "share_of_a": 0.095
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 118,
+   "share_of_a": 0.511
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 210,
+   "share_of_a": 0.328
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 118,
+   "share_of_a": 0.263
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 78,
+   "share_of_a": 0.338
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 25,
+   "share_of_a": 0.446
   }
  ],
  "eventSizes": [

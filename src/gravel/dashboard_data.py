@@ -129,7 +129,24 @@ def build() -> dict:
                COUNT(*) FILTER (WHERE GREATEST(nw, c) >= 2 AND nw <> c) AS own2
         FROM per GROUP BY ALL ORDER BY 1, 2""")
 
+    # состав рейтинга по годам — из ключей API рейтингов сайта
+    key_to_event = {"ЦГ": "Царь Грейдер", "ЦГ180": "Царь Грейдер", "ЦГ250": "Царь Грейдер", "FURY ROAD": "Fury Road", "FR": "Fury Road",
+                    "ПОКРОВА": "Покрова", "ПКРВ": "Покрова", "СПОРТМАРАФОН": "Спортмарафон Фест", "SMF": "Спортмарафон Фест",
+                    "MODDER": "Моддер / Ардор", "ARD": "Моддер / Ардор", "А": "Моддер / Ардор", "SHULZ GW": "SHULZ Gravel Weekend",
+                    "SGW": "SHULZ Gravel Weekend", "Ш": "SHULZ Gravel Weekend", "GRAVEL INSTINCT": "Gravel Instinct", "GI": "Gravel Instinct"}
+    raw = ROOT / "data" / "raw"
+    rating = {y: sorted({key_to_event[k] for e in json.loads((raw / f"rankings_{y}.json").read_text(encoding="utf-8"))["entries"]
+                         for k in e["breakdown"]}) for y in (2024, 2025, 2026)}
+    gender_dist = q("""SELECT CASE WHEN d.is_long THEN 'длинная' ELSE 'короткая' END AS distance,
+                              AVG((r.gender = 'F')::INT) AS female_share
+                       FROM fct_result r JOIN dim_race d ON d.race_id = r.race_id
+                       WHERE r.status <> 'dns' AND r.year >= 2023 GROUP BY 1""").round(4)
+    nbg = nb.assign(distance=nb.any_long.map({True: "длинная", False: "короткая"}))
+    gender_ret = (nbg.groupby(["distance", "gender"])["returned"].agg(["mean", "size"]).reset_index()
+                  .rename(columns={"mean": "rate", "size": "n"}).round(4))
+
     return {
+        "rating": rating, "genderDist": records(gender_dist), "genderRet": records(gender_ret),
         "regions": records(home),
         "venues": records(venues), "pairs": records(pairs), "cross": records(cross),
         "season": records(season), "cohort": records(cohort), "aha": aha,
