@@ -1,0 +1,996 @@
+{
+ "season": [
+  {
+   "year": 2018,
+   "n_events": 1,
+   "riders": 145,
+   "starts": 149.0,
+   "starts_per_rider": 1.03,
+   "new_riders": 145.0,
+   "retained_from_prev": 0.0,
+   "resurrected": 0.0,
+   "female_share": 0.076,
+   "multi_event_share": 0.0
+  },
+  {
+   "year": 2019,
+   "n_events": 1,
+   "riders": 191,
+   "starts": 192.0,
+   "starts_per_rider": 1.01,
+   "new_riders": 136.0,
+   "retained_from_prev": 55.0,
+   "resurrected": 0.0,
+   "female_share": 0.084,
+   "multi_event_share": 0.0
+  },
+  {
+   "year": 2020,
+   "n_events": 1,
+   "riders": 337,
+   "starts": 343.0,
+   "starts_per_rider": 1.02,
+   "new_riders": 241.0,
+   "retained_from_prev": 88.0,
+   "resurrected": 8.0,
+   "female_share": 0.128,
+   "multi_event_share": 0.0
+  },
+  {
+   "year": 2021,
+   "n_events": 1,
+   "riders": 508,
+   "starts": 513.0,
+   "starts_per_rider": 1.01,
+   "new_riders": 318.0,
+   "retained_from_prev": 167.0,
+   "resurrected": 23.0,
+   "female_share": 0.154,
+   "multi_event_share": 0.0
+  },
+  {
+   "year": 2022,
+   "n_events": 2,
+   "riders": 204,
+   "starts": 206.0,
+   "starts_per_rider": 1.01,
+   "new_riders": 153.0,
+   "retained_from_prev": 40.0,
+   "resurrected": 11.0,
+   "female_share": 0.216,
+   "multi_event_share": 0.01
+  },
+  {
+   "year": 2023,
+   "n_events": 6,
+   "riders": 468,
+   "starts": 538.0,
+   "starts_per_rider": 1.15,
+   "new_riders": 336.0,
+   "retained_from_prev": 67.0,
+   "resurrected": 65.0,
+   "female_share": 0.184,
+   "multi_event_share": 0.124
+  },
+  {
+   "year": 2024,
+   "n_events": 7,
+   "riders": 643,
+   "starts": 844.0,
+   "starts_per_rider": 1.31,
+   "new_riders": 386.0,
+   "retained_from_prev": 192.0,
+   "resurrected": 65.0,
+   "female_share": 0.168,
+   "multi_event_share": 0.219
+  },
+  {
+   "year": 2025,
+   "n_events": 7,
+   "riders": 1315,
+   "starts": 1927.0,
+   "starts_per_rider": 1.47,
+   "new_riders": 854.0,
+   "retained_from_prev": 357.0,
+   "resurrected": 104.0,
+   "female_share": 0.186,
+   "multi_event_share": 0.278
+  },
+  {
+   "year": 2026,
+   "n_events": 8,
+   "riders": 1814,
+   "starts": 2786.0,
+   "starts_per_rider": 1.54,
+   "new_riders": 1010.0,
+   "retained_from_prev": 691.0,
+   "resurrected": 113.0,
+   "female_share": 0.193,
+   "multi_event_share": 0.314
+  }
+ ],
+ "cohort": [
+  {
+   "cohort": 2019,
+   "season_n": 0,
+   "riders": 136,
+   "retention": 1.0
+  },
+  {
+   "cohort": 2019,
+   "season_n": 1,
+   "riders": 62,
+   "retention": 0.456
+  },
+  {
+   "cohort": 2019,
+   "season_n": 2,
+   "riders": 45,
+   "retention": 0.331
+  },
+  {
+   "cohort": 2019,
+   "season_n": 3,
+   "riders": 4,
+   "retention": 0.029
+  },
+  {
+   "cohort": 2019,
+   "season_n": 4,
+   "riders": 9,
+   "retention": 0.066
+  },
+  {
+   "cohort": 2019,
+   "season_n": 5,
+   "riders": 13,
+   "retention": 0.096
+  },
+  {
+   "cohort": 2019,
+   "season_n": 6,
+   "riders": 13,
+   "retention": 0.096
+  },
+  {
+   "cohort": 2019,
+   "season_n": 7,
+   "riders": 15,
+   "retention": 0.11
+  },
+  {
+   "cohort": 2020,
+   "season_n": 0,
+   "riders": 241,
+   "retention": 1.0
+  },
+  {
+   "cohort": 2020,
+   "season_n": 1,
+   "riders": 108,
+   "retention": 0.448
+  },
+  {
+   "cohort": 2020,
+   "season_n": 2,
+   "riders": 17,
+   "retention": 0.071
+  },
+  {
+   "cohort": 2020,
+   "season_n": 3,
+   "riders": 26,
+   "retention": 0.108
+  },
+  {
+   "cohort": 2020,
+   "season_n": 4,
+   "riders": 29,
+   "retention": 0.12
+  },
+  {
+   "cohort": 2020,
+   "season_n": 5,
+   "riders": 36,
+   "retention": 0.149
+  },
+  {
+   "cohort": 2020,
+   "season_n": 6,
+   "riders": 32,
+   "retention": 0.133
+  },
+  {
+   "cohort": 2021,
+   "season_n": 0,
+   "riders": 318,
+   "retention": 1.0
+  },
+  {
+   "cohort": 2021,
+   "season_n": 1,
+   "riders": 23,
+   "retention": 0.072
+  },
+  {
+   "cohort": 2021,
+   "season_n": 2,
+   "riders": 43,
+   "retention": 0.135
+  },
+  {
+   "cohort": 2021,
+   "season_n": 3,
+   "riders": 49,
+   "retention": 0.154
+  },
+  {
+   "cohort": 2021,
+   "season_n": 4,
+   "riders": 61,
+   "retention": 0.192
+  },
+  {
+   "cohort": 2021,
+   "season_n": 5,
+   "riders": 64,
+   "retention": 0.201
+  },
+  {
+   "cohort": 2022,
+   "season_n": 0,
+   "riders": 153,
+   "retention": 1.0
+  },
+  {
+   "cohort": 2022,
+   "season_n": 1,
+   "riders": 41,
+   "retention": 0.268
+  },
+  {
+   "cohort": 2022,
+   "season_n": 2,
+   "riders": 33,
+   "retention": 0.216
+  },
+  {
+   "cohort": 2022,
+   "season_n": 3,
+   "riders": 27,
+   "retention": 0.176
+  },
+  {
+   "cohort": 2022,
+   "season_n": 4,
+   "riders": 26,
+   "retention": 0.17
+  },
+  {
+   "cohort": 2023,
+   "season_n": 0,
+   "riders": 336,
+   "retention": 1.0
+  },
+  {
+   "cohort": 2023,
+   "season_n": 1,
+   "riders": 117,
+   "retention": 0.348
+  },
+  {
+   "cohort": 2023,
+   "season_n": 2,
+   "riders": 108,
+   "retention": 0.321
+  },
+  {
+   "cohort": 2023,
+   "season_n": 3,
+   "riders": 103,
+   "retention": 0.307
+  },
+  {
+   "cohort": 2024,
+   "season_n": 0,
+   "riders": 386,
+   "retention": 1.0
+  },
+  {
+   "cohort": 2024,
+   "season_n": 1,
+   "riders": 198,
+   "retention": 0.513
+  },
+  {
+   "cohort": 2024,
+   "season_n": 2,
+   "riders": 151,
+   "retention": 0.391
+  },
+  {
+   "cohort": 2025,
+   "season_n": 0,
+   "riders": 854,
+   "retention": 1.0
+  },
+  {
+   "cohort": 2025,
+   "season_n": 1,
+   "riders": 388,
+   "retention": 0.454
+  }
+ ],
+ "aha": {
+  "base": 0.4303,
+  "n": 1729,
+  "panels": [
+   {
+    "title": "Стартов в первом сезоне",
+    "bars": [
+     {
+      "label": "1",
+      "rate": 0.3873,
+      "n": 1482
+     },
+     {
+      "label": "2",
+      "rate": 0.6492,
+      "n": 191
+     },
+     {
+      "label": "3+",
+      "rate": 0.8214,
+      "n": 56
+     }
+    ]
+   },
+   {
+    "title": "Первая дистанция",
+    "bars": [
+     {
+      "label": "короткая",
+      "rate": 0.3503,
+      "n": 788
+     },
+     {
+      "label": "длинная",
+      "rate": 0.4973,
+      "n": 941
+     }
+    ]
+   },
+   {
+    "title": "Квартиль места",
+    "bars": [
+     {
+      "label": "топ-25%",
+      "rate": 0.468,
+      "n": 297
+     },
+     {
+      "label": "25–50%",
+      "rate": 0.469,
+      "n": 403
+     },
+     {
+      "label": "50–75%",
+      "rate": 0.453,
+      "n": 479
+     },
+     {
+      "label": "хвост",
+      "rate": 0.3667,
+      "n": 540
+     }
+    ]
+   },
+   {
+    "title": "Пол",
+    "bars": [
+     {
+      "label": "женщины",
+      "rate": 0.3689,
+      "n": 347
+     },
+     {
+      "label": "мужчины",
+      "rate": 0.4457,
+      "n": 1382
+     }
+    ]
+   }
+  ]
+ },
+ "entry": {
+  "base": 0.4461,
+  "rows": [
+   {
+    "event": "Покрова",
+    "rate": 0.5548,
+    "n": 301
+   },
+   {
+    "event": "Царь Грейдер",
+    "rate": 0.5057,
+    "n": 265
+   },
+   {
+    "event": "Fury Road",
+    "rate": 0.4811,
+    "n": 212
+   },
+   {
+    "event": "Моддер / Ардор",
+    "rate": 0.4023,
+    "n": 87
+   },
+   {
+    "event": "Gravel Instinct",
+    "rate": 0.4,
+    "n": 105
+   },
+   {
+    "event": "SHULZ Gravel Weekend",
+    "rate": 0.3985,
+    "n": 261
+   },
+   {
+    "event": "Спортмарафон Фест",
+    "rate": 0.3449,
+    "n": 345
+   }
+  ]
+ },
+ "overlap": [
+  {
+   "event_a": "Redline",
+   "event_b": "Fury Road",
+   "shared_riders": 11,
+   "share_of_a": 0.196
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Fury Road",
+   "shared_riders": 122,
+   "share_of_a": 0.332
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Redline",
+   "shared_riders": 9,
+   "share_of_a": 0.028
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Redline",
+   "shared_riders": 25,
+   "share_of_a": 0.071
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Redline",
+   "shared_riders": 7,
+   "share_of_a": 0.02
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 90,
+   "share_of_a": 0.276
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 97,
+   "share_of_a": 0.264
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 91,
+   "share_of_a": 0.142
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 12,
+   "share_of_a": 0.214
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 3,
+   "share_of_a": 0.054
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 39,
+   "share_of_a": 0.169
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Redline",
+   "shared_riders": 3,
+   "share_of_a": 0.007
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 50,
+   "share_of_a": 0.153
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Fury Road",
+   "shared_riders": 42,
+   "share_of_a": 0.118
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 90,
+   "share_of_a": 0.256
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 48,
+   "share_of_a": 0.137
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 25,
+   "share_of_a": 0.077
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "Покрова",
+   "shared_riders": 9,
+   "share_of_a": 0.161
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Покрова",
+   "shared_riders": 50,
+   "share_of_a": 0.136
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Покрова",
+   "shared_riders": 90,
+   "share_of_a": 0.256
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 27,
+   "share_of_a": 0.06
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 22,
+   "share_of_a": 0.062
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 90,
+   "share_of_a": 0.245
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 78,
+   "share_of_a": 0.338
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 118,
+   "share_of_a": 0.511
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 122,
+   "share_of_a": 0.19
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 210,
+   "share_of_a": 0.328
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 25,
+   "share_of_a": 0.446
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 118,
+   "share_of_a": 0.263
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Покрова",
+   "shared_riders": 26,
+   "share_of_a": 0.073
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 39,
+   "share_of_a": 0.111
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 19,
+   "share_of_a": 0.058
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Покрова",
+   "shared_riders": 70,
+   "share_of_a": 0.109
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Fury Road",
+   "shared_riders": 210,
+   "share_of_a": 0.469
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "Покрова",
+   "shared_riders": 19,
+   "share_of_a": 0.082
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 61,
+   "share_of_a": 0.171
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 42,
+   "share_of_a": 0.114
+  },
+  {
+   "event_a": "Redline",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 7,
+   "share_of_a": 0.125
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Redline",
+   "shared_riders": 12,
+   "share_of_a": 0.033
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 148,
+   "share_of_a": 0.231
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 97,
+   "share_of_a": 0.217
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Fury Road",
+   "shared_riders": 70,
+   "share_of_a": 0.215
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "Царь Грейдер",
+   "shared_riders": 42,
+   "share_of_a": 0.118
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 42,
+   "share_of_a": 0.066
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Fury Road",
+   "shared_riders": 91,
+   "share_of_a": 0.259
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 22,
+   "share_of_a": 0.095
+  },
+  {
+   "event_a": "Спортмарафон Фест",
+   "event_b": "SHULZ Gravel Weekend",
+   "shared_riders": 27,
+   "share_of_a": 0.076
+  },
+  {
+   "event_a": "Покрова",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 26,
+   "share_of_a": 0.08
+  },
+  {
+   "event_a": "Моддер / Ардор",
+   "event_b": "Fury Road",
+   "shared_riders": 148,
+   "share_of_a": 0.641
+  },
+  {
+   "event_a": "Gravel Instinct",
+   "event_b": "Спортмарафон Фест",
+   "shared_riders": 61,
+   "share_of_a": 0.174
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Покрова",
+   "shared_riders": 25,
+   "share_of_a": 0.056
+  },
+  {
+   "event_a": "Царь Грейдер",
+   "event_b": "Моддер / Ардор",
+   "shared_riders": 78,
+   "share_of_a": 0.212
+  },
+  {
+   "event_a": "SHULZ Gravel Weekend",
+   "event_b": "Gravel Instinct",
+   "shared_riders": 48,
+   "share_of_a": 0.107
+  },
+  {
+   "event_a": "Fury Road",
+   "event_b": "Redline",
+   "shared_riders": 11,
+   "share_of_a": 0.017
+  }
+ ],
+ "eventSizes": [
+  {
+   "event": "Fury Road",
+   "riders": 641
+  },
+  {
+   "event": "SHULZ Gravel Weekend",
+   "riders": 448
+  },
+  {
+   "event": "Царь Грейдер",
+   "riders": 368
+  },
+  {
+   "event": "Спортмарафон Фест",
+   "riders": 356
+  },
+  {
+   "event": "Gravel Instinct",
+   "riders": 351
+  },
+  {
+   "event": "Покрова",
+   "riders": 326
+  },
+  {
+   "event": "Моддер / Ардор",
+   "riders": 231
+  },
+  {
+   "event": "Redline",
+   "riders": 56
+  }
+ ],
+ "speed": [
+  {
+   "event": "Царь Грейдер",
+   "race": "ВЕПРЬ · 180 км",
+   "km": 180.0,
+   "n": 67,
+   "q1": 31.77,
+   "med": 33.81,
+   "q3": 37.35,
+   "top": 38.46
+  },
+  {
+   "event": "Царь Грейдер",
+   "race": "КАБАНЧИК · 150 км",
+   "km": 150.0,
+   "n": 143,
+   "q1": 30.01,
+   "med": 33.72,
+   "q3": 34.67,
+   "top": 37.62
+  },
+  {
+   "event": "Царь Грейдер",
+   "race": "ПОДСВИНОК · 110 км",
+   "km": 110.0,
+   "n": 146,
+   "q1": 25.61,
+   "med": 28.19,
+   "q3": 30.63,
+   "top": 34.2
+  },
+  {
+   "event": "Fury Road",
+   "race": "80 км",
+   "km": 80.0,
+   "n": 378,
+   "q1": 23.07,
+   "med": 25.93,
+   "q3": 28.51,
+   "top": 33.33
+  },
+  {
+   "event": "Gravel Instinct",
+   "race": "СТРИЖ 170 км",
+   "km": 170.0,
+   "n": 133,
+   "q1": 21.43,
+   "med": 25.27,
+   "q3": 27.88,
+   "top": 33.26
+  },
+  {
+   "event": "Fury Road",
+   "race": "130 км",
+   "km": 130.0,
+   "n": 151,
+   "q1": 21.73,
+   "med": 24.23,
+   "q3": 26.83,
+   "top": 30.91
+  },
+  {
+   "event": "Моддер / Ардор",
+   "race": "110 км",
+   "km": 110.0,
+   "n": 78,
+   "q1": 21.28,
+   "med": 23.93,
+   "q3": 26.66,
+   "top": 30.38
+  },
+  {
+   "event": "SHULZ Gravel Weekend",
+   "race": "111 км",
+   "km": 111.0,
+   "n": 152,
+   "q1": 20.12,
+   "med": 23.11,
+   "q3": 26.21,
+   "top": 30.21
+  },
+  {
+   "event": "Gravel Instinct",
+   "race": "КОЛИБРИ 88 км",
+   "km": 88.0,
+   "n": 158,
+   "q1": 20.07,
+   "med": 23.04,
+   "q3": 28.16,
+   "top": 34.61
+  },
+  {
+   "event": "Gravel Instinct",
+   "race": "ГЛУХАРЬ 170 км",
+   "km": 170.0,
+   "n": 19,
+   "q1": 20.11,
+   "med": 22.87,
+   "q3": 25.84,
+   "top": 30.52
+  },
+  {
+   "event": "Моддер / Ардор",
+   "race": "75 км",
+   "km": 75.0,
+   "n": 154,
+   "q1": 19.72,
+   "med": 22.84,
+   "q3": 25.48,
+   "top": 29.64
+  },
+  {
+   "event": "SHULZ Gravel Weekend",
+   "race": "60 км",
+   "km": 60.0,
+   "n": 300,
+   "q1": 18.15,
+   "med": 22.67,
+   "q3": 26.12,
+   "top": 31.87
+  },
+  {
+   "event": "Спортмарафон Фест",
+   "race": "BIKE 125 GRAVEL",
+   "km": 125.0,
+   "n": 51,
+   "q1": 18.25,
+   "med": 20.66,
+   "q3": 23.13,
+   "top": 26.65
+  },
+  {
+   "event": "Fury Road",
+   "race": "40 км",
+   "km": 40.0,
+   "n": 114,
+   "q1": 16.76,
+   "med": 19.32,
+   "q3": 20.73,
+   "top": 26.8
+  },
+  {
+   "event": "Спортмарафон Фест",
+   "race": "BIKE 65 GRAVEL",
+   "km": 65.0,
+   "n": 91,
+   "q1": 14.53,
+   "med": 17.47,
+   "q3": 20.84,
+   "top": 27.95
+  },
+  {
+   "event": "Redline",
+   "race": "Мультиспид · 88 км",
+   "km": 88.0,
+   "n": 47,
+   "q1": 14.72,
+   "med": 16.38,
+   "q3": 18.22,
+   "top": 22.92
+  },
+  {
+   "event": "Спортмарафон Фест",
+   "race": "BIKE 40 GRAVEL",
+   "km": 40.0,
+   "n": 183,
+   "q1": 12.59,
+   "med": 14.97,
+   "q3": 19.27,
+   "top": 26.77
+  }
+ ],
+ "funnel": [
+  {
+   "step": "Первый сезон — только короткая",
+   "n": 788
+  },
+  {
+   "step": "Вернулись в следующем сезоне",
+   "n": 276
+  },
+  {
+   "step": "…и проехали длинную",
+   "n": 58
+  }
+ ],
+ "totals": {
+  "results": 7682,
+  "riders": 3684,
+  "events": 34
+ }
+}

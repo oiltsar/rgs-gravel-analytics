@@ -1,0 +1,8604 @@
+{
+ "season": 2024,
+ "kind": "main",
+ "gender": "all",
+ "best": "all",
+ "entries": [
+  {
+   "gender": "m",
+   "place": 1,
+   "totalPoints": 4000,
+   "displayName": "Миловидов Николай",
+   "racer": {
+    "id": "milovidov-nikolai",
+    "numericId": "5829587"
+   },
+   "breakdown": {
+    "ЦГ": 1000,
+    "FURY ROAD": 1000,
+    "ПОКРОВА": 1000,
+    "СПОРТМАРАФОН": 1000
+   }
+  },
+  {
+   "gender": "m",
+   "place": 2,
+   "totalPoints": 3995,
+   "displayName": "Якушев Юрий",
+   "racer": {
+    "id": "yakushev-yurii",
+    "numericId": "11054240"
+   },
+   "breakdown": {
+    "ЦГ": 999,
+    "MODDER": 1000,
+    "SHULZ GW": 998,
+    "FURY ROAD": 998
+   }
+  },
+  {
+   "gender": "m",
+   "place": 3,
+   "totalPoints": 3990,
+   "displayName": "Дедков Денис",
+   "racer": {
+    "id": "dedkov-denis",
+    "numericId": "95714624"
+   },
+   "breakdown": {
+    "FURY ROAD": 994,
+    "ПОКРОВА": 998,
+    "GRAVEL INSTINCT": 999,
+    "СПОРТМАРАФОН": 999
+   }
+  },
+  {
+   "gender": "f",
+   "place": 1,
+   "totalPoints": 3988,
+   "displayName": "Метель Ольга",
+   "racer": {
+    "id": "metel-olga",
+    "numericId": "89095696"
+   },
+   "breakdown": {
+    "ЦГ": 993,
+    "SHULZ GW": 998,
+    "FURY ROAD": 998,
+    "ПОКРОВА": 999
+   }
+  },
+  {
+   "gender": "m",
+   "place": 4,
+   "totalPoints": 3979,
+   "displayName": "Зелёный Олег",
+   "racer": {
+    "id": "oleg-zelenyi",
+    "numericId": "30655806"
+   },
+   "breakdown": {
+    "ЦГ": 993,
+    "ПОКРОВА": 993,
+    "GRAVEL INSTINCT": 998,
+    "СПОРТМАРАФОН": 995
+   }
+  },
+  {
+   "gender": "f",
+   "place": 2,
+   "totalPoints": 3972,
+   "displayName": "Карпив Екатерина",
+   "racer": {
+    "id": "karpiv-ekaterina",
+    "numericId": "24495335"
+   },
+   "breakdown": {
+    "ЦГ": 990,
+    "MODDER": 995,
+    "SHULZ GW": 993,
+    "FURY ROAD": 994
+   }
+  },
+  {
+   "gender": "m",
+   "place": 5,
+   "totalPoints": 3968,
+   "displayName": "Миронов Павел",
+   "racer": {
+    "id": "mironov-pavel",
+    "numericId": "22239647"
+   },
+   "breakdown": {
+    "ЦГ": 988,
+    "FURY ROAD": 988,
+    "ПОКРОВА": 996,
+    "СПОРТМАРАФОН": 996
+   }
+  },
+  {
+   "gender": "m",
+   "place": 6,
+   "totalPoints": 3964,
+   "displayName": "Курочкин Владимир",
+   "racer": {
+    "id": "kurochkin-vladimir",
+    "numericId": "16767653"
+   },
+   "breakdown": {
+    "ЦГ": 992,
+    "MODDER": 990,
+    "SHULZ GW": 993,
+    "FURY ROAD": 989
+   }
+  },
+  {
+   "gender": "f",
+   "place": 3,
+   "totalPoints": 3959,
+   "displayName": "Стицюк Юлия",
+   "racer": {
+    "id": "stitsyuk-yuliya",
+    "numericId": "46070914"
+   },
+   "breakdown": {
+    "ЦГ": 985,
+    "MODDER": 994,
+    "SHULZ GW": 990,
+    "FURY ROAD": 990
+   }
+  },
+  {
+   "gender": "m",
+   "place": 7,
+   "totalPoints": 3952,
+   "displayName": "Локтионов Дмитрий",
+   "racer": {
+    "id": "loktionov-dmitrii",
+    "numericId": "56511472"
+   },
+   "breakdown": {
+    "ЦГ": 972,
+    "ПОКРОВА": 992,
+    "GRAVEL INSTINCT": 994,
+    "СПОРТМАРАФОН": 994
+   }
+  },
+  {
+   "gender": "m",
+   "place": 8,
+   "totalPoints": 3941,
+   "displayName": "Чалов Антон",
+   "racer": {
+    "id": "chalov-anton",
+    "numericId": "22114516"
+   },
+   "breakdown": {
+    "ЦГ": 967,
+    "MODDER": 994,
+    "SHULZ GW": 988,
+    "FURY ROAD": 992
+   }
+  },
+  {
+   "gender": "m",
+   "place": 9,
+   "totalPoints": 3935,
+   "displayName": "Янушевский Дмитрий",
+   "racer": {
+    "id": "yanushevskii-dima",
+    "numericId": "36454942"
+   },
+   "breakdown": {
+    "ЦГ": 973,
+    "MODDER": 995,
+    "SHULZ GW": 989,
+    "FURY ROAD": 978
+   }
+  },
+  {
+   "gender": "m",
+   "place": 10,
+   "totalPoints": 3888,
+   "displayName": "Власов Иван",
+   "racer": {
+    "id": "vlasov-ivan",
+    "numericId": "57211254"
+   },
+   "breakdown": {
+    "ЦГ": 953,
+    "MODDER": 978,
+    "SHULZ GW": 974,
+    "FURY ROAD": 983
+   }
+  },
+  {
+   "gender": "m",
+   "place": 11,
+   "totalPoints": 3886,
+   "displayName": "Садчиков Сергей",
+   "racer": {
+    "id": "sadchikov-sergei",
+    "numericId": "22889527"
+   },
+   "breakdown": {
+    "ЦГ": 965,
+    "SHULZ GW": 977,
+    "FURY ROAD": 958,
+    "ПОКРОВА": 986
+   }
+  },
+  {
+   "gender": "m",
+   "place": 12,
+   "totalPoints": 3818,
+   "displayName": "Верехин Кирилл",
+   "racer": {
+    "id": "kirill-verehin",
+    "numericId": "20512742"
+   },
+   "breakdown": {
+    "ЦГ": 960,
+    "MODDER": 971,
+    "FURY ROAD": 927,
+    "ПОКРОВА": 960
+   }
+  },
+  {
+   "gender": "m",
+   "place": 13,
+   "totalPoints": 3779,
+   "displayName": "Красилов Андрей",
+   "racer": {
+    "id": "krasilov-andrei",
+    "numericId": "86171601"
+   },
+   "breakdown": {
+    "ЦГ": 925,
+    "SHULZ GW": 967,
+    "FURY ROAD": 925,
+    "ПОКРОВА": 962
+   }
+  },
+  {
+   "gender": "m",
+   "place": 14,
+   "totalPoints": 3273,
+   "displayName": "Фандюшин Михаил",
+   "racer": {
+    "id": "mihail-fandyushin",
+    "numericId": "41338633"
+   },
+   "breakdown": {
+    "ЦГ": 920,
+    "ПОКРОВА": 904,
+    "GRAVEL INSTINCT": 966,
+    "СПОРТМАРАФОН": 483
+   }
+  },
+  {
+   "gender": "m",
+   "place": 15,
+   "totalPoints": 2996,
+   "displayName": "Одинцов Иван",
+   "racer": {
+    "id": "odintsov-ivan",
+    "numericId": "92093534"
+   },
+   "breakdown": {
+    "ЦГ": 997,
+    "SHULZ GW": 1000,
+    "FURY ROAD": 999
+   }
+  },
+  {
+   "gender": "f",
+   "place": 4,
+   "totalPoints": 2994,
+   "displayName": "Орлова Мария",
+   "racer": {
+    "id": "orlova-mariya",
+    "numericId": "53474467"
+   },
+   "breakdown": {
+    "ЦГ": 994,
+    "GRAVEL INSTINCT": 1000,
+    "СПОРТМАРАФОН": 1000
+   }
+  },
+  {
+   "gender": "f",
+   "place": 5,
+   "totalPoints": 2989,
+   "displayName": "Бегак (голобородько) Александра",
+   "racer": {
+    "id": "begak-aleksandra-butgjc",
+    "numericId": "88835893"
+   },
+   "breakdown": {
+    "ЦГ": 992,
+    "MODDER": 997,
+    "SHULZ GW": 1000
+   }
+  },
+  {
+   "gender": "m",
+   "place": 16,
+   "totalPoints": 2983,
+   "displayName": "Юников Михаил",
+   "racer": {
+    "id": "yunikov-mihail",
+    "numericId": "28427899"
+   },
+   "breakdown": {
+    "ЦГ": 987,
+    "MODDER": 999,
+    "SHULZ GW": 997
+   }
+  },
+  {
+   "gender": "m",
+   "place": 17,
+   "totalPoints": 2955,
+   "displayName": "Беляков Иван",
+   "racer": {
+    "id": "ivan-belyakov",
+    "numericId": "13107149"
+   },
+   "breakdown": {
+    "ЦГ": 971,
+    "ПОКРОВА": 995,
+    "GRAVEL INSTINCT": 989
+   }
+  },
+  {
+   "gender": "m",
+   "place": 18,
+   "totalPoints": 2953,
+   "displayName": "Лебедев Гоша",
+   "racer": {
+    "id": "lebedev-georgii",
+    "numericId": "24441383"
+   },
+   "breakdown": {
+    "MODDER": 993,
+    "FURY ROAD": 979,
+    "ПОКРОВА": 981
+   }
+  },
+  {
+   "gender": "m",
+   "place": 19,
+   "totalPoints": 2950,
+   "displayName": "Антонов Андрей",
+   "racer": {
+    "id": "antonov-andrei",
+    "numericId": "51141478"
+   },
+   "breakdown": {
+    "ЦГ": 983,
+    "MODDER": 985,
+    "ПОКРОВА": 982
+   }
+  },
+  {
+   "gender": "m",
+   "place": 20,
+   "totalPoints": 2948,
+   "displayName": "Авакян Андрей",
+   "racer": {
+    "id": "avakyan-andrei",
+    "numericId": "89751042"
+   },
+   "breakdown": {
+    "ЦГ": 975,
+    "ПОКРОВА": 984,
+    "СПОРТМАРАФОН": 989
+   }
+  },
+  {
+   "gender": "m",
+   "place": 21,
+   "totalPoints": 2947,
+   "displayName": "Костин Сергей",
+   "racer": {
+    "id": "kostin-sergei",
+    "numericId": "50046128"
+   },
+   "breakdown": {
+    "ЦГ": 969,
+    "MODDER": 992,
+    "SHULZ GW": 986
+   }
+  },
+  {
+   "gender": "m",
+   "place": 22,
+   "totalPoints": 2927,
+   "displayName": "Рябков Валентин",
+   "racer": {
+    "id": "ryabkov-valentin",
+    "numericId": "22743369"
+   },
+   "breakdown": {
+    "ЦГ": 964,
+    "SHULZ GW": 978,
+    "FURY ROAD": 985
+   }
+  },
+  {
+   "gender": "m",
+   "place": 23,
+   "totalPoints": 2916,
+   "displayName": "Фомин Игорь",
+   "racer": {
+    "id": "fomin-igor",
+    "numericId": "22532550"
+   },
+   "breakdown": {
+    "ЦГ": 968,
+    "SHULZ GW": 976,
+    "FURY ROAD": 972
+   }
+  },
+  {
+   "gender": "m",
+   "place": 24,
+   "totalPoints": 2892,
+   "displayName": "Безверхий Сергей",
+   "racer": {
+    "id": "bezverhii-sergei",
+    "numericId": "4527852"
+   },
+   "breakdown": {
+    "ЦГ": 945,
+    "SHULZ GW": 984,
+    "FURY ROAD": 963
+   }
+  },
+  {
+   "gender": "m",
+   "place": 25,
+   "totalPoints": 2870,
+   "displayName": "Трофимов Артем",
+   "racer": {
+    "id": "trofimov-artem",
+    "numericId": "18622369"
+   },
+   "breakdown": {
+    "ЦГ": 935,
+    "MODDER": 984,
+    "FURY ROAD": 951
+   }
+  },
+  {
+   "gender": "m",
+   "place": 26,
+   "totalPoints": 2863,
+   "displayName": "Смирнов Михаил",
+   "racer": {
+    "id": "smirnov-mihail",
+    "numericId": "8699812"
+   },
+   "breakdown": {
+    "MODDER": 966,
+    "SHULZ GW": 966,
+    "FURY ROAD": 931
+   }
+  },
+  {
+   "gender": "m",
+   "place": 27,
+   "totalPoints": 2855,
+   "displayName": "Борщенко Павел",
+   "racer": {
+    "id": "borshchenko-pavel",
+    "numericId": "11305305"
+   },
+   "breakdown": {
+    "MODDER": 973,
+    "SHULZ GW": 968,
+    "FURY ROAD": 914
+   }
+  },
+  {
+   "gender": "m",
+   "place": 28,
+   "totalPoints": 2830,
+   "displayName": "Носков Алексей",
+   "racer": {
+    "id": "noskov-aleksei",
+    "numericId": "45836979"
+   },
+   "breakdown": {
+    "ЦГ": 913,
+    "SHULZ GW": 972,
+    "FURY ROAD": 945
+   }
+  },
+  {
+   "gender": "m",
+   "place": 29,
+   "totalPoints": 2822,
+   "displayName": "Борщенко Михаил",
+   "racer": {
+    "id": "mihail-borshchenko",
+    "numericId": "42577584"
+   },
+   "breakdown": {
+    "MODDER": 959,
+    "SHULZ GW": 953,
+    "FURY ROAD": 910
+   }
+  },
+  {
+   "gender": "m",
+   "place": 30,
+   "totalPoints": 2815,
+   "displayName": "Курочкин Илья",
+   "racer": {
+    "id": "kurochkin-ilya",
+    "numericId": "18401702"
+   },
+   "breakdown": {
+    "ЦГ": 917,
+    "FURY ROAD": 937,
+    "ПОКРОВА": 961
+   }
+  },
+  {
+   "gender": "m",
+   "place": 31,
+   "totalPoints": 2813,
+   "displayName": "Войтов Евгений",
+   "racer": {
+    "id": "voitov-evgenii",
+    "numericId": "27177410"
+   },
+   "breakdown": {
+    "ЦГ": 928,
+    "MODDER": 967,
+    "FURY ROAD": 918
+   }
+  },
+  {
+   "gender": "m",
+   "place": 32,
+   "totalPoints": 2807,
+   "displayName": "Наумов Алексей",
+   "racer": {
+    "id": "naumov-aleksei",
+    "numericId": "20455967"
+   },
+   "breakdown": {
+    "ЦГ": 914,
+    "SHULZ GW": 965,
+    "FURY ROAD": 928
+   }
+  },
+  {
+   "gender": "m",
+   "place": 33,
+   "totalPoints": 2782,
+   "displayName": "Бравцев Никита",
+   "racer": {
+    "id": "bravtsev-nikita",
+    "numericId": "530353"
+   },
+   "breakdown": {
+    "ЦГ": 911,
+    "SHULZ GW": 954,
+    "FURY ROAD": 917
+   }
+  },
+  {
+   "gender": "m",
+   "place": 34,
+   "totalPoints": 2436,
+   "displayName": "Шандыбин Борис",
+   "racer": {
+    "id": "shandybin-boris",
+    "numericId": "27022558"
+   },
+   "breakdown": {
+    "ПОКРОВА": 946,
+    "GRAVEL INSTINCT": 991,
+    "СПОРТМАРАФОН": 499
+   }
+  },
+  {
+   "gender": "m",
+   "place": 35,
+   "totalPoints": 2418,
+   "displayName": "Павлов Алексей",
+   "racer": {
+    "id": "pavlov-aleksei",
+    "numericId": "656313"
+   },
+   "breakdown": {
+    "ЦГ": 944,
+    "MODDER": 977,
+    "СПОРТМАРАФОН": 497
+   }
+  },
+  {
+   "gender": "m",
+   "place": 36,
+   "totalPoints": 2401,
+   "displayName": "Таскаев Тимофей Викторович",
+   "racer": {
+    "id": "taskaev-timofei",
+    "numericId": "92011868"
+   },
+   "breakdown": {
+    "ЦГ": 926,
+    "MODDER": 986,
+    "SHULZ GW": 489
+   }
+  },
+  {
+   "gender": "m",
+   "place": 37,
+   "totalPoints": 2294,
+   "displayName": "Чепенко Алексей",
+   "racer": {
+    "id": "aleksei-chepenko",
+    "numericId": "34600487"
+   },
+   "breakdown": {
+    "ЦГ": 886,
+    "ПОКРОВА": 917,
+    "СПОРТМАРАФОН": 491
+   }
+  },
+  {
+   "gender": "f",
+   "place": 6,
+   "totalPoints": 1998,
+   "displayName": "Илларионова Екатерина",
+   "racer": {
+    "id": "illarionova-ekaterina",
+    "numericId": "56611848"
+   },
+   "breakdown": {
+    "ЦГ": 999,
+    "SHULZ GW": 999
+   }
+  },
+  {
+   "gender": "f",
+   "place": 7,
+   "totalPoints": 1996,
+   "displayName": "Ступина Ирина",
+   "racer": {
+    "id": "stupina-irina",
+    "numericId": "81950445"
+   },
+   "breakdown": {
+    "FURY ROAD": 1000,
+    "ПОКРОВА": 996
+   }
+  },
+  {
+   "gender": "f",
+   "place": 8,
+   "totalPoints": 1994,
+   "displayName": "Чудакова Ольга",
+   "racer": {
+    "id": "chudakova-olga",
+    "numericId": "11731851"
+   },
+   "breakdown": {
+    "ЦГ": 995,
+    "FURY ROAD": 999
+   }
+  },
+  {
+   "gender": "f",
+   "place": 9,
+   "totalPoints": 1993,
+   "displayName": "Ушакова Екатерина",
+   "racer": {
+    "id": "ushakova-ekaterina",
+    "numericId": "22888135"
+   },
+   "breakdown": {
+    "ЦГ": 996,
+    "FURY ROAD": 997
+   }
+  },
+  {
+   "gender": "f",
+   "place": 10,
+   "totalPoints": 1992,
+   "displayName": "Дарья Федорова",
+   "racer": {
+    "id": "fedorova-darya",
+    "numericId": "23320062"
+   },
+   "breakdown": {
+    "MODDER": 998,
+    "SHULZ GW": 994
+   }
+  },
+  {
+   "gender": "f",
+   "place": 11,
+   "totalPoints": 1990,
+   "displayName": "Полынкова Евгения",
+   "racer": {
+    "id": "polynkova-evgeniya",
+    "numericId": "4256748"
+   },
+   "breakdown": {
+    "FURY ROAD": 991,
+    "СПОРТМАРАФОН": 999
+   }
+  },
+  {
+   "gender": "m",
+   "place": 38,
+   "totalPoints": 1986,
+   "displayName": "Чебанов Егор",
+   "racer": {
+    "id": "egor-chebanov",
+    "numericId": "66840531"
+   },
+   "breakdown": {
+    "ЦГ": 989,
+    "FURY ROAD": 997
+   }
+  },
+  {
+   "gender": "m",
+   "place": 39,
+   "totalPoints": 1983,
+   "displayName": "Чистяков Станислав",
+   "racer": {
+    "id": "chistyakov-stanislav",
+    "numericId": "63182447"
+   },
+   "breakdown": {
+    "ЦГ": 991,
+    "SHULZ GW": 992
+   }
+  },
+  {
+   "gender": "m",
+   "place": 40,
+   "totalPoints": 1982,
+   "displayName": "Степанов Игорь",
+   "racer": {
+    "id": "stepanov-igor",
+    "numericId": "80064920"
+   },
+   "breakdown": {
+    "ЦГ": 982,
+    "GRAVEL INSTINCT": 1000
+   }
+  },
+  {
+   "gender": "f",
+   "place": 12,
+   "totalPoints": 1981,
+   "displayName": "Тю Юлия",
+   "racer": {
+    "id": "tyu-yuliya",
+    "numericId": "21321159"
+   },
+   "breakdown": {
+    "ЦГ": 986,
+    "ПОКРОВА": 995
+   }
+  },
+  {
+   "gender": "m",
+   "place": 41,
+   "totalPoints": 1981,
+   "displayName": "Пкин Вадим",
+   "racer": {
+    "id": "pkin-vadim",
+    "numericId": "182867"
+   },
+   "breakdown": {
+    "ЦГ": 986,
+    "FURY ROAD": 995
+   }
+  },
+  {
+   "gender": "m",
+   "place": 42,
+   "totalPoints": 1981,
+   "displayName": "Чикурков Кирилл",
+   "racer": {
+    "id": "chikurkov-kirill",
+    "numericId": "92307356"
+   },
+   "breakdown": {
+    "ЦГ": 998,
+    "SHULZ GW": 983
+   }
+  },
+  {
+   "gender": "m",
+   "place": 43,
+   "totalPoints": 1980,
+   "displayName": "Самойлов Филипп",
+   "racer": {
+    "id": "filipp-samoilov",
+    "numericId": "36758510"
+   },
+   "breakdown": {
+    "ЦГ": 985,
+    "GRAVEL INSTINCT": 995
+   }
+  },
+  {
+   "gender": "m",
+   "place": 44,
+   "totalPoints": 1979,
+   "displayName": "Карпекин Антон",
+   "racer": {
+    "id": "karpekin-anton",
+    "numericId": "21837805"
+   },
+   "breakdown": {
+    "ЦГ": 984,
+    "SHULZ GW": 995
+   }
+  },
+  {
+   "gender": "m",
+   "place": 45,
+   "totalPoints": 1977,
+   "displayName": "Коля State",
+   "racer": {
+    "id": "kolya-state",
+    "numericId": "21336532"
+   },
+   "breakdown": {
+    "FURY ROAD": 984,
+    "GRAVEL INSTINCT": 993
+   }
+  },
+  {
+   "gender": "m",
+   "place": 46,
+   "totalPoints": 1977,
+   "displayName": "Овсянников Никита",
+   "racer": {
+    "id": "ovsyannikov-nikita",
+    "numericId": "28189241"
+   },
+   "breakdown": {
+    "FURY ROAD": 996,
+    "SHULZ GW": 981
+   }
+  },
+  {
+   "gender": "m",
+   "place": 47,
+   "totalPoints": 1976,
+   "displayName": "Поляков Михаил",
+   "racer": {
+    "id": "mihail-polyakov",
+    "numericId": "71981043"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 984,
+    "СПОРТМАРАФОН": 992
+   }
+  },
+  {
+   "gender": "f",
+   "place": 13,
+   "totalPoints": 1975,
+   "displayName": "Махмутова Екатерина",
+   "racer": {
+    "id": "mahmutova-ekaterina",
+    "numericId": "49120832"
+   },
+   "breakdown": {
+    "SHULZ GW": 987,
+    "FURY ROAD": 988
+   }
+  },
+  {
+   "gender": "m",
+   "place": 48,
+   "totalPoints": 1975,
+   "displayName": "Рахманов Тимур",
+   "racer": {
+    "id": "rahmanov-timur",
+    "numericId": "64806149"
+   },
+   "breakdown": {
+    "ПОКРОВА": 985,
+    "GRAVEL INSTINCT": 990
+   }
+  },
+  {
+   "gender": "f",
+   "place": 14,
+   "totalPoints": 1973,
+   "displayName": "Думбадзе Тамара",
+   "racer": {
+    "id": "dumbadze-tamara",
+    "numericId": "74699904"
+   },
+   "breakdown": {
+    "ЦГ": 982,
+    "SHULZ GW": 991
+   }
+  },
+  {
+   "gender": "m",
+   "place": 49,
+   "totalPoints": 1968,
+   "displayName": "Ахраров Эмир",
+   "racer": {
+    "id": "ahrarov-emir",
+    "numericId": "12132431"
+   },
+   "breakdown": {
+    "MODDER": 981,
+    "SHULZ GW": 987
+   }
+  },
+  {
+   "gender": "f",
+   "place": 15,
+   "totalPoints": 1966,
+   "displayName": "Конникова Маша",
+   "racer": {
+    "id": "konnikova-masha",
+    "numericId": "32899294"
+   },
+   "breakdown": {
+    "ЦГ": 980,
+    "ПОКРОВА": 986
+   }
+  },
+  {
+   "gender": "m",
+   "place": 50,
+   "totalPoints": 1965,
+   "displayName": "Осипов Дмитрий",
+   "racer": {
+    "id": "osipov-dmitrii",
+    "numericId": "27724253"
+   },
+   "breakdown": {
+    "ПОКРОВА": 977,
+    "GRAVEL INSTINCT": 988
+   }
+  },
+  {
+   "gender": "m",
+   "place": 51,
+   "totalPoints": 1961,
+   "displayName": "Журавлев Михаил",
+   "racer": {
+    "id": "zhuravlev-mihail",
+    "numericId": "11568617"
+   },
+   "breakdown": {
+    "MODDER": 988,
+    "FURY ROAD": 973
+   }
+  },
+  {
+   "gender": "m",
+   "place": 52,
+   "totalPoints": 1956,
+   "displayName": "Жаков Антон",
+   "racer": {
+    "id": "zhakov-anton",
+    "numericId": "71909300"
+   },
+   "breakdown": {
+    "ПОКРОВА": 976,
+    "GRAVEL INSTINCT": 980
+   }
+  },
+  {
+   "gender": "m",
+   "place": 53,
+   "totalPoints": 1956,
+   "displayName": "Пискунов Денис",
+   "racer": {
+    "id": "piskunov-denis",
+    "numericId": "26686402"
+   },
+   "breakdown": {
+    "ПОКРОВА": 970,
+    "GRAVEL INSTINCT": 986
+   }
+  },
+  {
+   "gender": "m",
+   "place": 54,
+   "totalPoints": 1955,
+   "displayName": "Яблочнюк Егор",
+   "racer": {
+    "id": "yablochnyuk-egor",
+    "numericId": "82493290"
+   },
+   "breakdown": {
+    "FURY ROAD": 980,
+    "ПОКРОВА": 975
+   }
+  },
+  {
+   "gender": "m",
+   "place": 55,
+   "totalPoints": 1953,
+   "displayName": "Руденко Александр",
+   "racer": {
+    "id": "rudenko-aleksandr",
+    "numericId": "72253106"
+   },
+   "breakdown": {
+    "ПОКРОВА": 971,
+    "GRAVEL INSTINCT": 982
+   }
+  },
+  {
+   "gender": "m",
+   "place": 56,
+   "totalPoints": 1948,
+   "displayName": "Антонюк Григорий",
+   "racer": {
+    "id": "antonyuk-grigorii",
+    "numericId": "92894961"
+   },
+   "breakdown": {
+    "ЦГ": 955,
+    "FURY ROAD": 993
+   }
+  },
+  {
+   "gender": "m",
+   "place": 57,
+   "totalPoints": 1948,
+   "displayName": "Фатеев Илья",
+   "racer": {
+    "id": "fateev-ilya",
+    "numericId": "34814108"
+   },
+   "breakdown": {
+    "ЦГ": 981,
+    "FURY ROAD": 967
+   }
+  },
+  {
+   "gender": "m",
+   "place": 58,
+   "totalPoints": 1946,
+   "displayName": "Давыдов Антон",
+   "racer": {
+    "id": "davydov-anton",
+    "numericId": "92170504"
+   },
+   "breakdown": {
+    "ЦГ": 970,
+    "FURY ROAD": 976
+   }
+  },
+  {
+   "gender": "m",
+   "place": 59,
+   "totalPoints": 1945,
+   "displayName": "Кобец Вячеслав",
+   "racer": {
+    "id": "kobets-vyacheslav",
+    "numericId": "47311880"
+   },
+   "breakdown": {
+    "MODDER": 970,
+    "SHULZ GW": 975
+   }
+  },
+  {
+   "gender": "m",
+   "place": 60,
+   "totalPoints": 1943,
+   "displayName": "Школин Николай",
+   "racer": {
+    "id": "shkolin-nikolai",
+    "numericId": "7392476"
+   },
+   "breakdown": {
+    "ПОКРОВА": 964,
+    "GRAVEL INSTINCT": 979
+   }
+  },
+  {
+   "gender": "m",
+   "place": 61,
+   "totalPoints": 1938,
+   "displayName": "Рыжков Илья",
+   "racer": {
+    "id": "ryzhkov-ilya",
+    "numericId": "50917194"
+   },
+   "breakdown": {
+    "FURY ROAD": 964,
+    "ПОКРОВА": 974
+   }
+  },
+  {
+   "gender": "m",
+   "place": 62,
+   "totalPoints": 1933,
+   "displayName": "Козлов Сергей",
+   "racer": {
+    "id": "kozlov-sergei",
+    "numericId": "96057519"
+   },
+   "breakdown": {
+    "SHULZ GW": 970,
+    "ПОКРОВА": 963
+   }
+  },
+  {
+   "gender": "m",
+   "place": 63,
+   "totalPoints": 1929,
+   "displayName": "Андреев Владимир",
+   "racer": {
+    "id": "andreev-vladimir",
+    "numericId": "36470333"
+   },
+   "breakdown": {
+    "ЦГ": 949,
+    "MODDER": 980
+   }
+  },
+  {
+   "gender": "m",
+   "place": 64,
+   "totalPoints": 1929,
+   "displayName": "Бадеев Артём",
+   "racer": {
+    "id": "badeev-artem",
+    "numericId": "67733606"
+   },
+   "breakdown": {
+    "ЦГ": 966,
+    "SHULZ GW": 963
+   }
+  },
+  {
+   "gender": "m",
+   "place": 65,
+   "totalPoints": 1928,
+   "displayName": "Архипов Антон",
+   "racer": {
+    "id": "arhipov-anton",
+    "numericId": "21301433"
+   },
+   "breakdown": {
+    "MODDER": 974,
+    "FURY ROAD": 954
+   }
+  },
+  {
+   "gender": "m",
+   "place": 66,
+   "totalPoints": 1926,
+   "displayName": "Белоколенко Артем",
+   "racer": {
+    "id": "belokolenko-artem",
+    "numericId": "92610139"
+   },
+   "breakdown": {
+    "MODDER": 960,
+    "FURY ROAD": 966
+   }
+  },
+  {
+   "gender": "m",
+   "place": 67,
+   "totalPoints": 1925,
+   "displayName": "Богачев Андрей",
+   "racer": {
+    "id": "bogachev-andrei",
+    "numericId": "7587438"
+   },
+   "breakdown": {
+    "FURY ROAD": 960,
+    "ПОКРОВА": 965
+   }
+  },
+  {
+   "gender": "m",
+   "place": 68,
+   "totalPoints": 1918,
+   "displayName": "Герль Михаил",
+   "racer": {
+    "id": "mihail-gerl",
+    "numericId": "11548470"
+   },
+   "breakdown": {
+    "FURY ROAD": 932,
+    "СПОРТМАРАФОН": 986
+   }
+  },
+  {
+   "gender": "m",
+   "place": 69,
+   "totalPoints": 1915,
+   "displayName": "Трифонов Вадим",
+   "racer": {
+    "id": "trifonov-vadim-d5jdcg",
+    "numericId": "6716760"
+   },
+   "breakdown": {
+    "ЦГ": 958,
+    "SHULZ GW": 957
+   }
+  },
+  {
+   "gender": "m",
+   "place": 70,
+   "totalPoints": 1915,
+   "displayName": "Тюшков Максим",
+   "racer": {
+    "id": "tyushkov-maksim",
+    "numericId": "55537801"
+   },
+   "breakdown": {
+    "SHULZ GW": 969,
+    "FURY ROAD": 946
+   }
+  },
+  {
+   "gender": "m",
+   "place": 71,
+   "totalPoints": 1911,
+   "displayName": "Наделко Ярослав",
+   "racer": {
+    "id": "nadelko-yaroslav",
+    "numericId": "63199657"
+   },
+   "breakdown": {
+    "ЦГ": 943,
+    "FURY ROAD": 968
+   }
+  },
+  {
+   "gender": "m",
+   "place": 72,
+   "totalPoints": 1907,
+   "displayName": "Свилев Михаил",
+   "racer": {
+    "id": "mihail-svilev",
+    "numericId": "58262924"
+   },
+   "breakdown": {
+    "ПОКРОВА": 942,
+    "GRAVEL INSTINCT": 965
+   }
+  },
+  {
+   "gender": "m",
+   "place": 73,
+   "totalPoints": 1905,
+   "displayName": "Кирилловский Максим",
+   "racer": {
+    "id": "kirillovskii-maksim",
+    "numericId": "82149969"
+   },
+   "breakdown": {
+    "ЦГ": 940,
+    "FURY ROAD": 965
+   }
+  },
+  {
+   "gender": "m",
+   "place": 74,
+   "totalPoints": 1905,
+   "displayName": "Полубояринов Антон",
+   "racer": {
+    "id": "poluboyarinov-anton",
+    "numericId": "86696460"
+   },
+   "breakdown": {
+    "ЦГ": 932,
+    "SHULZ GW": 973
+   }
+  },
+  {
+   "gender": "m",
+   "place": 75,
+   "totalPoints": 1904,
+   "displayName": "Шарафиев Ренат",
+   "racer": {
+    "id": "renat-sharafiev",
+    "numericId": "33915816"
+   },
+   "breakdown": {
+    "ПОКРОВА": 928,
+    "GRAVEL INSTINCT": 976
+   }
+  },
+  {
+   "gender": "m",
+   "place": 76,
+   "totalPoints": 1899,
+   "displayName": "Миронов Алексей",
+   "racer": {
+    "id": "mironov-aleksei",
+    "numericId": "91170328"
+   },
+   "breakdown": {
+    "FURY ROAD": 940,
+    "ПОКРОВА": 959
+   }
+  },
+  {
+   "gender": "m",
+   "place": 77,
+   "totalPoints": 1898,
+   "displayName": "Акопов Дмитрий",
+   "racer": {
+    "id": "akopov-dmitrii",
+    "numericId": "80077989"
+   },
+   "breakdown": {
+    "MODDER": 976,
+    "FURY ROAD": 922
+   }
+  },
+  {
+   "gender": "m",
+   "place": 78,
+   "totalPoints": 1893,
+   "displayName": "Свечников Александр",
+   "racer": {
+    "id": "svechnikov-aleksandr",
+    "numericId": "6105471"
+   },
+   "breakdown": {
+    "FURY ROAD": 900,
+    "СПОРТМАРАФОН": 993
+   }
+  },
+  {
+   "gender": "m",
+   "place": 79,
+   "totalPoints": 1888,
+   "displayName": "Груздев Роман",
+   "racer": {
+    "id": "gruzdev-roman",
+    "numericId": "46842261"
+   },
+   "breakdown": {
+    "MODDER": 968,
+    "FURY ROAD": 920
+   }
+  },
+  {
+   "gender": "m",
+   "place": 80,
+   "totalPoints": 1884,
+   "displayName": "Сапегин Денис",
+   "racer": {
+    "id": "denis-sapegin",
+    "numericId": "53807545"
+   },
+   "breakdown": {
+    "FURY ROAD": 933,
+    "ПОКРОВА": 951
+   }
+  },
+  {
+   "gender": "m",
+   "place": 81,
+   "totalPoints": 1882,
+   "displayName": "Белов Дмитрий",
+   "racer": {
+    "id": "belov-dmitrii",
+    "numericId": "10875398"
+   },
+   "breakdown": {
+    "FURY ROAD": 909,
+    "ПОКРОВА": 973
+   }
+  },
+  {
+   "gender": "m",
+   "place": 82,
+   "totalPoints": 1877,
+   "displayName": "Жуковский Антон",
+   "racer": {
+    "id": "zhukovskii-anton",
+    "numericId": "7754676"
+   },
+   "breakdown": {
+    "FURY ROAD": 936,
+    "ПОКРОВА": 941
+   }
+  },
+  {
+   "gender": "m",
+   "place": 83,
+   "totalPoints": 1874,
+   "displayName": "Туробов Никита",
+   "racer": {
+    "id": "turobov-nikita",
+    "numericId": "65978767"
+   },
+   "breakdown": {
+    "ЦГ": 912,
+    "SHULZ GW": 962
+   }
+  },
+  {
+   "gender": "m",
+   "place": 84,
+   "totalPoints": 1872,
+   "displayName": "Горшков Денис",
+   "racer": {
+    "id": "gorshkov-denis",
+    "numericId": "7599153"
+   },
+   "breakdown": {
+    "ПОКРОВА": 898,
+    "GRAVEL INSTINCT": 974
+   }
+  },
+  {
+   "gender": "m",
+   "place": 85,
+   "totalPoints": 1860,
+   "displayName": "Тарасов Денис",
+   "racer": {
+    "id": "tarasov-denis--xjyjw",
+    "numericId": "85873095"
+   },
+   "breakdown": {
+    "ЦГ": 891,
+    "GRAVEL INSTINCT": 969
+   }
+  },
+  {
+   "gender": "m",
+   "place": 86,
+   "totalPoints": 1859,
+   "displayName": "Купоров Артем",
+   "racer": {
+    "id": "artem-kuporov",
+    "numericId": "74206661"
+   },
+   "breakdown": {
+    "FURY ROAD": 921,
+    "ПОКРОВА": 938
+   }
+  },
+  {
+   "gender": "m",
+   "place": 87,
+   "totalPoints": 1857,
+   "displayName": "Подгорный Тимофей",
+   "racer": {
+    "id": "podgornyi-timofei",
+    "numericId": "73827846"
+   },
+   "breakdown": {
+    "ЦГ": 904,
+    "FURY ROAD": 953
+   }
+  },
+  {
+   "gender": "m",
+   "place": 88,
+   "totalPoints": 1853,
+   "displayName": "Новиков Вячеслав",
+   "racer": {
+    "id": "novikov-vyacheslav",
+    "numericId": "45118068"
+   },
+   "breakdown": {
+    "ЦГ": 924,
+    "FURY ROAD": 929
+   }
+  },
+  {
+   "gender": "m",
+   "place": 89,
+   "totalPoints": 1844,
+   "displayName": "Шестаков Александр",
+   "racer": {
+    "id": "aleksandr-shestakov",
+    "numericId": "78943307"
+   },
+   "breakdown": {
+    "ЦГ": 890,
+    "ПОКРОВА": 954
+   }
+  },
+  {
+   "gender": "m",
+   "place": 90,
+   "totalPoints": 1843,
+   "displayName": "Солтановский Сергей",
+   "racer": {
+    "id": "soltanovskii-sergei",
+    "numericId": "3531695"
+   },
+   "breakdown": {
+    "ЦГ": 887,
+    "SHULZ GW": 956
+   }
+  },
+  {
+   "gender": "m",
+   "place": 91,
+   "totalPoints": 1842,
+   "displayName": "Куликов Дмитрий",
+   "racer": {
+    "id": "kulikov-dmitrii",
+    "numericId": "77820865"
+   },
+   "breakdown": {
+    "ЦГ": 881,
+    "SHULZ GW": 961
+   }
+  },
+  {
+   "gender": "m",
+   "place": 92,
+   "totalPoints": 1841,
+   "displayName": "Карасов Роман",
+   "racer": {
+    "id": "karasov-roman",
+    "numericId": "7375704"
+   },
+   "breakdown": {
+    "ЦГ": 902,
+    "FURY ROAD": 939
+   }
+  },
+  {
+   "gender": "m",
+   "place": 93,
+   "totalPoints": 1834,
+   "displayName": "Мазур Роман",
+   "racer": {
+    "id": "mazur-roman",
+    "numericId": "81491974"
+   },
+   "breakdown": {
+    "ЦГ": 892,
+    "FURY ROAD": 942
+   }
+  },
+  {
+   "gender": "m",
+   "place": 94,
+   "totalPoints": 1833,
+   "displayName": "Пантелеев Антон",
+   "racer": {
+    "id": "panteleev-anton",
+    "numericId": "71934457"
+   },
+   "breakdown": {
+    "SHULZ GW": 939,
+    "ПОКРОВА": 894
+   }
+  },
+  {
+   "gender": "m",
+   "place": 95,
+   "totalPoints": 1828,
+   "displayName": "Losdeniskos Losdeniskos",
+   "racer": {
+    "id": "losdeniskos-losdeniskos",
+    "numericId": "67092207"
+   },
+   "breakdown": {
+    "ЦГ": 894,
+    "FURY ROAD": 934
+   }
+  },
+  {
+   "gender": "m",
+   "place": 96,
+   "totalPoints": 1823,
+   "displayName": "Соловьев Алексей",
+   "racer": {
+    "id": "solovev-aleksei",
+    "numericId": "71507615"
+   },
+   "breakdown": {
+    "ЦГ": 874,
+    "FURY ROAD": 949
+   }
+  },
+  {
+   "gender": "m",
+   "place": 97,
+   "totalPoints": 1819,
+   "displayName": "Преображенский Арсений",
+   "racer": {
+    "id": "arsenii-preobrazhenskii",
+    "numericId": "73584316"
+   },
+   "breakdown": {
+    "ЦГ": 870,
+    "SHULZ GW": 949
+   }
+  },
+  {
+   "gender": "m",
+   "place": 98,
+   "totalPoints": 1812,
+   "displayName": "Исалиев Алексей",
+   "racer": {
+    "id": "aleksei-isaliev",
+    "numericId": "84504119"
+   },
+   "breakdown": {
+    "FURY ROAD": 903,
+    "ПОКРОВА": 909
+   }
+  },
+  {
+   "gender": "m",
+   "place": 99,
+   "totalPoints": 1805,
+   "displayName": "Тимофеев Михаил",
+   "racer": {
+    "id": "timofeev-mihail",
+    "numericId": "67685068"
+   },
+   "breakdown": {
+    "ЦГ": 875,
+    "SHULZ GW": 930
+   }
+  },
+  {
+   "gender": "m",
+   "place": 100,
+   "totalPoints": 1797,
+   "displayName": "Веселов Эдуард",
+   "racer": {
+    "id": "veselov-eduard",
+    "numericId": "47117178"
+   },
+   "breakdown": {
+    "ЦГ": 898,
+    "FURY ROAD": 899
+   }
+  },
+  {
+   "gender": "m",
+   "place": 101,
+   "totalPoints": 1793,
+   "displayName": "Марачевский Антон",
+   "racer": {
+    "id": "marachevskii-anton",
+    "numericId": "19602984"
+   },
+   "breakdown": {
+    "ЦГ": 877,
+    "FURY ROAD": 916
+   }
+  },
+  {
+   "gender": "m",
+   "place": 102,
+   "totalPoints": 1786,
+   "displayName": "Листвин Василий",
+   "racer": {
+    "id": "vasilii-listvin",
+    "numericId": "13387641"
+   },
+   "breakdown": {
+    "ЦГ": 883,
+    "ПОКРОВА": 903
+   }
+  },
+  {
+   "gender": "f",
+   "place": 16,
+   "totalPoints": 1500,
+   "displayName": "Шарко Ирина Викторовна",
+   "racer": {
+    "id": "sharko-irina",
+    "numericId": "8085759"
+   },
+   "breakdown": {
+    "MODDER": 1000,
+    "SHULZ GW": 500
+   }
+  },
+  {
+   "gender": "m",
+   "place": 103,
+   "totalPoints": 1497,
+   "displayName": "Лалин Григорий Владимирович",
+   "racer": {
+    "id": "lalin-grigorii",
+    "numericId": "5044505"
+   },
+   "breakdown": {
+    "MODDER": 998,
+    "SHULZ GW": 499
+   }
+  },
+  {
+   "gender": "m",
+   "place": 104,
+   "totalPoints": 1496,
+   "displayName": "Антонюк Гриня",
+   "racer": {
+    "id": "antonyuk-grinya",
+    "numericId": "32541578"
+   },
+   "breakdown": {
+    "MODDER": 996,
+    "SHULZ GW": 500
+   }
+  },
+  {
+   "gender": "f",
+   "place": 17,
+   "totalPoints": 1490,
+   "displayName": "Аничина Мария",
+   "racer": {
+    "id": "anichina-mariya",
+    "numericId": "41115389"
+   },
+   "breakdown": {
+    "ЦГ": 991,
+    "SHULZ GW": 499
+   }
+  },
+  {
+   "gender": "m",
+   "place": 105,
+   "totalPoints": 1490,
+   "displayName": "Проценко Олег",
+   "racer": {
+    "id": "protsenko-oleg",
+    "numericId": "60317314"
+   },
+   "breakdown": {
+    "ЦГ": 990,
+    "СПОРТМАРАФОН": 500
+   }
+  },
+  {
+   "gender": "m",
+   "place": 106,
+   "totalPoints": 1486,
+   "displayName": "Коваленко Сергей Васильевич",
+   "racer": {
+    "id": "kovalenko-sergei",
+    "numericId": "20412608"
+   },
+   "breakdown": {
+    "MODDER": 989,
+    "SHULZ GW": 497
+   }
+  },
+  {
+   "gender": "m",
+   "place": 107,
+   "totalPoints": 1481,
+   "displayName": "Григорьев Григорий Андреевич",
+   "racer": {
+    "id": "grigorev-grigorii",
+    "numericId": "8840860"
+   },
+   "breakdown": {
+    "SHULZ GW": 494,
+    "FURY ROAD": 987
+   }
+  },
+  {
+   "gender": "m",
+   "place": 108,
+   "totalPoints": 1475,
+   "displayName": "Тарасов Дмитрий Сергеевич",
+   "racer": {
+    "id": "tarasov-dmitrii",
+    "numericId": "28197496"
+   },
+   "breakdown": {
+    "ЦГ": 977,
+    "SHULZ GW": 498
+   }
+  },
+  {
+   "gender": "m",
+   "place": 109,
+   "totalPoints": 1474,
+   "displayName": "Егоров Степан",
+   "racer": {
+    "id": "egorov-stepan",
+    "numericId": "77161635"
+   },
+   "breakdown": {
+    "MODDER": 983,
+    "SHULZ GW": 491
+   }
+  },
+  {
+   "gender": "m",
+   "place": 110,
+   "totalPoints": 1451,
+   "displayName": "Смирных Сергей",
+   "racer": {
+    "id": "smirnyh-sergei",
+    "numericId": "14408595"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 963,
+    "СПОРТМАРАФОН": 488
+   }
+  },
+  {
+   "gender": "m",
+   "place": 111,
+   "totalPoints": 1447,
+   "displayName": "Цветаев Алексей Евгеньевич",
+   "racer": {
+    "id": "tsvetaev-aleksei",
+    "numericId": "41597745"
+   },
+   "breakdown": {
+    "ЦГ": 951,
+    "SHULZ GW": 496
+   }
+  },
+  {
+   "gender": "m",
+   "place": 112,
+   "totalPoints": 1435,
+   "displayName": "Патраков Александр Васильевич",
+   "racer": {
+    "id": "patrakov-aleksandr",
+    "numericId": "94095254"
+   },
+   "breakdown": {
+    "ЦГ": 942,
+    "SHULZ GW": 493
+   }
+  },
+  {
+   "gender": "m",
+   "place": 113,
+   "totalPoints": 1433,
+   "displayName": "Скакунов Сергей Викторович",
+   "racer": {
+    "id": "skakunov-sergei",
+    "numericId": "15689874"
+   },
+   "breakdown": {
+    "ЦГ": 948,
+    "SHULZ GW": 485
+   }
+  },
+  {
+   "gender": "m",
+   "place": 114,
+   "totalPoints": 1413,
+   "displayName": "Мальцев Дмитрий Андреевич",
+   "racer": {
+    "id": "maltsev-dmitrii",
+    "numericId": "52053903"
+   },
+   "breakdown": {
+    "ЦГ": 923,
+    "SHULZ GW": 490
+   }
+  },
+  {
+   "gender": "m",
+   "place": 115,
+   "totalPoints": 1402,
+   "displayName": "Кокин Владимир Ильич",
+   "racer": {
+    "id": "kokin-vladimir",
+    "numericId": "93301099"
+   },
+   "breakdown": {
+    "ЦГ": 915,
+    "SHULZ GW": 487
+   }
+  },
+  {
+   "gender": "m",
+   "place": 116,
+   "totalPoints": 1398,
+   "displayName": "Королёв Артём",
+   "racer": {
+    "id": "korolev-artem",
+    "numericId": "90944428"
+   },
+   "breakdown": {
+    "ПОКРОВА": 913,
+    "СПОРТМАРАФОН": 485
+   }
+  },
+  {
+   "gender": "m",
+   "place": 117,
+   "totalPoints": 1368,
+   "displayName": "Аббасов Загид",
+   "racer": {
+    "id": "abbasov-zagid",
+    "numericId": "9475899"
+   },
+   "breakdown": {
+    "ЦГ": 884,
+    "SHULZ GW": 484
+   }
+  },
+  {
+   "gender": "m",
+   "place": 118,
+   "totalPoints": 1368,
+   "displayName": "Агафонов Сергей Георгиевич",
+   "racer": {
+    "id": "agafonov-sergei",
+    "numericId": "50355510"
+   },
+   "breakdown": {
+    "ЦГ": 889,
+    "SHULZ GW": 479
+   }
+  },
+  {
+   "gender": "m",
+   "place": 119,
+   "totalPoints": 1238,
+   "displayName": "Осипов Михаил",
+   "racer": {
+    "id": "mihail-osipov",
+    "numericId": "36918418"
+   },
+   "breakdown": {
+    "ПОКРОВА": 924,
+    "СПОРТМАРАФОН": 314
+   }
+  },
+  {
+   "gender": "m",
+   "place": 120,
+   "totalPoints": 1228,
+   "displayName": "Андреев Вадим",
+   "racer": {
+    "id": "andreev-vadim",
+    "numericId": "81005778"
+   },
+   "breakdown": {
+    "ПОКРОВА": 912,
+    "СПОРТМАРАФОН": 316
+   }
+  },
+  {
+   "gender": "m",
+   "place": 121,
+   "totalPoints": 1206,
+   "displayName": "Ворник Валентин",
+   "racer": {
+    "id": "valentin-vornik",
+    "numericId": "83374172"
+   },
+   "breakdown": {
+    "ПОКРОВА": 899,
+    "СПОРТМАРАФОН": 307
+   }
+  },
+  {
+   "gender": "m",
+   "place": 122,
+   "totalPoints": 1204,
+   "displayName": "Николаев Андрей",
+   "racer": {
+    "id": "nikolaev-andrei",
+    "numericId": "27545894"
+   },
+   "breakdown": {
+    "ПОКРОВА": 944,
+    "СПОРТМАРАФОН": 260
+   }
+  },
+  {
+   "gender": "f",
+   "place": 18,
+   "totalPoints": 1000,
+   "displayName": "Полякова Анастасия",
+   "racer": {
+    "id": "polyakova-anastasiya",
+    "numericId": "58415226"
+   },
+   "breakdown": {
+    "ЦГ": 1000
+   }
+  },
+  {
+   "gender": "f",
+   "place": 19,
+   "totalPoints": 1000,
+   "displayName": "Струмпэ Анастасия",
+   "racer": {
+    "id": "anastasiya-strumpe",
+    "numericId": "20930584"
+   },
+   "breakdown": {
+    "ПОКРОВА": 1000
+   }
+  },
+  {
+   "gender": "f",
+   "place": 20,
+   "totalPoints": 999,
+   "displayName": "Горбунова Екатерина",
+   "racer": {
+    "id": "gorbunova-ekaterina",
+    "numericId": "32906830"
+   },
+   "breakdown": {
+    "MODDER": 999
+   }
+  },
+  {
+   "gender": "f",
+   "place": 21,
+   "totalPoints": 999,
+   "displayName": "Яблокова Марина",
+   "racer": {
+    "id": "yablokova-marina",
+    "numericId": "79684525"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 999
+   }
+  },
+  {
+   "gender": "m",
+   "place": 123,
+   "totalPoints": 999,
+   "displayName": "Ломакин Александр",
+   "racer": {
+    "id": "lomakin-aleksandr",
+    "numericId": "69785702"
+   },
+   "breakdown": {
+    "SHULZ GW": 999
+   }
+  },
+  {
+   "gender": "m",
+   "place": 124,
+   "totalPoints": 999,
+   "displayName": "Трунин Александр",
+   "racer": {
+    "id": "trunin-aleksandr",
+    "numericId": "29706524"
+   },
+   "breakdown": {
+    "ПОКРОВА": 999
+   }
+  },
+  {
+   "gender": "f",
+   "place": 22,
+   "totalPoints": 998,
+   "displayName": "Семенова Валерия",
+   "racer": {
+    "id": "semenova-valeriya",
+    "numericId": "12148362"
+   },
+   "breakdown": {
+    "ПОКРОВА": 998
+   }
+  },
+  {
+   "gender": "f",
+   "place": 23,
+   "totalPoints": 998,
+   "displayName": "Токранова Аида",
+   "racer": {
+    "id": "tokranova-aida",
+    "numericId": "75639218"
+   },
+   "breakdown": {
+    "ЦГ": 998
+   }
+  },
+  {
+   "gender": "f",
+   "place": 24,
+   "totalPoints": 998,
+   "displayName": "Чеповская Алена",
+   "racer": {
+    "id": "chepovskaya-alena",
+    "numericId": "73379380"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 998
+   }
+  },
+  {
+   "gender": "m",
+   "place": 125,
+   "totalPoints": 998,
+   "displayName": "Скоробогатов Виталий",
+   "racer": {
+    "id": "skorobogatov-vitalii",
+    "numericId": "32406869"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 998
+   }
+  },
+  {
+   "gender": "f",
+   "place": 25,
+   "totalPoints": 997,
+   "displayName": "Анисимова Екатерина",
+   "racer": {
+    "id": "anisimova-ekaterina",
+    "numericId": "26430401"
+   },
+   "breakdown": {
+    "SHULZ GW": 997
+   }
+  },
+  {
+   "gender": "f",
+   "place": 26,
+   "totalPoints": 997,
+   "displayName": "Власова Ксения",
+   "racer": {
+    "id": "vlasova-kseniya",
+    "numericId": "24297795"
+   },
+   "breakdown": {
+    "ПОКРОВА": 997
+   }
+  },
+  {
+   "gender": "f",
+   "place": 27,
+   "totalPoints": 997,
+   "displayName": "Щербакова Ирина",
+   "racer": {
+    "id": "shcherbakova-irina",
+    "numericId": "20719334"
+   },
+   "breakdown": {
+    "ЦГ": 997
+   }
+  },
+  {
+   "gender": "m",
+   "place": 126,
+   "totalPoints": 997,
+   "displayName": "Лазаревич Олег",
+   "racer": {
+    "id": "oleg-jiitdg",
+    "numericId": "84837774"
+   },
+   "breakdown": {
+    "ПОКРОВА": 997
+   }
+  },
+  {
+   "gender": "m",
+   "place": 127,
+   "totalPoints": 997,
+   "displayName": "Саяпин Дмитрий",
+   "racer": {
+    "id": "sayapin-dmitrii",
+    "numericId": "78840861"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 997
+   }
+  },
+  {
+   "gender": "m",
+   "place": 128,
+   "totalPoints": 997,
+   "displayName": "Фишер Александр",
+   "racer": {
+    "id": "fisher-aleksandr",
+    "numericId": "86152660"
+   },
+   "breakdown": {
+    "MODDER": 997
+   }
+  },
+  {
+   "gender": "m",
+   "place": 129,
+   "totalPoints": 997,
+   "displayName": "Quadro Demetrii",
+   "racer": {
+    "id": "quadro-demetrii",
+    "numericId": "20037729"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 997
+   }
+  },
+  {
+   "gender": "f",
+   "place": 28,
+   "totalPoints": 996,
+   "displayName": "Евгения",
+   "racer": {
+    "id": "evgeniya-t5yppt",
+    "numericId": "80800813"
+   },
+   "breakdown": {
+    "MODDER": 996
+   }
+  },
+  {
+   "gender": "f",
+   "place": 29,
+   "totalPoints": 996,
+   "displayName": "Морозова Татьяна",
+   "racer": {
+    "id": "morozova-tatyana",
+    "numericId": "65429928"
+   },
+   "breakdown": {
+    "SHULZ GW": 996
+   }
+  },
+  {
+   "gender": "f",
+   "place": 30,
+   "totalPoints": 996,
+   "displayName": "Самарина Анастасия",
+   "racer": {
+    "id": "samarina-anastasiya",
+    "numericId": "10565957"
+   },
+   "breakdown": {
+    "FURY ROAD": 996
+   }
+  },
+  {
+   "gender": "m",
+   "place": 130,
+   "totalPoints": 996,
+   "displayName": "Кириллов Евгений",
+   "racer": {
+    "id": "kirillov-evgenii",
+    "numericId": "51234013"
+   },
+   "breakdown": {
+    "SHULZ GW": 996
+   }
+  },
+  {
+   "gender": "m",
+   "place": 131,
+   "totalPoints": 996,
+   "displayName": "Кушнарев Валентин",
+   "racer": {
+    "id": "kushnarev-valentin",
+    "numericId": "78890914"
+   },
+   "breakdown": {
+    "ЦГ": 996
+   }
+  },
+  {
+   "gender": "m",
+   "place": 132,
+   "totalPoints": 996,
+   "displayName": "Масянов Андрей",
+   "racer": {
+    "id": "masyanov-andrei",
+    "numericId": "99324821"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 996
+   }
+  },
+  {
+   "gender": "f",
+   "place": 31,
+   "totalPoints": 995,
+   "displayName": "Тюрина Алиса",
+   "racer": {
+    "id": "tyurina-alisa",
+    "numericId": "74581281"
+   },
+   "breakdown": {
+    "SHULZ GW": 995
+   }
+  },
+  {
+   "gender": "f",
+   "place": 32,
+   "totalPoints": 995,
+   "displayName": "Шевкова Наталия",
+   "racer": {
+    "id": "shevkova-nataliya",
+    "numericId": "81116750"
+   },
+   "breakdown": {
+    "FURY ROAD": 995
+   }
+  },
+  {
+   "gender": "m",
+   "place": 133,
+   "totalPoints": 995,
+   "displayName": "Лисин Алексей",
+   "racer": {
+    "id": "lisin-aleksei",
+    "numericId": "88701513"
+   },
+   "breakdown": {
+    "ЦГ": 995
+   }
+  },
+  {
+   "gender": "f",
+   "place": 33,
+   "totalPoints": 994,
+   "displayName": "Мамченкова Наталья",
+   "racer": {
+    "id": "natalya-mamchenkova",
+    "numericId": "35478616"
+   },
+   "breakdown": {
+    "ПОКРОВА": 994
+   }
+  },
+  {
+   "gender": "m",
+   "place": 134,
+   "totalPoints": 994,
+   "displayName": "Бедретдинов Эмиль",
+   "racer": {
+    "id": "bedretdinov-emil-klfdfl",
+    "numericId": "82775790"
+   },
+   "breakdown": {
+    "ЦГ": 994
+   }
+  },
+  {
+   "gender": "m",
+   "place": 135,
+   "totalPoints": 994,
+   "displayName": "Иноземцев Иван",
+   "racer": {
+    "id": "inozemtsev-ivan",
+    "numericId": "96757679"
+   },
+   "breakdown": {
+    "SHULZ GW": 994
+   }
+  },
+  {
+   "gender": "m",
+   "place": 136,
+   "totalPoints": 994,
+   "displayName": "Массальский Никита",
+   "racer": {
+    "id": "nikita-massalskii",
+    "numericId": "56708292"
+   },
+   "breakdown": {
+    "ПОКРОВА": 994
+   }
+  },
+  {
+   "gender": "f",
+   "place": 34,
+   "totalPoints": 993,
+   "displayName": "Лаврентьева Ирина",
+   "racer": {
+    "id": "lavrenteva-irina",
+    "numericId": "21160538"
+   },
+   "breakdown": {
+    "FURY ROAD": 993
+   }
+  },
+  {
+   "gender": "f",
+   "place": 35,
+   "totalPoints": 993,
+   "displayName": "Щемелева Нина",
+   "racer": {
+    "id": "shchemeleva-nina",
+    "numericId": "6401481"
+   },
+   "breakdown": {
+    "ПОКРОВА": 993
+   }
+  },
+  {
+   "gender": "f",
+   "place": 36,
+   "totalPoints": 992,
+   "displayName": "Вяльяк Яна",
+   "racer": {
+    "id": "vyalyak-yana",
+    "numericId": "83890573"
+   },
+   "breakdown": {
+    "ПОКРОВА": 992
+   }
+  },
+  {
+   "gender": "f",
+   "place": 37,
+   "totalPoints": 992,
+   "displayName": "Лошманова Ольга",
+   "racer": {
+    "id": "loshmanova-olga",
+    "numericId": "31279925"
+   },
+   "breakdown": {
+    "FURY ROAD": 992
+   }
+  },
+  {
+   "gender": "f",
+   "place": 38,
+   "totalPoints": 992,
+   "displayName": "Прокудина Елизавета",
+   "racer": {
+    "id": "prokudina-elizaveta",
+    "numericId": "70874974"
+   },
+   "breakdown": {
+    "SHULZ GW": 992
+   }
+  },
+  {
+   "gender": "m",
+   "place": 137,
+   "totalPoints": 992,
+   "displayName": "Смирнов Володя",
+   "racer": {
+    "id": "volodya-smirnov",
+    "numericId": "47116852"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 992
+   }
+  },
+  {
+   "gender": "f",
+   "place": 39,
+   "totalPoints": 991,
+   "displayName": "Бессонова Александра",
+   "racer": {
+    "id": "bessonova-aleksandra",
+    "numericId": "30089575"
+   },
+   "breakdown": {
+    "ПОКРОВА": 991
+   }
+  },
+  {
+   "gender": "m",
+   "place": 138,
+   "totalPoints": 991,
+   "displayName": "Бегемотов",
+   "racer": {
+    "id": "begemotov",
+    "numericId": "83289598"
+   },
+   "breakdown": {
+    "FURY ROAD": 991
+   }
+  },
+  {
+   "gender": "m",
+   "place": 139,
+   "totalPoints": 991,
+   "displayName": "Гавришев Иван",
+   "racer": {
+    "id": "gavrishev-ivan",
+    "numericId": "26659290"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 991
+   }
+  },
+  {
+   "gender": "m",
+   "place": 140,
+   "totalPoints": 991,
+   "displayName": "Рагозин Сергей",
+   "racer": {
+    "id": "ragozin-sergei",
+    "numericId": "65436158"
+   },
+   "breakdown": {
+    "SHULZ GW": 991
+   }
+  },
+  {
+   "gender": "m",
+   "place": 141,
+   "totalPoints": 991,
+   "displayName": "Халявин Дмитрий",
+   "racer": {
+    "id": "halyavin-dmitrii",
+    "numericId": "2164565"
+   },
+   "breakdown": {
+    "MODDER": 991
+   }
+  },
+  {
+   "gender": "m",
+   "place": 142,
+   "totalPoints": 991,
+   "displayName": "Demetri Quadro",
+   "racer": {
+    "id": "demetri-quadro",
+    "numericId": "48988785"
+   },
+   "breakdown": {
+    "ПОКРОВА": 991
+   }
+  },
+  {
+   "gender": "f",
+   "place": 40,
+   "totalPoints": 990,
+   "displayName": "Золотникова Антонина",
+   "racer": {
+    "id": "zolotnikova-antonina",
+    "numericId": "67858070"
+   },
+   "breakdown": {
+    "ПОКРОВА": 990
+   }
+  },
+  {
+   "gender": "m",
+   "place": 143,
+   "totalPoints": 990,
+   "displayName": "Гуревич Даня",
+   "racer": {
+    "id": "danya",
+    "numericId": "35699138"
+   },
+   "breakdown": {
+    "FURY ROAD": 990
+   }
+  },
+  {
+   "gender": "m",
+   "place": 144,
+   "totalPoints": 990,
+   "displayName": "Кол Юрий",
+   "racer": {
+    "id": "kol-yurii",
+    "numericId": "2195596"
+   },
+   "breakdown": {
+    "SHULZ GW": 990
+   }
+  },
+  {
+   "gender": "m",
+   "place": 145,
+   "totalPoints": 990,
+   "displayName": "Овцын Дмитрий",
+   "racer": {
+    "id": "dmitrii-ovtsyn",
+    "numericId": "27277746"
+   },
+   "breakdown": {
+    "ПОКРОВА": 990
+   }
+  },
+  {
+   "gender": "m",
+   "place": 146,
+   "totalPoints": 990,
+   "displayName": "Яньшин Максим",
+   "racer": {
+    "id": "yanshin-maksim",
+    "numericId": "70616930"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 990
+   }
+  },
+  {
+   "gender": "f",
+   "place": 41,
+   "totalPoints": 989,
+   "displayName": "Григорьева Женя",
+   "racer": {
+    "id": "grigoreva-zhenya",
+    "numericId": "44892105"
+   },
+   "breakdown": {
+    "ПОКРОВА": 989
+   }
+  },
+  {
+   "gender": "f",
+   "place": 42,
+   "totalPoints": 989,
+   "displayName": "Коленько Наталья",
+   "racer": {
+    "id": "kolenko-natalya",
+    "numericId": "55279359"
+   },
+   "breakdown": {
+    "ЦГ": 989
+   }
+  },
+  {
+   "gender": "f",
+   "place": 43,
+   "totalPoints": 989,
+   "displayName": "Лихачева Екатерина",
+   "racer": {
+    "id": "lihacheva-ekaterina",
+    "numericId": "4778077"
+   },
+   "breakdown": {
+    "FURY ROAD": 989
+   }
+  },
+  {
+   "gender": "f",
+   "place": 44,
+   "totalPoints": 989,
+   "displayName": "Хваткова Алиса",
+   "racer": {
+    "id": "hvatkova-alisa",
+    "numericId": "77605434"
+   },
+   "breakdown": {
+    "SHULZ GW": 989
+   }
+  },
+  {
+   "gender": "m",
+   "place": 147,
+   "totalPoints": 989,
+   "displayName": "Давыдов Владимир",
+   "racer": {
+    "id": "davydov-vladimir",
+    "numericId": "49812294"
+   },
+   "breakdown": {
+    "ПОКРОВА": 989
+   }
+  },
+  {
+   "gender": "f",
+   "place": 45,
+   "totalPoints": 988,
+   "displayName": "Каленова Асель",
+   "racer": {
+    "id": "kalenova-asel",
+    "numericId": "16815003"
+   },
+   "breakdown": {
+    "SHULZ GW": 988
+   }
+  },
+  {
+   "gender": "f",
+   "place": 46,
+   "totalPoints": 988,
+   "displayName": "Пугонова Мария",
+   "racer": {
+    "id": "pugonova-mariya",
+    "numericId": "28388245"
+   },
+   "breakdown": {
+    "ПОКРОВА": 988
+   }
+  },
+  {
+   "gender": "f",
+   "place": 47,
+   "totalPoints": 988,
+   "displayName": "Сурикова Полли",
+   "racer": {
+    "id": "surikova-polli",
+    "numericId": "79989869"
+   },
+   "breakdown": {
+    "ЦГ": 988
+   }
+  },
+  {
+   "gender": "m",
+   "place": 148,
+   "totalPoints": 988,
+   "displayName": "Ефимов Георгий",
+   "racer": {
+    "id": "efimov-georgii",
+    "numericId": "2806552"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 988
+   }
+  },
+  {
+   "gender": "m",
+   "place": 149,
+   "totalPoints": 988,
+   "displayName": "Смирнов Владимир",
+   "racer": {
+    "id": "smirnov-vladimir",
+    "numericId": "66090189"
+   },
+   "breakdown": {
+    "ПОКРОВА": 988
+   }
+  },
+  {
+   "gender": "f",
+   "place": 48,
+   "totalPoints": 987,
+   "displayName": "Горбунова Валерия",
+   "racer": {
+    "id": "gorbunova-valeriya",
+    "numericId": "76482267"
+   },
+   "breakdown": {
+    "ЦГ": 987
+   }
+  },
+  {
+   "gender": "f",
+   "place": 49,
+   "totalPoints": 987,
+   "displayName": "Наумович Елизавета",
+   "racer": {
+    "id": "elizaveta",
+    "numericId": "80083599"
+   },
+   "breakdown": {
+    "FURY ROAD": 987
+   }
+  },
+  {
+   "gender": "f",
+   "place": 50,
+   "totalPoints": 987,
+   "displayName": "Новикова Ольга",
+   "racer": {
+    "id": "olga-novikova",
+    "numericId": "31580078"
+   },
+   "breakdown": {
+    "ПОКРОВА": 987
+   }
+  },
+  {
+   "gender": "m",
+   "place": 150,
+   "totalPoints": 987,
+   "displayName": "Васильев Антон",
+   "racer": {
+    "id": "vasilev-anton",
+    "numericId": "19987613"
+   },
+   "breakdown": {
+    "MODDER": 987
+   }
+  },
+  {
+   "gender": "m",
+   "place": 151,
+   "totalPoints": 987,
+   "displayName": "Галкин Андрей",
+   "racer": {
+    "id": "galkin-andrei",
+    "numericId": "9079705"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 987
+   }
+  },
+  {
+   "gender": "m",
+   "place": 152,
+   "totalPoints": 987,
+   "displayName": "Нечипуренко Дмитрий",
+   "racer": {
+    "id": "nechipurenko-dmitrii",
+    "numericId": "99944920"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 987
+   }
+  },
+  {
+   "gender": "m",
+   "place": 153,
+   "totalPoints": 987,
+   "displayName": "Слоган Вася",
+   "racer": {
+    "id": "slogan-vasya",
+    "numericId": "88173177"
+   },
+   "breakdown": {
+    "ПОКРОВА": 987
+   }
+  },
+  {
+   "gender": "f",
+   "place": 51,
+   "totalPoints": 986,
+   "displayName": "Смирнова Полина",
+   "racer": {
+    "id": "smirnova-polina",
+    "numericId": "24141655"
+   },
+   "breakdown": {
+    "SHULZ GW": 986
+   }
+  },
+  {
+   "gender": "m",
+   "place": 154,
+   "totalPoints": 986,
+   "displayName": "Романов Алексей",
+   "racer": {
+    "id": "romanov-aleksei",
+    "numericId": "3590014"
+   },
+   "breakdown": {
+    "FURY ROAD": 986
+   }
+  },
+  {
+   "gender": "f",
+   "place": 52,
+   "totalPoints": 985,
+   "displayName": "Алексеева Инга",
+   "racer": {
+    "id": "alekseeva-inga",
+    "numericId": "81085055"
+   },
+   "breakdown": {
+    "ПОКРОВА": 985
+   }
+  },
+  {
+   "gender": "f",
+   "place": 53,
+   "totalPoints": 985,
+   "displayName": "Буркова Алиса",
+   "racer": {
+    "id": "burkova-alisa",
+    "numericId": "34764051"
+   },
+   "breakdown": {
+    "SHULZ GW": 985
+   }
+  },
+  {
+   "gender": "m",
+   "place": 155,
+   "totalPoints": 985,
+   "displayName": "Болотецкий Ростислав",
+   "racer": {
+    "id": "bolotetskii-rostislav",
+    "numericId": "96809527"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 985
+   }
+  },
+  {
+   "gender": "m",
+   "place": 156,
+   "totalPoints": 985,
+   "displayName": "Мирошников Алексей",
+   "racer": {
+    "id": "miroshnikov-aleksei",
+    "numericId": "35163592"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 985
+   }
+  },
+  {
+   "gender": "m",
+   "place": 157,
+   "totalPoints": 985,
+   "displayName": "Ядыкин Евгений",
+   "racer": {
+    "id": "yadykin-evgenii",
+    "numericId": "53097491"
+   },
+   "breakdown": {
+    "SHULZ GW": 985
+   }
+  },
+  {
+   "gender": "f",
+   "place": 54,
+   "totalPoints": 984,
+   "displayName": "Баландина Гала",
+   "racer": {
+    "id": "balandina-gala",
+    "numericId": "95428291"
+   },
+   "breakdown": {
+    "ЦГ": 984
+   }
+  },
+  {
+   "gender": "m",
+   "place": 158,
+   "totalPoints": 984,
+   "displayName": "Буянов Максим",
+   "racer": {
+    "id": "buyanov-maksim",
+    "numericId": "51868846"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 984
+   }
+  },
+  {
+   "gender": "f",
+   "place": 55,
+   "totalPoints": 983,
+   "displayName": "Пек Оля",
+   "racer": {
+    "id": "pek-olya",
+    "numericId": "34041585"
+   },
+   "breakdown": {
+    "ЦГ": 983
+   }
+  },
+  {
+   "gender": "m",
+   "place": 159,
+   "totalPoints": 983,
+   "displayName": "Архипов Эдуард",
+   "racer": {
+    "id": "arhipov-eduard",
+    "numericId": "3195726"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 983
+   }
+  },
+  {
+   "gender": "m",
+   "place": 160,
+   "totalPoints": 983,
+   "displayName": "Блохин Родион",
+   "racer": {
+    "id": "rodion-blohin",
+    "numericId": "86227073"
+   },
+   "breakdown": {
+    "ПОКРОВА": 983
+   }
+  },
+  {
+   "gender": "m",
+   "place": 161,
+   "totalPoints": 983,
+   "displayName": "Хлюстов Иван",
+   "racer": {
+    "id": "ivan-hlyustov",
+    "numericId": "91602578"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 983
+   }
+  },
+  {
+   "gender": "m",
+   "place": 162,
+   "totalPoints": 982,
+   "displayName": "Курганов Ярослав",
+   "racer": {
+    "id": "kurganov-yaroslav",
+    "numericId": "89936773"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 982
+   }
+  },
+  {
+   "gender": "m",
+   "place": 163,
+   "totalPoints": 982,
+   "displayName": "Нестеров Максим",
+   "racer": {
+    "id": "nesterov-maksim",
+    "numericId": "48671856"
+   },
+   "breakdown": {
+    "FURY ROAD": 982
+   }
+  },
+  {
+   "gender": "m",
+   "place": 164,
+   "totalPoints": 982,
+   "displayName": "Пантюхин",
+   "racer": {
+    "id": "pantyuhin",
+    "numericId": "76239962"
+   },
+   "breakdown": {
+    "MODDER": 982
+   }
+  },
+  {
+   "gender": "m",
+   "place": 165,
+   "totalPoints": 982,
+   "displayName": "Плюснин Максим",
+   "racer": {
+    "id": "plyusnin-maksim",
+    "numericId": "59361814"
+   },
+   "breakdown": {
+    "SHULZ GW": 982
+   }
+  },
+  {
+   "gender": "f",
+   "place": 56,
+   "totalPoints": 981,
+   "displayName": "Чернышева Виктория",
+   "racer": {
+    "id": "chernysheva-viktoriya",
+    "numericId": "85446696"
+   },
+   "breakdown": {
+    "ЦГ": 981
+   }
+  },
+  {
+   "gender": "m",
+   "place": 166,
+   "totalPoints": 981,
+   "displayName": "Дрёмин Саша",
+   "racer": {
+    "id": "dremin-sasha",
+    "numericId": "632248"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 981
+   }
+  },
+  {
+   "gender": "m",
+   "place": 167,
+   "totalPoints": 981,
+   "displayName": "Косилов Дмитрий",
+   "racer": {
+    "id": "kosilov-dmitrii",
+    "numericId": "60825350"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 981
+   }
+  },
+  {
+   "gender": "m",
+   "place": 168,
+   "totalPoints": 981,
+   "displayName": "Макарычев Алексей",
+   "racer": {
+    "id": "makarychev-aleksei",
+    "numericId": "21630003"
+   },
+   "breakdown": {
+    "FURY ROAD": 981
+   }
+  },
+  {
+   "gender": "m",
+   "place": 169,
+   "totalPoints": 980,
+   "displayName": "Гаврилов Костя",
+   "racer": {
+    "id": "gavrilov-kostya",
+    "numericId": "53453723"
+   },
+   "breakdown": {
+    "ЦГ": 980
+   }
+  },
+  {
+   "gender": "m",
+   "place": 170,
+   "totalPoints": 980,
+   "displayName": "Крылов Александр",
+   "racer": {
+    "id": "krylov-aleksandr",
+    "numericId": "33255550"
+   },
+   "breakdown": {
+    "SHULZ GW": 980
+   }
+  },
+  {
+   "gender": "m",
+   "place": 171,
+   "totalPoints": 980,
+   "displayName": "Хвастунов Роман",
+   "racer": {
+    "id": "roman-hvastunov",
+    "numericId": "20785711"
+   },
+   "breakdown": {
+    "ПОКРОВА": 980
+   }
+  },
+  {
+   "gender": "f",
+   "place": 57,
+   "totalPoints": 979,
+   "displayName": "Щербакова Мария",
+   "racer": {
+    "id": "shcherbakova-mariya",
+    "numericId": "73714995"
+   },
+   "breakdown": {
+    "ЦГ": 979
+   }
+  },
+  {
+   "gender": "m",
+   "place": 172,
+   "totalPoints": 979,
+   "displayName": "Дементьев Руслан",
+   "racer": {
+    "id": "dementev-ruslan",
+    "numericId": "81487512"
+   },
+   "breakdown": {
+    "SHULZ GW": 979
+   }
+  },
+  {
+   "gender": "m",
+   "place": 173,
+   "totalPoints": 979,
+   "displayName": "Иванов Олег",
+   "racer": {
+    "id": "ivanov-oleg",
+    "numericId": "55168819"
+   },
+   "breakdown": {
+    "MODDER": 979
+   }
+  },
+  {
+   "gender": "m",
+   "place": 174,
+   "totalPoints": 979,
+   "displayName": "Колобовников Станислав",
+   "racer": {
+    "id": "kolobovnikov-stanislav",
+    "numericId": "17532990"
+   },
+   "breakdown": {
+    "ПОКРОВА": 979
+   }
+  },
+  {
+   "gender": "m",
+   "place": 175,
+   "totalPoints": 979,
+   "displayName": "Мамаев Павел",
+   "racer": {
+    "id": "pavel-mamaev",
+    "numericId": "90194187"
+   },
+   "breakdown": {
+    "ЦГ": 979
+   }
+  },
+  {
+   "gender": "m",
+   "place": 176,
+   "totalPoints": 978,
+   "displayName": "Верин Кирилл",
+   "racer": {
+    "id": "verin-kirill",
+    "numericId": "75628330"
+   },
+   "breakdown": {
+    "ПОКРОВА": 978
+   }
+  },
+  {
+   "gender": "m",
+   "place": 177,
+   "totalPoints": 978,
+   "displayName": "Орлов Андрей",
+   "racer": {
+    "id": "orlov-andrei",
+    "numericId": "57962616"
+   },
+   "breakdown": {
+    "ЦГ": 978
+   }
+  },
+  {
+   "gender": "m",
+   "place": 178,
+   "totalPoints": 978,
+   "displayName": "Шестаков Саша",
+   "racer": {
+    "id": "shestakov-sasha",
+    "numericId": "37238950"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 978
+   }
+  },
+  {
+   "gender": "m",
+   "place": 179,
+   "totalPoints": 977,
+   "displayName": "Тихонов Максим",
+   "racer": {
+    "id": "tihonov-maksim",
+    "numericId": "7679827"
+   },
+   "breakdown": {
+    "FURY ROAD": 977
+   }
+  },
+  {
+   "gender": "m",
+   "place": 180,
+   "totalPoints": 977,
+   "displayName": "Шубин Владимир",
+   "racer": {
+    "id": "shubin-vladimir",
+    "numericId": "59601382"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 977
+   }
+  },
+  {
+   "gender": "m",
+   "place": 181,
+   "totalPoints": 976,
+   "displayName": "Топорков Александр",
+   "racer": {
+    "id": "toporkov-aleksandr",
+    "numericId": "20011150"
+   },
+   "breakdown": {
+    "ЦГ": 976
+   }
+  },
+  {
+   "gender": "m",
+   "place": 182,
+   "totalPoints": 975,
+   "displayName": "Гаврилов Сергей",
+   "racer": {
+    "id": "gavrilov-sergei",
+    "numericId": "63677707"
+   },
+   "breakdown": {
+    "FURY ROAD": 975
+   }
+  },
+  {
+   "gender": "m",
+   "place": 183,
+   "totalPoints": 975,
+   "displayName": "Гладус Дмитрий",
+   "racer": {
+    "id": "gladus-dmitrii",
+    "numericId": "3449280"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 975
+   }
+  },
+  {
+   "gender": "m",
+   "place": 184,
+   "totalPoints": 975,
+   "displayName": "Шаврин Саша",
+   "racer": {
+    "id": "shavrin-sasha",
+    "numericId": "85828910"
+   },
+   "breakdown": {
+    "MODDER": 975
+   }
+  },
+  {
+   "gender": "m",
+   "place": 185,
+   "totalPoints": 974,
+   "displayName": "Журбенко Михаил",
+   "racer": {
+    "id": "zhurbenko-mihail",
+    "numericId": "81097547"
+   },
+   "breakdown": {
+    "ЦГ": 974
+   }
+  },
+  {
+   "gender": "m",
+   "place": 186,
+   "totalPoints": 974,
+   "displayName": "Чепурин Денис",
+   "racer": {
+    "id": "denis-chepurin",
+    "numericId": "58704747"
+   },
+   "breakdown": {
+    "FURY ROAD": 974
+   }
+  },
+  {
+   "gender": "m",
+   "place": 187,
+   "totalPoints": 973,
+   "displayName": "Морозкафас Кот",
+   "racer": {
+    "id": "morozkafas-kot",
+    "numericId": "58908078"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 973
+   }
+  },
+  {
+   "gender": "m",
+   "place": 188,
+   "totalPoints": 972,
+   "displayName": "Бегемотов Слава",
+   "racer": {
+    "id": "begemotov-slava",
+    "numericId": "7724637"
+   },
+   "breakdown": {
+    "MODDER": 972
+   }
+  },
+  {
+   "gender": "m",
+   "place": 189,
+   "totalPoints": 972,
+   "displayName": "Журкин Сергей",
+   "racer": {
+    "id": "sergei-zhurkin",
+    "numericId": "67104043"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 972
+   }
+  },
+  {
+   "gender": "m",
+   "place": 190,
+   "totalPoints": 972,
+   "displayName": "Маматов Сергей",
+   "racer": {
+    "id": "sergei-mamatov",
+    "numericId": "43726181"
+   },
+   "breakdown": {
+    "ПОКРОВА": 972
+   }
+  },
+  {
+   "gender": "m",
+   "place": 191,
+   "totalPoints": 971,
+   "displayName": "Пронин Александр",
+   "racer": {
+    "id": "pronin-aleksandr",
+    "numericId": "84890948"
+   },
+   "breakdown": {
+    "SHULZ GW": 971
+   }
+  },
+  {
+   "gender": "m",
+   "place": 192,
+   "totalPoints": 971,
+   "displayName": "Рысаков Илья",
+   "racer": {
+    "id": "rysakov-ilya",
+    "numericId": "58680341"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 971
+   }
+  },
+  {
+   "gender": "m",
+   "place": 193,
+   "totalPoints": 971,
+   "displayName": "Судьин Николай",
+   "racer": {
+    "id": "sudin-nikolai",
+    "numericId": "18089789"
+   },
+   "breakdown": {
+    "FURY ROAD": 971
+   }
+  },
+  {
+   "gender": "m",
+   "place": 194,
+   "totalPoints": 970,
+   "displayName": "Васильев Артём",
+   "racer": {
+    "id": "vasilev-artem",
+    "numericId": "18874803"
+   },
+   "breakdown": {
+    "FURY ROAD": 970
+   }
+  },
+  {
+   "gender": "m",
+   "place": 195,
+   "totalPoints": 970,
+   "displayName": "Пышков Алексей",
+   "racer": {
+    "id": "aleksei-pyshkov",
+    "numericId": "20955195"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 970
+   }
+  },
+  {
+   "gender": "m",
+   "place": 196,
+   "totalPoints": 969,
+   "displayName": "Грачев Кирилл",
+   "racer": {
+    "id": "grachev-kirill",
+    "numericId": "35174403"
+   },
+   "breakdown": {
+    "ПОКРОВА": 969
+   }
+  },
+  {
+   "gender": "m",
+   "place": 197,
+   "totalPoints": 969,
+   "displayName": "Палтусов Илья",
+   "racer": {
+    "id": "paltusov-ilya",
+    "numericId": "96882956"
+   },
+   "breakdown": {
+    "FURY ROAD": 969
+   }
+  },
+  {
+   "gender": "m",
+   "place": 198,
+   "totalPoints": 969,
+   "displayName": "Фролов Вадим",
+   "racer": {
+    "id": "frolov-vadim",
+    "numericId": "20271329"
+   },
+   "breakdown": {
+    "MODDER": 969
+   }
+  },
+  {
+   "gender": "m",
+   "place": 199,
+   "totalPoints": 968,
+   "displayName": "Андрусов Борис",
+   "racer": {
+    "id": "andrusov-boris",
+    "numericId": "70090262"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 968
+   }
+  },
+  {
+   "gender": "m",
+   "place": 200,
+   "totalPoints": 968,
+   "displayName": "Гаркушин Александр",
+   "racer": {
+    "id": "aleksandr-garkushin",
+    "numericId": "75397009"
+   },
+   "breakdown": {
+    "ПОКРОВА": 968
+   }
+  },
+  {
+   "gender": "m",
+   "place": 201,
+   "totalPoints": 967,
+   "displayName": "Кикер Рома",
+   "racer": {
+    "id": "kiker-roma",
+    "numericId": "9860346"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 967
+   }
+  },
+  {
+   "gender": "m",
+   "place": 202,
+   "totalPoints": 967,
+   "displayName": "Рорк Артур",
+   "racer": {
+    "id": "rork-artur",
+    "numericId": "13325794"
+   },
+   "breakdown": {
+    "ПОКРОВА": 967
+   }
+  },
+  {
+   "gender": "m",
+   "place": 203,
+   "totalPoints": 966,
+   "displayName": "Волков Петр",
+   "racer": {
+    "id": "volkov-petr-aabzbi",
+    "numericId": "45033254"
+   },
+   "breakdown": {
+    "ПОКРОВА": 966
+   }
+  },
+  {
+   "gender": "m",
+   "place": 204,
+   "totalPoints": 965,
+   "displayName": "Бородин Валентин",
+   "racer": {
+    "id": "borodin-valentin",
+    "numericId": "32436165"
+   },
+   "breakdown": {
+    "MODDER": 965
+   }
+  },
+  {
+   "gender": "m",
+   "place": 205,
+   "totalPoints": 964,
+   "displayName": "Лелюх Арсений",
+   "racer": {
+    "id": "lelyuh-arsenii",
+    "numericId": "83819968"
+   },
+   "breakdown": {
+    "SHULZ GW": 964
+   }
+  },
+  {
+   "gender": "m",
+   "place": 206,
+   "totalPoints": 964,
+   "displayName": "Резниченко Георгий",
+   "racer": {
+    "id": "reznichenko-georgii",
+    "numericId": "43569348"
+   },
+   "breakdown": {
+    "MODDER": 964
+   }
+  },
+  {
+   "gender": "m",
+   "place": 207,
+   "totalPoints": 964,
+   "displayName": "Шаталов Илья",
+   "racer": {
+    "id": "shatalov-ilya",
+    "numericId": "80241179"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 964
+   }
+  },
+  {
+   "gender": "m",
+   "place": 208,
+   "totalPoints": 963,
+   "displayName": "Окуневич Сергей",
+   "racer": {
+    "id": "sergei-8tqx7w",
+    "numericId": "74822013"
+   },
+   "breakdown": {
+    "ЦГ": 963
+   }
+  },
+  {
+   "gender": "m",
+   "place": 209,
+   "totalPoints": 963,
+   "displayName": "Петров Илья",
+   "racer": {
+    "id": "petrov-ilya",
+    "numericId": "75376619"
+   },
+   "breakdown": {
+    "MODDER": 963
+   }
+  },
+  {
+   "gender": "m",
+   "place": 210,
+   "totalPoints": 962,
+   "displayName": "Берка Кирилл",
+   "racer": {
+    "id": "kirill-berka",
+    "numericId": "73257562"
+   },
+   "breakdown": {
+    "ЦГ": 962
+   }
+  },
+  {
+   "gender": "m",
+   "place": 211,
+   "totalPoints": 962,
+   "displayName": "Кузнецов Алексей",
+   "racer": {
+    "id": "kuznetsov-aleksei",
+    "numericId": "57594919"
+   },
+   "breakdown": {
+    "FURY ROAD": 962
+   }
+  },
+  {
+   "gender": "m",
+   "place": 212,
+   "totalPoints": 962,
+   "displayName": "Хватов Артем",
+   "racer": {
+    "id": "hvatov-artem",
+    "numericId": "77572380"
+   },
+   "breakdown": {
+    "MODDER": 962
+   }
+  },
+  {
+   "gender": "m",
+   "place": 213,
+   "totalPoints": 962,
+   "displayName": "Pavloff Дима",
+   "racer": {
+    "id": "pavloff-dima",
+    "numericId": "53413866"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 962
+   }
+  },
+  {
+   "gender": "m",
+   "place": 214,
+   "totalPoints": 961,
+   "displayName": "Александров Владимир",
+   "racer": {
+    "id": "aleksandrov-vladimir",
+    "numericId": "84916602"
+   },
+   "breakdown": {
+    "FURY ROAD": 961
+   }
+  },
+  {
+   "gender": "m",
+   "place": 215,
+   "totalPoints": 961,
+   "displayName": "Климов Александр",
+   "racer": {
+    "id": "klimov-aleksandr",
+    "numericId": "67110841"
+   },
+   "breakdown": {
+    "MODDER": 961
+   }
+  },
+  {
+   "gender": "m",
+   "place": 216,
+   "totalPoints": 961,
+   "displayName": "Ма Алекс",
+   "racer": {
+    "id": "aleks-ma",
+    "numericId": "16601189"
+   },
+   "breakdown": {
+    "ЦГ": 961
+   }
+  },
+  {
+   "gender": "m",
+   "place": 217,
+   "totalPoints": 961,
+   "displayName": "Ческис Саша",
+   "racer": {
+    "id": "cheskis-sasha",
+    "numericId": "27816273"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 961
+   }
+  },
+  {
+   "gender": "m",
+   "place": 218,
+   "totalPoints": 960,
+   "displayName": "Мазеин Константин",
+   "racer": {
+    "id": "mazein-konstantin",
+    "numericId": "24626263"
+   },
+   "breakdown": {
+    "SHULZ GW": 960
+   }
+  },
+  {
+   "gender": "m",
+   "place": 219,
+   "totalPoints": 960,
+   "displayName": "Малков Артем",
+   "racer": {
+    "id": "malkov-artem",
+    "numericId": "76898817"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 960
+   }
+  },
+  {
+   "gender": "m",
+   "place": 220,
+   "totalPoints": 959,
+   "displayName": "Васильев Михаил",
+   "racer": {
+    "id": "vasilev-mihail",
+    "numericId": "37432718"
+   },
+   "breakdown": {
+    "SHULZ GW": 959
+   }
+  },
+  {
+   "gender": "m",
+   "place": 221,
+   "totalPoints": 959,
+   "displayName": "Петров Антоха",
+   "racer": {
+    "id": "antoha-petrov",
+    "numericId": "3715307"
+   },
+   "breakdown": {
+    "ЦГ": 959
+   }
+  },
+  {
+   "gender": "m",
+   "place": 222,
+   "totalPoints": 959,
+   "displayName": "Преснов Роман",
+   "racer": {
+    "id": "presnov-roman",
+    "numericId": "17878051"
+   },
+   "breakdown": {
+    "FURY ROAD": 959
+   }
+  },
+  {
+   "gender": "m",
+   "place": 223,
+   "totalPoints": 959,
+   "displayName": "Coresuckoff Yra",
+   "racer": {
+    "id": "coresuckoff-yra",
+    "numericId": "33223835"
+   },
+   "breakdown": {
+    "GRAVEL INSTINCT": 959
+   }
+  },
+  {
+   "gender": "m",
+   "place": 224,
+   "totalPoints": 958,
+   "displayName": "Белых Антон",
+   "racer": {
+    "id": "belyh-anton",
+    "numericId": "11455917"
+   },
+   "breakdown": {
+    "MODDER": 958
+   }
+  },
+  {
+   "gender": "m",
+   "place": 225,
+   "totalPoints": 958,
+   "displayName": "Дорофеев Никита",
+   "racer": {
+    "id": "dorofeev-nikita",
+    "numericId": "96243401"
+   },
+   "breakdown": {
+    "SHULZ GW": 958
+   }
+  },
+  {
+   "gender": "m",
+   "place": 226,
+   "totalPoints": 958,
+   "displayName": "Резван Александр",
+   "racer": {
+    "id": "aleksandr-rezvan",
+    "numericId": "18008613"
+   },
+   "breakdown": {
+    "ПОКРОВА": 958
+   }
+  },
+  {
+   "gender": "m",
+   "place": 227,
+   "totalPoints": 957,
+   "displayName": "Нестеров Макс",
+   "racer": {
+    "id": "nesterov-maks",
+    "numericId": "65513805"
+   },
+   "breakdown": {
+    "ЦГ": 957
+   }
+  },
+  {
+   "gender": "m",
+   "place": 228,
+   "totalPoints": 957,
+   "displayName": "Тюрнин Александр",
+   "racer": {
+    "id": "tyurnin-aleksandr",
+    "numericId": "40067563"
+   },
+   "breakdown": {
+    "ПОКРОВА": 957
+   }
+  },
+  {
+   "gender": "m",
+   "place": 229,
+   "totalPoints": 957,
+   "displayName": "Царьков Виктор",
+   "racer": {
+    "id": "tsarkov-viktor-9ndy37",
+    "numericId": "35436671"
+   },
+   "breakdown": {
+    "FURY ROAD": 957
+   }
+  },
+  {
+   "gender": "m",
+   "place": 230,
+   "totalPoints": 957,
+   "displayName": "Юрку Григорий",
+   "racer": {
+    "id": "yurku-grigorii",
+    "numericId": "90331133"
+   },
+   "breakdown": {
+    "MODDER": 957
+   }
+  },
+  {
+   "gender": "m",
+   "place": 231,
+   "totalPoints": 956,
+   "displayName": "Вайнер Алексей",
+   "racer": {
+    "id": "aleksei-vainer",
+    "numericId": "56959515"
+   },
+   "breakdown": {
+    "ПОКРОВА": 956
+   }
+  },
+  {
+   "gender": "m",
+   "place": 232,
+   "totalPoints": 956,
+   "displayName": "Курунов Алексей",
+   "racer": {
+    "id": "kurunov-aleksei",
+    "numericId": "90748044"
+   },
+   "breakdown": {
+    "MODDER": 956
+   }
+  },
+  {
+   "gender": "m",
+   "place": 233,
+   "totalPoints": 956,
+   "displayName": "Леонтьев Андрей",
+   "racer": {
+    "id": "leontev-andrei",
+    "numericId": "4267140"
+   },
+   "breakdown": {
+    "FURY ROAD": 956
+   }
+  },
+  {
+   "gender": "m",
+   "place": 234,
+   "totalPoints": 956,
+   "displayName": "Любимцев Рома",
+   "racer": {
+    "id": "lyubimtsev-roma",
+    "numericId": "99487136"
+   },
+   "breakdown": {
+    "ЦГ": 956
+   }
+  },
+  {
+   "gender": "m",
+   "place": 235,
+   "totalPoints": 955,
+   "displayName": "Алексеев Павел",
+   "racer": {
+    "id": "alekseev-pavel",
+    "numericId": "60157176"
+   },
+   "breakdown": {
+    "SHULZ GW": 955
+   }
+  },
+  {
+   "gender": "m",
+   "place": 236,
+   "totalPoints": 955,
+   "displayName": "Дукмас Руслан",
+   "racer": {
+    "id": "dukmas-ruslan",
+    "numericId": "97307129"
+   },
+   "breakdown": {
+    "FURY ROAD": 955
+   }
+  },
+  {
+   "gender": "m",
+   "place": 237,
+   "totalPoints": 955,
+   "displayName": "Еренков Игорь",
+   "racer": {
+    "id": "igor-erenkov",
+    "numericId": "13028198"
+   },
+   "breakdown": {
+    "ПОКРОВА": 955
+   }
+  },
+  {
+   "gender": "m",
+   "place": 238,
+   "totalPoints": 954,
+   "displayName": "Луначарский Гришка",
+   "racer": {
+    "id": "lunacharskii-grishka",
+    "numericId": "59434513"
+   },
+   "breakdown": {
+    "ЦГ": 954
+   }
+  },
+  {
+   "gender": "m",
+   "place": 239,
+   "totalPoints": 953,
+   "displayName": "Березин Александр",
+   "racer": {
+    "id": "berezin-aleksandr",
+    "numericId": "68283474"
+   },
+   "breakdown": {
+    "ПОКРОВА": 953
+   }
+  },
+  {
+   "gender": "m",
+   "place": 240,
+   "totalPoints": 952,
+   "displayName": "Волк Макс",
+   "racer": {
+    "id": "volk-maks",
+    "numericId": "98283943"
+   },
+   "breakdown": {
+    "ЦГ": 952
+   }
+  },
+  {
+   "gender": "m",
+   "place": 241,
+   "totalPoints": 952,
+   "displayName": "Михайлов Алексей",
+   "racer": {
+    "id": "mihailov-aleksei",
+    "numericId": "19626807"
+   },
+   "breakdown": {
+    "ПОКРОВА": 952
+   }
+  },
+  {
+   "gender": "m",
+   "place": 242,
+   "totalPoints": 952,
+   "displayName": "Ровенский Дмитрий",
+   "racer": {
+    "id": "rovenskii-dmitrii",
+    "numericId": "91265961"
+   },
+   "breakdown": {
+    "SHULZ GW": 952
+   }
+  },
+  {
+   "gender": "m",
+   "place": 243,
+   "totalPoints": 952,
+   "displayName": "Шаврин Александр",
+   "racer": {
+    "id": "shavrin-aleksandr",
+    "numericId": "45626488"
+   },
+   "breakdown": {
+    "FURY ROAD": 952
+   }
+  },
+  {
+   "gender": "m",
+   "place": 244,
+   "totalPoints": 951,
+   "displayName": "Аруев Павел",
+   "racer": {
+    "id": "aruev-pavel",
+    "numericId": "54238950"
+   },
+   "breakdown": {
+    "SHULZ GW": 951
+   }
+  },
+  {
+   "gender": "m",
+   "place": 245,
+   "totalPoints": 950,
+   "displayName": "Болоцков Богдан",
+   "racer": {
+    "id": "bogdan-bolotskov",
+    "numericId": "31863504"
+   },
+   "breakdown": {
+    "ПОКРОВА": 950
+   }
+  },
+  {
+   "gender": "m",
+   "place": 246,
+   "totalPoints": 950,
+   "displayName": "Дравант Илья",
+   "racer": {
+    "id": "dravant-ilya",
+    "numericId": "53528793"
+   },
+   "breakdown": {
+    "SHULZ GW": 950
+   }
+  },
+  {
+   "gender": "m",
+   "place": 247,
+   "totalPoints": 950,
+   "displayName": "Михайлов Павел",
+   "racer": {
+    "id": "mihailov-pavel",
+    "numericId": "97671387"
+   },
+   "breakdown": {
+    "FURY ROAD": 950
+   }
+  },
+  {
+   "gender": "m",
+   "place": 248,
+   "totalPoints": 950,
+   "displayName": "Одинцов Дмитрий",
+   "racer": {
+    "id": "odintsov-dmitrii",
+    "numericId": "57102260"
+   },
+   "breakdown": {
+    "ЦГ": 950
+   }
+  },
+  {
+   "gender": "m",
+   "place": 249,
+   "totalPoints": 949,
+   "displayName": "Семенов Пётр",
+   "racer": {
+    "id": "semenov-petr",
+    "numericId": "35885750"
+   },
+   "breakdown": {
+    "ПОКРОВА": 949
+   }
+  },
+  {
+   "gender": "m",
+   "place": 250,
+   "totalPoints": 948,
+   "displayName": "Ванин Константин",
+   "racer": {
+    "id": "vanin-konstantin",
+    "numericId": "7354331"
+   },
+   "breakdown": {
+    "SHULZ GW": 948
+   }
+  },
+  {
+   "gender": "m",
+   "place": 251,
+   "totalPoints": 948,
+   "displayName": "Иванов Евгений",
+   "racer": {
+    "id": "ivanov-evgenii",
+    "numericId": "8897350"
+   },
+   "breakdown": {
+    "FURY ROAD": 948
+   }
+  },
+  {
+   "gender": "m",
+   "place": 252,
+   "totalPoints": 948,
+   "displayName": "Смирнов Павел",
+   "racer": {
+    "id": "smirnov-pavel",
+    "numericId": "31040429"
+   },
+   "breakdown": {
+    "ПОКРОВА": 948
+   }
+  },
+  {
+   "gender": "m",
+   "place": 253,
+   "totalPoints": 947,
+   "displayName": "Бартулев Фёдор",
+   "racer": {
+    "id": "bartulev-fedor",
+    "numericId": "14868480"
+   },
+   "breakdown": {
+    "FURY ROAD": 947
+   }
+  },
+  {
+   "gender": "m",
+   "place": 254,
+   "totalPoints": 947,
+   "displayName": "К4 Александр",
+   "racer": {
+    "id": "k4-aleksandr",
+    "numericId": "3658476"
+   },
+   "breakdown": {
+    "ЦГ": 947
+   }
+  },
+  {
+   "gender": "m",
+   "place": 255,
+   "totalPoints": 947,
+   "displayName": "Лещинский Илья",
+   "racer": {
+    "id": "leshchinskii-ilya",
+    "numericId": "53911195"
+   },
+   "breakdown": {
+    "SHULZ GW": 947
+   }
+  },
+  {
+   "gender": "m",
+   "place": 256,
+   "totalPoints": 947,
+   "displayName": "Пахомов Сергей",
+   "racer": {
+    "id": "pahomov-sergei",
+    "numericId": "47996616"
+   },
+   "breakdown": {
+    "ПОКРОВА": 947
+   }
+  },
+  {
+   "gender": "m",
+   "place": 257,
+   "totalPoints": 946,
+   "displayName": "Федотов Владимир",
+   "racer": {
+    "id": "fedotov-vladimir",
+    "numericId": "20966668"
+   },
+   "breakdown": {
+    "SHULZ GW": 946
+   }
+  },
+  {
+   "gender": "m",
+   "place": 258,
+   "totalPoints": 946,
+   "displayName": "Tarzan Tarzan",
+   "racer": {
+    "id": "tarzan-tarzan",
+    "numericId": "62948255"
+   },
+   "breakdown": {
+    "ЦГ": 946
+   }
+  },
+  {
+   "gender": "m",
+   "place": 259,
+   "totalPoints": 945,
+   "displayName": "Ильин Никита",
+   "racer": {
+    "id": "ilin-nikita",
+    "numericId": "27768879"
+   },
+   "breakdown": {
+    "SHULZ GW": 945
+   }
+  },
+  {
+   "gender": "m",
+   "place": 260,
+   "totalPoints": 945,
+   "displayName": "Лебедев Артем",
+   "racer": {
+    "id": "artem-lebedev",
+    "numericId": "35561354"
+   },
+   "breakdown": {
+    "ПОКРОВА": 945
+   }
+  },
+  {
+   "gender": "m",
+   "place": 261,
+   "totalPoints": 944,
+   "displayName": "Богатыренко Дима",
+   "racer": {
+    "id": "bogatyrenko-dima",
+    "numericId": "88742027"
+   },
+   "breakdown": {
+    "FURY ROAD": 944
+   }
+  },
+  {
+   "gender": "m",
+   "place": 262,
+   "totalPoints": 944,
+   "displayName": "Сухарев Павел",
+   "racer": {
+    "id": "suharev-pavel",
+    "numericId": "48978192"
+   },
+   "breakdown": {
+    "SHULZ GW": 944
+   }
+  },
+  {
+   "gender": "m",
+   "place": 263,
+   "totalPoints": 943,
+   "displayName": "Баженов Андрей",
+   "racer": {
+    "id": "bazhenov-andrei",
+    "numericId": "26897791"
+   },
+   "breakdown": {
+    "SHULZ GW": 943
+   }
+  },
+  {
+   "gender": "m",
+   "place": 264,
+   "totalPoints": 943,
+   "displayName": "Коржавин Максим",
+   "racer": {
+    "id": "korzhavin-maksim",
+    "numericId": "19423638"
+   },
+   "breakdown": {
+    "FURY ROAD": 943
+   }
+  },
+  {
+   "gender": "m",
+   "place": 265,
+   "totalPoints": 943,
+   "displayName": "Онищук Борис",
+   "racer": {
+    "id": "onishchuk-boris",
+    "numericId": "21828842"
+   },
+   "breakdown": {
+    "ПОКРОВА": 943
+   }
+  },
+  {
+   "gender": "m",
+   "place": 266,
+   "totalPoints": 942,
+   "displayName": "Бездетко Игорь",
+   "racer": {
+    "id": "bezdetko-igor",
+    "numericId": "31563435"
+   },
+   "breakdown": {
+    "SHULZ GW": 942
+   }
+  },
+  {
+   "gender": "m",
+   "place": 267,
+   "totalPoints": 941,
+   "displayName": "Иванов Виталий",
+   "racer": {
+    "id": "ivanov-vitalii",
+    "numericId": "63197386"
+   },
+   "breakdown": {
+    "FURY ROAD": 941
+   }
+  },
+  {
+   "gender": "m",
+   "place": 268,
+   "totalPoints": 941,
+   "displayName": "Мальцев Евгений",
+   "racer": {
+    "id": "maltsev-evgenii",
+    "numericId": "71183434"
+   },
+   "breakdown": {
+    "SHULZ GW": 941
+   }
+  },
+  {
+   "gender": "m",
+   "place": 269,
+   "totalPoints": 941,
+   "displayName": "Фомин Александр",
+   "racer": {
+    "id": "fomin-aleksandr",
+    "numericId": "79034154"
+   },
+   "breakdown": {
+    "ЦГ": 941
+   }
+  },
+  {
+   "gender": "m",
+   "place": 270,
+   "totalPoints": 940,
+   "displayName": "Заведеев Олег",
+   "racer": {
+    "id": "oleg-zavedeev",
+    "numericId": "64610405"
+   },
+   "breakdown": {
+    "ПОКРОВА": 940
+   }
+  },
+  {
+   "gender": "m",
+   "place": 271,
+   "totalPoints": 940,
+   "displayName": "Козак Василий",
+   "racer": {
+    "id": "kozak-vasilii",
+    "numericId": "31303067"
+   },
+   "breakdown": {
+    "SHULZ GW": 940
+   }
+  },
+  {
+   "gender": "m",
+   "place": 272,
+   "totalPoints": 939,
+   "displayName": "Колпаков Юрий",
+   "racer": {
+    "id": "kolpakov-yurii",
+    "numericId": "28089008"
+   },
+   "breakdown": {
+    "ЦГ": 939
+   }
+  },
+  {
+   "gender": "m",
+   "place": 273,
+   "totalPoints": 939,
+   "displayName": "Швецов Алексей",
+   "racer": {
+    "id": "aleksei-shvetsov",
+    "numericId": "71971878"
+   },
+   "breakdown": {
+    "ПОКРОВА": 939
+   }
+  },
+  {
+   "gender": "m",
+   "place": 274,
+   "totalPoints": 938,
+   "displayName": "Иванов Кирилл",
+   "racer": {
+    "id": "ivanov-kirill",
+    "numericId": "70343469"
+   },
+   "breakdown": {
+    "ЦГ": 938
+   }
+  },
+  {
+   "gender": "m",
+   "place": 275,
+   "totalPoints": 938,
+   "displayName": "Мельников Роман",
+   "racer": {
+    "id": "melnikov-roman",
+    "numericId": "427233"
+   },
+   "breakdown": {
+    "SHULZ GW": 938
+   }
+  },
+  {
+   "gender": "m",
+   "place": 276,
+   "totalPoints": 938,
+   "displayName": "Оборин Михаил",
+   "racer": {
+    "id": "oborin-mihail",
+    "numericId": "67830227"
+   },
+   "breakdown": {
+    "FURY ROAD": 938
+   }
+  },
+  {
+   "gender": "m",
+   "place": 277,
+   "totalPoints": 937,
+   "displayName": "Забиров Руслан",
+   "racer": {
+    "id": "zabirov-ruslan",
+    "numericId": "16596916"
+   },
+   "breakdown": {
+    "ПОКРОВА": 937
+   }
+  },
+  {
+   "gender": "m",
+   "place": 278,
+   "totalPoints": 937,
+   "displayName": "Оленев Иван",
+   "racer": {
+    "id": "olenev-ivan",
+    "numericId": "6446109"
+   },
+   "breakdown": {
+    "ЦГ": 937
+   }
+  },
+  {
+   "gender": "m",
+   "place": 279,
+   "totalPoints": 937,
+   "displayName": "Федоров Владимир",
+   "racer": {
+    "id": "fedorov-vladimir",
+    "numericId": "74282906"
+   },
+   "breakdown": {
+    "SHULZ GW": 937
+   }
+  },
+  {
+   "gender": "m",
+   "place": 280,
+   "totalPoints": 936,
+   "displayName": "Золкин Семён",
+   "racer": {
+    "id": "zolkin-semen",
+    "numericId": "89390134"
+   },
+   "breakdown": {
+    "ПОКРОВА": 936
+   }
+  },
+  {
+   "gender": "m",
+   "place": 281,
+   "totalPoints": 936,
+   "displayName": "Комин Игорь",
+   "racer": {
+    "id": "komin-igor",
+    "numericId": "6909938"
+   },
+   "breakdown": {
+    "SHULZ GW": 936
+   }
+  },
+  {
+   "gender": "m",
+   "place": 282,
+   "totalPoints": 936,
+   "displayName": "Меньшаков Егор",
+   "racer": {
+    "id": "menshakov-egor",
+    "numericId": "27498759"
+   },
+   "breakdown": {
+    "ЦГ": 936
+   }
+  },
+  {
+   "gender": "m",
+   "place": 283,
+   "totalPoints": 935,
+   "displayName": "Кривошлык Станислав",
+   "racer": {
+    "id": "krivoshlyk-stanislav",
+    "numericId": "31428198"
+   },
+   "breakdown": {
+    "SHULZ GW": 935
+   }
+  },
+  {
+   "gender": "m",
+   "place": 284,
+   "totalPoints": 935,
+   "displayName": "Максимов Иван",
+   "racer": {
+    "id": "maksimov-ivan",
+    "numericId": "3819967"
+   },
+   "breakdown": {
+    "FURY ROAD": 935
+   }
+  },
+  {
+   "gender": "m",
+   "place": 285,
+   "totalPoints": 935,
+   "displayName": "Моськин Михаил",
+   "racer": {
+    "id": "moskin-mihail",
+    "numericId": "51987714"
+   },
+   "breakdown": {
+    "ПОКРОВА": 935
+   }
+  },
+  {
+   "gender": "m",
+   "place": 286,
+   "totalPoints": 934,
+   "displayName": "Аксенчик Владислав",
+   "racer": {
+    "id": "aksenchik-vladislav",
+    "numericId": "37853128"
+   },
+   "breakdown": {
+    "SHULZ GW": 934
+   }
+  },
+  {
+   "gender": "m",
+   "place": 287,
+   "totalPoints": 934,
+   "displayName": "Кириленко Александр",
+   "racer": {
+    "id": "kirilenko-aleksandr",
+    "numericId": "23911612"
+   },
+   "breakdown": {
+    "ПОКРОВА": 934
+   }
+  },
+  {
+   "gender": "m",
+   "place": 288,
+   "totalPoints": 934,
+   "displayName": "Федоров Максим",
+   "racer": {
+    "id": "maksim-fedorov",
+    "numericId": "16540357"
+   },
+   "breakdown": {
+    "ЦГ": 934
+   }
+  },
+  {
+   "gender": "m",
+   "place": 289,
+   "totalPoints": 933,
+   "displayName": "Кузнецов Дмитрий",
+   "racer": {
+    "id": "kuznetsov-dmitrii",
+    "numericId": "32521293"
+   },
+   "breakdown": {
+    "ЦГ": 933
+   }
+  },
+  {
+   "gender": "m",
+   "place": 290,
+   "totalPoints": 933,
+   "displayName": "Митюшкин Семен",
+   "racer": {
+    "id": "mityushkin-semen",
+    "numericId": "42970356"
+   },
+   "breakdown": {
+    "SHULZ GW": 933
+   }
+  },
+  {
+   "gender": "m",
+   "place": 291,
+   "totalPoints": 933,
+   "displayName": "Павлик Назар",
+   "racer": {
+    "id": "pavlik-nazar",
+    "numericId": "82919047"
+   },
+   "breakdown": {
+    "ПОКРОВА": 933
+   }
+  },
+  {
+   "gender": "m",
+   "place": 292,
+   "totalPoints": 932,
+   "displayName": "Кесарев 682",
+   "racer": {
+    "id": "kesarev-682",
+    "numericId": "48447862"
+   },
+   "breakdown": {
+    "SHULZ GW": 932
+   }
+  },
+  {
+   "gender": "m",
+   "place": 293,
+   "totalPoints": 932,
+   "displayName": "Чичурин Андрей",
+   "racer": {
+    "id": "andrei-chichurin",
+    "numericId": "15192980"
+   },
+   "breakdown": {
+    "ПОКРОВА": 932
+   }
+  },
+  {
+   "gender": "m",
+   "place": 294,
+   "totalPoints": 931,
+   "displayName": "Есюнин Никита",
+   "racer": {
+    "id": "esyunin-nikita",
+    "numericId": "24459697"
+   },
+   "breakdown": {
+    "ЦГ": 931
+   }
+  },
+  {
+   "gender": "m",
+   "place": 295,
+   "totalPoints": 931,
+   "displayName": "Меньчиков Родион",
+   "racer": {
+    "id": "menchikov-rodion",
+    "numericId": "90201882"
+   },
+   "breakdown": {
+    "ПОКРОВА": 931
+   }
+  },
+  {
+   "gender": "m",
+   "place": 296,
+   "totalPoints": 931,
+   "displayName": "Моторный Никита",
+   "racer": {
+    "id": "motornyi-nikita",
+    "numericId": "37141498"
+   },
+   "breakdown": {
+    "SHULZ GW": 931
+   }
+  },
+  {
+   "gender": "m",
+   "place": 297,
+   "totalPoints": 930,
+   "displayName": "Лишний Иван",
+   "racer": {
+    "id": "ivan-lishnii",
+    "numericId": "66931957"
+   },
+   "breakdown": {
+    "FURY ROAD": 930
+   }
+  },
+  {
+   "gender": "m",
+   "place": 298,
+   "totalPoints": 930,
+   "displayName": "Макарычев Макар",
+   "racer": {
+    "id": "makarychev-makar",
+    "numericId": "88721115"
+   },
+   "breakdown": {
+    "ЦГ": 930
+   }
+  },
+  {
+   "gender": "m",
+   "place": 299,
+   "totalPoints": 930,
+   "displayName": "Перепелов Антон",
+   "racer": {
+    "id": "perepelov-anton",
+    "numericId": "77873475"
+   },
+   "breakdown": {
+    "ПОКРОВА": 930
+   }
+  },
+  {
+   "gender": "m",
+   "place": 300,
+   "totalPoints": 929,
+   "displayName": "Моргун Егор",
+   "racer": {
+    "id": "egor-morgun",
+    "numericId": "15626808"
+   },
+   "breakdown": {
+    "ПОКРОВА": 929
+   }
+  },
+  {
+   "gender": "m",
+   "place": 301,
+   "totalPoints": 929,
+   "displayName": "Пембеджян Артур",
+   "racer": {
+    "id": "pembedzhyan-artur",
+    "numericId": "33864043"
+   },
+   "breakdown": {
+    "SHULZ GW": 929
+   }
+  },
+  {
+   "gender": "m",
+   "place": 302,
+   "totalPoints": 929,
+   "displayName": "Стефанов Георгий",
+   "racer": {
+    "id": "stefanov-georgii",
+    "numericId": "13877311"
+   },
+   "breakdown": {
+    "ЦГ": 929
+   }
+  },
+  {
+   "gender": "m",
+   "place": 303,
+   "totalPoints": 928,
+   "displayName": "Воробьев Антон",
+   "racer": {
+    "id": "vorobev-anton",
+    "numericId": "16628352"
+   },
+   "breakdown": {
+    "SHULZ GW": 928
+   }
+  },
+  {
+   "gender": "m",
+   "place": 304,
+   "totalPoints": 927,
+   "displayName": "Сирый Александр",
+   "racer": {
+    "id": "siryi-aleksandr",
+    "numericId": "14157980"
+   },
+   "breakdown": {
+    "ЦГ": 927
+   }
+  },
+  {
+   "gender": "m",
+   "place": 305,
+   "totalPoints": 927,
+   "displayName": "Топников Михаил",
+   "racer": {
+    "id": "mihail-topnikov",
+    "numericId": "20464867"
+   },
+   "breakdown": {
+    "ПОКРОВА": 927
+   }
+  },
+  {
+   "gender": "m",
+   "place": 306,
+   "totalPoints": 927,
+   "displayName": "Шатов Руслан",
+   "racer": {
+    "id": "shatov-ruslan",
+    "numericId": "75794013"
+   },
+   "breakdown": {
+    "SHULZ GW": 927
+   }
+  },
+  {
+   "gender": "m",
+   "place": 307,
+   "totalPoints": 926,
+   "displayName": "Вишняков Александр",
+   "racer": {
+    "id": "vishnyakov-aleksandr",
+    "numericId": "46774080"
+   },
+   "breakdown": {
+    "SHULZ GW": 926
+   }
+  },
+  {
+   "gender": "m",
+   "place": 308,
+   "totalPoints": 926,
+   "displayName": "Коротков Антон",
+   "racer": {
+    "id": "korotkov-anton-pcemtd",
+    "numericId": "36171773"
+   },
+   "breakdown": {
+    "FURY ROAD": 926
+   }
+  },
+  {
+   "gender": "m",
+   "place": 309,
+   "totalPoints": 926,
+   "displayName": "Мясников Денис",
+   "racer": {
+    "id": "denis-myasnikov",
+    "numericId": "63391489"
+   },
+   "breakdown": {
+    "ПОКРОВА": 926
+   }
+  },
+  {
+   "gender": "m",
+   "place": 310,
+   "totalPoints": 925,
+   "displayName": "Гученков Максим",
+   "racer": {
+    "id": "guchenkov-maksim",
+    "numericId": "23507621"
+   },
+   "breakdown": {
+    "SHULZ GW": 925
+   }
+  },
+  {
+   "gender": "m",
+   "place": 311,
+   "totalPoints": 925,
+   "displayName": "Масленников Сергей",
+   "racer": {
+    "id": "maslennikov-sergei",
+    "numericId": "25617939"
+   },
+   "breakdown": {
+    "ПОКРОВА": 925
+   }
+  },
+  {
+   "gender": "m",
+   "place": 312,
+   "totalPoints": 924,
+   "displayName": "Обухов Даниил",
+   "racer": {
+    "id": "obuhov-daniil",
+    "numericId": "13276567"
+   },
+   "breakdown": {
+    "FURY ROAD": 924
+   }
+  },
+  {
+   "gender": "m",
+   "place": 313,
+   "totalPoints": 923,
+   "displayName": "Качалков Станислав",
+   "racer": {
+    "id": "kachalkov-stanislav",
+    "numericId": "52119998"
+   },
+   "breakdown": {
+    "ПОКРОВА": 923
+   }
+  },
+  {
+   "gender": "m",
+   "place": 314,
+   "totalPoints": 923,
+   "displayName": "Мельников",
+   "racer": {
+    "id": "melnikov",
+    "numericId": "61772434"
+   },
+   "breakdown": {
+    "FURY ROAD": 923
+   }
+  },
+  {
+   "gender": "m",
+   "place": 315,
+   "totalPoints": 922,
+   "displayName": "Бабай Тимур",
+   "racer": {
+    "id": "babai-timur",
+    "numericId": "32692890"
+   },
+   "breakdown": {
+    "ПОКРОВА": 922
+   }
+  },
+  {
+   "gender": "m",
+   "place": 316,
+   "totalPoints": 922,
+   "displayName": "Федулов Владимир",
+   "racer": {
+    "id": "fedulov-vladimir",
+    "numericId": "92743205"
+   },
+   "breakdown": {
+    "ЦГ": 922
+   }
+  },
+  {
+   "gender": "m",
+   "place": 317,
+   "totalPoints": 921,
+   "displayName": "Венедиктов Альберт",
+   "racer": {
+    "id": "albert-venediktov",
+    "numericId": "83055184"
+   },
+   "breakdown": {
+    "ПОКРОВА": 921
+   }
+  },
+  {
+   "gender": "m",
+   "place": 318,
+   "totalPoints": 921,
+   "displayName": "Левштанов Евгений",
+   "racer": {
+    "id": "levshtanov-evgenii",
+    "numericId": "61606259"
+   },
+   "breakdown": {
+    "ЦГ": 921
+   }
+  },
+  {
+   "gender": "m",
+   "place": 319,
+   "totalPoints": 920,
+   "displayName": "Ганшин Антон",
+   "racer": {
+    "id": "ganshin-anton-rwmxq5",
+    "numericId": "91937539"
+   },
+   "breakdown": {
+    "ПОКРОВА": 920
+   }
+  },
+  {
+   "gender": "m",
+   "place": 320,
+   "totalPoints": 919,
+   "displayName": "Баруздин Александр",
+   "racer": {
+    "id": "aleksandr-baruzdin",
+    "numericId": "578170"
+   },
+   "breakdown": {
+    "ПОКРОВА": 919
+   }
+  },
+  {
+   "gender": "m",
+   "place": 321,
+   "totalPoints": 919,
+   "displayName": "Плетнев Леонид",
+   "racer": {
+    "id": "pletnev-leonid",
+    "numericId": "74628349"
+   },
+   "breakdown": {
+    "FURY ROAD": 919
+   }
+  },
+  {
+   "gender": "m",
+   "place": 322,
+   "totalPoints": 919,
+   "displayName": "Потапов Никита",
+   "racer": {
+    "id": "potapov-nikita",
+    "numericId": "26908712"
+   },
+   "breakdown": {
+    "ЦГ": 919
+   }
+  },
+  {
+   "gender": "m",
+   "place": 323,
+   "totalPoints": 918,
+   "displayName": "Лапчук Максим",
+   "racer": {
+    "id": "lapchuk-maksim",
+    "numericId": "94524964"
+   },
+   "breakdown": {
+    "ПОКРОВА": 918
+   }
+  },
+  {
+   "gender": "m",
+   "place": 324,
+   "totalPoints": 918,
+   "displayName": "Суров Илья",
+   "racer": {
+    "id": "surov-ilya",
+    "numericId": "79095790"
+   },
+   "breakdown": {
+    "ЦГ": 918
+   }
+  },
+  {
+   "gender": "m",
+   "place": 325,
+   "totalPoints": 916,
+   "displayName": "Иванов Вадим",
+   "racer": {
+    "id": "vadim-ivanov",
+    "numericId": "8431636"
+   },
+   "breakdown": {
+    "ПОКРОВА": 916
+   }
+  },
+  {
+   "gender": "m",
+   "place": 326,
+   "totalPoints": 916,
+   "displayName": "Полетаев Артём",
+   "racer": {
+    "id": "poletaev-artem",
+    "numericId": "11219963"
+   },
+   "breakdown": {
+    "ЦГ": 916
+   }
+  },
+  {
+   "gender": "m",
+   "place": 327,
+   "totalPoints": 915,
+   "displayName": "Биг Буг",
+   "racer": {
+    "id": "big-bug",
+    "numericId": "76929163"
+   },
+   "breakdown": {
+    "FURY ROAD": 915
+   }
+  },
+  {
+   "gender": "m",
+   "place": 328,
+   "totalPoints": 915,
+   "displayName": "Дьячков Сергей",
+   "racer": {
+    "id": "dyachkov-sergei",
+    "numericId": "64017465"
+   },
+   "breakdown": {
+    "ПОКРОВА": 915
+   }
+  },
+  {
+   "gender": "m",
+   "place": 329,
+   "totalPoints": 914,
+   "displayName": "Герасимов Антон",
+   "racer": {
+    "id": "anton-gerasimov",
+    "numericId": "15254258"
+   },
+   "breakdown": {
+    "ПОКРОВА": 914
+   }
+  },
+  {
+   "gender": "m",
+   "place": 330,
+   "totalPoints": 913,
+   "displayName": "Герасимов Александр",
+   "racer": {
+    "id": "gerasimov-aleksandr",
+    "numericId": "42197893"
+   },
+   "breakdown": {
+    "FURY ROAD": 913
+   }
+  },
+  {
+   "gender": "m",
+   "place": 331,
+   "totalPoints": 912,
+   "displayName": "Соловьев Никита",
+   "racer": {
+    "id": "solovev-nikita",
+    "numericId": "53931531"
+   },
+   "breakdown": {
+    "FURY ROAD": 912
+   }
+  },
+  {
+   "gender": "m",
+   "place": 332,
+   "totalPoints": 911,
+   "displayName": "Евдокимов Илья",
+   "racer": {
+    "id": "evdokimov-ilya",
+    "numericId": "89645830"
+   },
+   "breakdown": {
+    "FURY ROAD": 911
+   }
+  },
+  {
+   "gender": "m",
+   "place": 333,
+   "totalPoints": 911,
+   "displayName": "Холмин Денис",
+   "racer": {
+    "id": "holmin-denis",
+    "numericId": "89164904"
+   },
+   "breakdown": {
+    "ПОКРОВА": 911
+   }
+  },
+  {
+   "gender": "m",
+   "place": 334,
+   "totalPoints": 910,
+   "displayName": "Александров Артём",
+   "racer": {
+    "id": "aleksandrov-artem",
+    "numericId": "29176638"
+   },
+   "breakdown": {
+    "ПОКРОВА": 910
+   }
+  },
+  {
+   "gender": "m",
+   "place": 335,
+   "totalPoints": 910,
+   "displayName": "Сматрицкий Павел",
+   "racer": {
+    "id": "smatritskii-pavel",
+    "numericId": "75204846"
+   },
+   "breakdown": {
+    "ЦГ": 910
+   }
+  },
+  {
+   "gender": "m",
+   "place": 336,
+   "totalPoints": 909,
+   "displayName": "Болотов Денис",
+   "racer": {
+    "id": "bolotov-denis",
+    "numericId": "182052"
+   },
+   "breakdown": {
+    "ЦГ": 909
+   }
+  },
+  {
+   "gender": "m",
+   "place": 337,
+   "totalPoints": 908,
+   "displayName": "Валишев Шамиль",
+   "racer": {
+    "id": "valishev-shamil",
+    "numericId": "46834310"
+   },
+   "breakdown": {
+    "ЦГ": 908
+   }
+  },
+  {
+   "gender": "m",
+   "place": 338,
+   "totalPoints": 908,
+   "displayName": "Кирюха Плюха",
+   "racer": {
+    "id": "kiryuha-plyuha",
+    "numericId": "57659466"
+   },
+   "breakdown": {
+    "FURY ROAD": 908
+   }
+  },
+  {
+   "gender": "m",
+   "place": 339,
+   "totalPoints": 908,
+   "displayName": "Трубицин Дмитрий",
+   "racer": {
+    "id": "dmitrii-trubitsin",
+    "numericId": "2973094"
+   },
+   "breakdown": {
+    "ПОКРОВА": 908
+   }
+  },
+  {
+   "gender": "m",
+   "place": 340,
+   "totalPoints": 907,
+   "displayName": "Гараев Артур",
+   "racer": {
+    "id": "garaev-artur",
+    "numericId": "81310825"
+   },
+   "breakdown": {
+    "ЦГ": 907
+   }
+  },
+  {
+   "gender": "m",
+   "place": 341,
+   "totalPoints": 907,
+   "displayName": "Поспелов Денис",
+   "racer": {
+    "id": "pospelov-denis",
+    "numericId": "94047960"
+   },
+   "breakdown": {
+    "ПОКРОВА": 907
+   }
+  },
+  {
+   "gender": "m",
+   "place": 342,
+   "totalPoints": 907,
+   "displayName": "Трефилов Демид",
+   "racer": {
+    "id": "trefilov-demid",
+    "numericId": "89084319"
+   },
+   "breakdown": {
+    "FURY ROAD": 907
+   }
+  },
+  {
+   "gender": "m",
+   "place": 343,
+   "totalPoints": 906,
+   "displayName": "Гинтер Станислав",
+   "racer": {
+    "id": "stanislav-ginter",
+    "numericId": "57187202"
+   },
+   "breakdown": {
+    "ЦГ": 906
+   }
+  },
+  {
+   "gender": "m",
+   "place": 344,
+   "totalPoints": 906,
+   "displayName": "Ивлев Павел",
+   "racer": {
+    "id": "pavel-ivlev",
+    "numericId": "27488367"
+   },
+   "breakdown": {
+    "ПОКРОВА": 906
+   }
+  },
+  {
+   "gender": "m",
+   "place": 345,
+   "totalPoints": 906,
+   "displayName": "Меньшутин Алексей",
+   "racer": {
+    "id": "menshutin-aleksei",
+    "numericId": "59524835"
+   },
+   "breakdown": {
+    "FURY ROAD": 906
+   }
+  },
+  {
+   "gender": "m",
+   "place": 346,
+   "totalPoints": 905,
+   "displayName": "Глобин Даниил",
+   "racer": {
+    "id": "globin-daniil",
+    "numericId": "31745394"
+   },
+   "breakdown": {
+    "FURY ROAD": 905
+   }
+  },
+  {
+   "gender": "m",
+   "place": 347,
+   "totalPoints": 905,
+   "displayName": "Игнатов Антон",
+   "racer": {
+    "id": "ignatov-anton",
+    "numericId": "55466610"
+   },
+   "breakdown": {
+    "ЦГ": 905
+   }
+  },
+  {
+   "gender": "m",
+   "place": 348,
+   "totalPoints": 905,
+   "displayName": "Кравчук Георгий",
+   "racer": {
+    "id": "kravchuk-georgii",
+    "numericId": "22767520"
+   },
+   "breakdown": {
+    "ПОКРОВА": 905
+   }
+  },
+  {
+   "gender": "m",
+   "place": 349,
+   "totalPoints": 904,
+   "displayName": "Калугин Владислав",
+   "racer": {
+    "id": "kalugin-vladislav",
+    "numericId": "61778032"
+   },
+   "breakdown": {
+    "FURY ROAD": 904
+   }
+  },
+  {
+   "gender": "m",
+   "place": 350,
+   "totalPoints": 903,
+   "displayName": "Нечаев Артём",
+   "racer": {
+    "id": "nechaev-artem",
+    "numericId": "49242133"
+   },
+   "breakdown": {
+    "ЦГ": 903
+   }
+  },
+  {
+   "gender": "m",
+   "place": 351,
+   "totalPoints": 902,
+   "displayName": "Башуев Александр",
+   "racer": {
+    "id": "bashuev-aleksandr",
+    "numericId": "47275703"
+   },
+   "breakdown": {
+    "FURY ROAD": 902
+   }
+  },
+  {
+   "gender": "m",
+   "place": 352,
+   "totalPoints": 902,
+   "displayName": "Смирнов Александр",
+   "racer": {
+    "id": "smirnov-aleksandr",
+    "numericId": "18844822"
+   },
+   "breakdown": {
+    "ПОКРОВА": 902
+   }
+  },
+  {
+   "gender": "m",
+   "place": 353,
+   "totalPoints": 901,
+   "displayName": "Калыбаев Данила",
+   "racer": {
+    "id": "kalybaev-danila",
+    "numericId": "3270869"
+   },
+   "breakdown": {
+    "FURY ROAD": 901
+   }
+  },
+  {
+   "gender": "m",
+   "place": 354,
+   "totalPoints": 901,
+   "displayName": "Сманцер Дмитрий",
+   "racer": {
+    "id": "smantser-dmitrii",
+    "numericId": "17531477"
+   },
+   "breakdown": {
+    "ЦГ": 901
+   }
+  },
+  {
+   "gender": "m",
+   "place": 355,
+   "totalPoints": 901,
+   "displayName": "Чернядьев Дмитрий",
+   "racer": {
+    "id": "chernyadev-dmitrii",
+    "numericId": "33428885"
+   },
+   "breakdown": {
+    "ПОКРОВА": 901
+   }
+  },
+  {
+   "gender": "m",
+   "place": 356,
+   "totalPoints": 900,
+   "displayName": "Новиков Даниил",
+   "racer": {
+    "id": "novikov-daniil",
+    "numericId": "50314852"
+   },
+   "breakdown": {
+    "ЦГ": 900
+   }
+  },
+  {
+   "gender": "m",
+   "place": 357,
+   "totalPoints": 900,
+   "displayName": "Тарасов Алексей",
+   "racer": {
+    "id": "aleksei-tarasov",
+    "numericId": "35565130"
+   },
+   "breakdown": {
+    "ПОКРОВА": 900
+   }
+  },
+  {
+   "gender": "m",
+   "place": 358,
+   "totalPoints": 899,
+   "displayName": "Галяев Юрий",
+   "racer": {
+    "id": "galyaev-yurii",
+    "numericId": "84261971"
+   },
+   "breakdown": {
+    "ЦГ": 899
+   }
+  },
+  {
+   "gender": "m",
+   "place": 359,
+   "totalPoints": 898,
+   "displayName": "Булик",
+   "racer": {
+    "id": "bulik",
+    "numericId": "31698462"
+   },
+   "breakdown": {
+    "FURY ROAD": 898
+   }
+  },
+  {
+   "gender": "m",
+   "place": 360,
+   "totalPoints": 897,
+   "displayName": "Барышников Сергей",
+   "racer": {
+    "id": "baryshnikov-sergei",
+    "numericId": "16272913"
+   },
+   "breakdown": {
+    "FURY ROAD": 897
+   }
+  },
+  {
+   "gender": "m",
+   "place": 361,
+   "totalPoints": 897,
+   "displayName": "Егоров Евгений",
+   "racer": {
+    "id": "egorov-evgenii",
+    "numericId": "55394804"
+   },
+   "breakdown": {
+    "ПОКРОВА": 897
+   }
+  },
+  {
+   "gender": "m",
+   "place": 362,
+   "totalPoints": 897,
+   "displayName": "Павлов Дима",
+   "racer": {
+    "id": "pavlov-dima",
+    "numericId": "63823712"
+   },
+   "breakdown": {
+    "ЦГ": 897
+   }
+  },
+  {
+   "gender": "m",
+   "place": 363,
+   "totalPoints": 896,
+   "displayName": "Ал-Раджаб Кайс",
+   "racer": {
+    "id": "al-radzhab-kais",
+    "numericId": "61315479"
+   },
+   "breakdown": {
+    "FURY ROAD": 896
+   }
+  },
+  {
+   "gender": "m",
+   "place": 364,
+   "totalPoints": 896,
+   "displayName": "Верещагин Никита",
+   "racer": {
+    "id": "nikita-vereshchagin",
+    "numericId": "95645492"
+   },
+   "breakdown": {
+    "ПОКРОВА": 896
+   }
+  },
+  {
+   "gender": "m",
+   "place": 365,
+   "totalPoints": 896,
+   "displayName": "Гильотинов Рома",
+   "racer": {
+    "id": "gilotinov-roma",
+    "numericId": "77570729"
+   },
+   "breakdown": {
+    "ЦГ": 896
+   }
+  },
+  {
+   "gender": "m",
+   "place": 366,
+   "totalPoints": 895,
+   "displayName": "Жуков Алексей",
+   "racer": {
+    "id": "aleksei-zhukov",
+    "numericId": "77864055"
+   },
+   "breakdown": {
+    "ПОКРОВА": 895
+   }
+  },
+  {
+   "gender": "m",
+   "place": 367,
+   "totalPoints": 895,
+   "displayName": "Поливода Станислав",
+   "racer": {
+    "id": "stanislav-polivoda",
+    "numericId": "24997052"
+   },
+   "breakdown": {
+    "FURY ROAD": 895
+   }
+  },
+  {
+   "gender": "m",
+   "place": 368,
+   "totalPoints": 895,
+   "displayName": "Шехирев Евгений",
+   "racer": {
+    "id": "shehirev-evgenii",
+    "numericId": "45611217"
+   },
+   "breakdown": {
+    "ЦГ": 895
+   }
+  },
+  {
+   "gender": "m",
+   "place": 369,
+   "totalPoints": 893,
+   "displayName": "Мебония Джано",
+   "racer": {
+    "id": "meboniya-dzhano",
+    "numericId": "52124584"
+   },
+   "breakdown": {
+    "ПОКРОВА": 893
+   }
+  },
+  {
+   "gender": "m",
+   "place": 370,
+   "totalPoints": 893,
+   "displayName": "Тришин Дмитрий",
+   "racer": {
+    "id": "trishin-dmitrii",
+    "numericId": "17311048"
+   },
+   "breakdown": {
+    "ЦГ": 893
+   }
+  },
+  {
+   "gender": "m",
+   "place": 371,
+   "totalPoints": 892,
+   "displayName": "Фомин Сергей",
+   "racer": {
+    "id": "sergei-fomin",
+    "numericId": "44802547"
+   },
+   "breakdown": {
+    "ПОКРОВА": 892
+   }
+  },
+  {
+   "gender": "m",
+   "place": 372,
+   "totalPoints": 891,
+   "displayName": "Кутало Сергей",
+   "racer": {
+    "id": "kutalo-sergei",
+    "numericId": "27554265"
+   },
+   "breakdown": {
+    "ПОКРОВА": 891
+   }
+  },
+  {
+   "gender": "m",
+   "place": 373,
+   "totalPoints": 890,
+   "displayName": "Бобков Александр",
+   "racer": {
+    "id": "aleksandr-bobkov",
+    "numericId": "87481002"
+   },
+   "breakdown": {
+    "ПОКРОВА": 890
+   }
+  },
+  {
+   "gender": "m",
+   "place": 374,
+   "totalPoints": 889,
+   "displayName": "Лешков Слава",
+   "racer": {
+    "id": "leshkov-slava",
+    "numericId": "8572688"
+   },
+   "breakdown": {
+    "ПОКРОВА": 889
+   }
+  },
+  {
+   "gender": "m",
+   "place": 375,
+   "totalPoints": 888,
+   "displayName": "Городничев Дмитрий",
+   "racer": {
+    "id": "gorodnichev-dmitrii",
+    "numericId": "869652"
+   },
+   "breakdown": {
+    "ЦГ": 888
+   }
+  },
+  {
+   "gender": "m",
+   "place": 376,
+   "totalPoints": 888,
+   "displayName": "Попов Евгений",
+   "racer": {
+    "id": "popov-evgenii",
+    "numericId": "39035132"
+   },
+   "breakdown": {
+    "ПОКРОВА": 888
+   }
+  },
+  {
+   "gender": "m",
+   "place": 377,
+   "totalPoints": 887,
+   "displayName": "Ногинов Антон",
+   "racer": {
+    "id": "noginov-anton",
+    "numericId": "80441893"
+   },
+   "breakdown": {
+    "ПОКРОВА": 887
+   }
+  },
+  {
+   "gender": "m",
+   "place": 378,
+   "totalPoints": 886,
+   "displayName": "Сапельников Федор",
+   "racer": {
+    "id": "fedor-sapelnikov",
+    "numericId": "78213921"
+   },
+   "breakdown": {
+    "ПОКРОВА": 886
+   }
+  },
+  {
+   "gender": "m",
+   "place": 379,
+   "totalPoints": 885,
+   "displayName": "Васильев Дмитрий",
+   "racer": {
+    "id": "vasilev-dmitrii",
+    "numericId": "21739519"
+   },
+   "breakdown": {
+    "ЦГ": 885
+   }
+  },
+  {
+   "gender": "m",
+   "place": 380,
+   "totalPoints": 885,
+   "displayName": "Еремин Артём",
+   "racer": {
+    "id": "eremin-artem",
+    "numericId": "80381002"
+   },
+   "breakdown": {
+    "ПОКРОВА": 885
+   }
+  },
+  {
+   "gender": "m",
+   "place": 381,
+   "totalPoints": 884,
+   "displayName": "Дроздов Михаил",
+   "racer": {
+    "id": "mihail-drozdov",
+    "numericId": "75878246"
+   },
+   "breakdown": {
+    "ПОКРОВА": 884
+   }
+  },
+  {
+   "gender": "m",
+   "place": 382,
+   "totalPoints": 882,
+   "displayName": "Минин Андрей",
+   "racer": {
+    "id": "minin-andrei",
+    "numericId": "99940985"
+   },
+   "breakdown": {
+    "ЦГ": 882
+   }
+  },
+  {
+   "gender": "m",
+   "place": 383,
+   "totalPoints": 880,
+   "displayName": "Зайцев Евгений",
+   "racer": {
+    "id": "zaitsev-evgenii",
+    "numericId": "28631893"
+   },
+   "breakdown": {
+    "ЦГ": 880
+   }
+  },
+  {
+   "gender": "m",
+   "place": 384,
+   "totalPoints": 879,
+   "displayName": "Шаляпин Валерий",
+   "racer": {
+    "id": "shalyapin-valerii",
+    "numericId": "20033839"
+   },
+   "breakdown": {
+    "ЦГ": 879
+   }
+  },
+  {
+   "gender": "m",
+   "place": 385,
+   "totalPoints": 878,
+   "displayName": "Кормановский Андрей",
+   "racer": {
+    "id": "kormanovskii-andrei",
+    "numericId": "50473352"
+   },
+   "breakdown": {
+    "ЦГ": 878
+   }
+  },
+  {
+   "gender": "m",
+   "place": 386,
+   "totalPoints": 876,
+   "displayName": "Цехмистро Дмитрий",
+   "racer": {
+    "id": "tsehmistro-dmitrii",
+    "numericId": "40880106"
+   },
+   "breakdown": {
+    "ЦГ": 876
+   }
+  },
+  {
+   "gender": "m",
+   "place": 387,
+   "totalPoints": 873,
+   "displayName": "Климов Саша",
+   "racer": {
+    "id": "klimov-sasha",
+    "numericId": "19908536"
+   },
+   "breakdown": {
+    "ЦГ": 873
+   }
+  },
+  {
+   "gender": "m",
+   "place": 388,
+   "totalPoints": 872,
+   "displayName": "Сорокин Евгений",
+   "racer": {
+    "id": "sorokin-evgenii",
+    "numericId": "46046288"
+   },
+   "breakdown": {
+    "ЦГ": 872
+   }
+  },
+  {
+   "gender": "m",
+   "place": 389,
+   "totalPoints": 871,
+   "displayName": "Тарасов Александр",
+   "racer": {
+    "id": "tarasov-aleksandr",
+    "numericId": "14153599"
+   },
+   "breakdown": {
+    "ЦГ": 871
+   }
+  },
+  {
+   "gender": "m",
+   "place": 390,
+   "totalPoints": 869,
+   "displayName": ". Roadfacker",
+   "racer": {
+    "id": "roadfacker",
+    "numericId": "99920435"
+   },
+   "breakdown": {
+    "ЦГ": 869
+   }
+  },
+  {
+   "gender": "m",
+   "place": 391,
+   "totalPoints": 868,
+   "displayName": "Видякин Денис",
+   "racer": {
+    "id": "vidyakin-denis",
+    "numericId": "87597870"
+   },
+   "breakdown": {
+    "ЦГ": 868
+   }
+  },
+  {
+   "gender": "m",
+   "place": 392,
+   "totalPoints": 867,
+   "displayName": "Коногорский Никита",
+   "racer": {
+    "id": "konogorskii-nikita",
+    "numericId": "46359987"
+   },
+   "breakdown": {
+    "ЦГ": 867
+   }
+  },
+  {
+   "gender": "m",
+   "place": 393,
+   "totalPoints": 866,
+   "displayName": "Натыкин Максим",
+   "racer": {
+    "id": "natykin-maksim",
+    "numericId": "17389233"
+   },
+   "breakdown": {
+    "ЦГ": 866
+   }
+  },
+  {
+   "gender": "m",
+   "place": 394,
+   "totalPoints": 865,
+   "displayName": "Кесарев Филипп",
+   "racer": {
+    "id": "kesarev-filipp",
+    "numericId": "50022704"
+   },
+   "breakdown": {
+    "ЦГ": 865
+   }
+  },
+  {
+   "gender": "m",
+   "place": 395,
+   "totalPoints": 864,
+   "displayName": "Чернышев Олег",
+   "racer": {
+    "id": "oleg-chernyshev",
+    "numericId": "27680091"
+   },
+   "breakdown": {
+    "ЦГ": 864
+   }
+  },
+  {
+   "gender": "m",
+   "place": 396,
+   "totalPoints": 863,
+   "displayName": "Тюрин Алексей",
+   "racer": {
+    "id": "tyurin-aleksei",
+    "numericId": "45372520"
+   },
+   "breakdown": {
+    "ЦГ": 863
+   }
+  },
+  {
+   "gender": "m",
+   "place": 397,
+   "totalPoints": 862,
+   "displayName": "Ивлев Владимир",
+   "racer": {
+    "id": "vladimir-ivlev",
+    "numericId": "1436817"
+   },
+   "breakdown": {
+    "ЦГ": 862
+   }
+  },
+  {
+   "gender": "f",
+   "place": 58,
+   "totalPoints": 500,
+   "displayName": "Ломовцева Мария",
+   "racer": {
+    "id": "lomovtseva-mariya",
+    "numericId": "90848031"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 500
+   }
+  },
+  {
+   "gender": "f",
+   "place": 59,
+   "totalPoints": 499,
+   "displayName": "Пахомова Лидия",
+   "racer": {
+    "id": "pahomova-lidiya",
+    "numericId": "82594562"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 499
+   }
+  },
+  {
+   "gender": "f",
+   "place": 60,
+   "totalPoints": 498,
+   "displayName": "Суракова Светлана",
+   "racer": {
+    "id": "surakova-svetlana",
+    "numericId": "10967056"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 498
+   }
+  },
+  {
+   "gender": "f",
+   "place": 61,
+   "totalPoints": 498,
+   "displayName": "Транше Влада Сергеевна",
+   "racer": {
+    "id": "transhe-vlada",
+    "numericId": "90180624"
+   },
+   "breakdown": {
+    "SHULZ GW": 498
+   }
+  },
+  {
+   "gender": "m",
+   "place": 398,
+   "totalPoints": 498,
+   "displayName": "Юхансон Станислав",
+   "racer": {
+    "id": "yuhanson-stanislav",
+    "numericId": "73928072"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 498
+   }
+  },
+  {
+   "gender": "f",
+   "place": 62,
+   "totalPoints": 497,
+   "displayName": "Кириллова Елизавета Алексеевна",
+   "racer": {
+    "id": "kirillova-elizaveta",
+    "numericId": "20554365"
+   },
+   "breakdown": {
+    "SHULZ GW": 497
+   }
+  },
+  {
+   "gender": "f",
+   "place": 63,
+   "totalPoints": 497,
+   "displayName": "Кондратьева Елена",
+   "racer": {
+    "id": "kondrateva-elena",
+    "numericId": "86747436"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 497
+   }
+  },
+  {
+   "gender": "f",
+   "place": 64,
+   "totalPoints": 496,
+   "displayName": "Кузнецова Валентина Викторовна",
+   "racer": {
+    "id": "kuznetsova-valentina",
+    "numericId": "20091769"
+   },
+   "breakdown": {
+    "SHULZ GW": 496
+   }
+  },
+  {
+   "gender": "f",
+   "place": 65,
+   "totalPoints": 496,
+   "displayName": "Писарева Мария",
+   "racer": {
+    "id": "pisareva-mariya",
+    "numericId": "70115608"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 496
+   }
+  },
+  {
+   "gender": "m",
+   "place": 399,
+   "totalPoints": 496,
+   "displayName": "Ивашинин Сергей",
+   "racer": {
+    "id": "ivashinin-sergei",
+    "numericId": "28880606"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 496
+   }
+  },
+  {
+   "gender": "f",
+   "place": 66,
+   "totalPoints": 495,
+   "displayName": "Борилкевич Екатерина Алексеевна",
+   "racer": {
+    "id": "ekaterina",
+    "numericId": "46572541"
+   },
+   "breakdown": {
+    "SHULZ GW": 495
+   }
+  },
+  {
+   "gender": "f",
+   "place": 67,
+   "totalPoints": 495,
+   "displayName": "Гаршина Евгения",
+   "racer": {
+    "id": "garshina-evgeniya",
+    "numericId": "18423419"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 495
+   }
+  },
+  {
+   "gender": "m",
+   "place": 400,
+   "totalPoints": 495,
+   "displayName": "Пантюхин Констнатин",
+   "racer": {
+    "id": "pantyuhin-konstnatin",
+    "numericId": "77000554"
+   },
+   "breakdown": {
+    "SHULZ GW": 495
+   }
+  },
+  {
+   "gender": "m",
+   "place": 401,
+   "totalPoints": 495,
+   "displayName": "Рублев Андрей",
+   "racer": {
+    "id": "rublev-andrei",
+    "numericId": "27326297"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 495
+   }
+  },
+  {
+   "gender": "f",
+   "place": 68,
+   "totalPoints": 494,
+   "displayName": "Борисова Татьяна",
+   "racer": {
+    "id": "borisova-tatyana",
+    "numericId": "91437909"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 494
+   }
+  },
+  {
+   "gender": "f",
+   "place": 69,
+   "totalPoints": 494,
+   "displayName": "Дудник Евгения Леонидовна",
+   "racer": {
+    "id": "dudnik-evgeniya",
+    "numericId": "22543865"
+   },
+   "breakdown": {
+    "SHULZ GW": 494
+   }
+  },
+  {
+   "gender": "m",
+   "place": 402,
+   "totalPoints": 494,
+   "displayName": "Лебасов Евгений",
+   "racer": {
+    "id": "lebasov-evgenii",
+    "numericId": "10953706"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 494
+   }
+  },
+  {
+   "gender": "f",
+   "place": 70,
+   "totalPoints": 493,
+   "displayName": "Буянова Нина",
+   "racer": {
+    "id": "buyanova-nina",
+    "numericId": "66664774"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 493
+   }
+  },
+  {
+   "gender": "f",
+   "place": 71,
+   "totalPoints": 493,
+   "displayName": "Платонова Екатерина",
+   "racer": {
+    "id": "platonova-ekaterina",
+    "numericId": "51643654"
+   },
+   "breakdown": {
+    "SHULZ GW": 493
+   }
+  },
+  {
+   "gender": "m",
+   "place": 403,
+   "totalPoints": 493,
+   "displayName": "Цареёв Евгений",
+   "racer": {
+    "id": "tsareev-evgenii",
+    "numericId": "28353539"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 493
+   }
+  },
+  {
+   "gender": "f",
+   "place": 72,
+   "totalPoints": 492,
+   "displayName": "Гулина Анна Валерьевна",
+   "racer": {
+    "id": "gulina-anna",
+    "numericId": "75366844"
+   },
+   "breakdown": {
+    "SHULZ GW": 492
+   }
+  },
+  {
+   "gender": "f",
+   "place": 73,
+   "totalPoints": 492,
+   "displayName": "Крылова Анна",
+   "racer": {
+    "id": "anna-krylova",
+    "numericId": "7592998"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 492
+   }
+  },
+  {
+   "gender": "m",
+   "place": 404,
+   "totalPoints": 492,
+   "displayName": "Николаенко Михаил",
+   "racer": {
+    "id": "nikolaenko-mihail",
+    "numericId": "24644783"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 492
+   }
+  },
+  {
+   "gender": "m",
+   "place": 405,
+   "totalPoints": 492,
+   "displayName": "Чернышев Сергей Владимирович",
+   "racer": {
+    "id": "chernyshev-sergei",
+    "numericId": "40802606"
+   },
+   "breakdown": {
+    "SHULZ GW": 492
+   }
+  },
+  {
+   "gender": "f",
+   "place": 74,
+   "totalPoints": 491,
+   "displayName": "Рожкова Александра",
+   "racer": {
+    "id": "rozhkova-aleksandra",
+    "numericId": "15135135"
+   },
+   "breakdown": {
+    "SHULZ GW": 491
+   }
+  },
+  {
+   "gender": "f",
+   "place": 75,
+   "totalPoints": 490,
+   "displayName": "Шумкова Анастасия Владимировна",
+   "racer": {
+    "id": "shumkova-anastasiya",
+    "numericId": "50632354"
+   },
+   "breakdown": {
+    "SHULZ GW": 490
+   }
+  },
+  {
+   "gender": "m",
+   "place": 406,
+   "totalPoints": 490,
+   "displayName": "Хамзин Наиль",
+   "racer": {
+    "id": "hamzin-nail",
+    "numericId": "4120506"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 490
+   }
+  },
+  {
+   "gender": "f",
+   "place": 76,
+   "totalPoints": 489,
+   "displayName": "Миттер Александра Олеговна",
+   "racer": {
+    "id": "mitter-aleksandra",
+    "numericId": "22826362"
+   },
+   "breakdown": {
+    "SHULZ GW": 489
+   }
+  },
+  {
+   "gender": "m",
+   "place": 407,
+   "totalPoints": 489,
+   "displayName": "Попов Алексей",
+   "racer": {
+    "id": "popov-aleksei",
+    "numericId": "81539046"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 489
+   }
+  },
+  {
+   "gender": "f",
+   "place": 77,
+   "totalPoints": 488,
+   "displayName": "Лобанова Софья Михайловна",
+   "racer": {
+    "id": "lobanova-sofya",
+    "numericId": "34176475"
+   },
+   "breakdown": {
+    "SHULZ GW": 488
+   }
+  },
+  {
+   "gender": "m",
+   "place": 408,
+   "totalPoints": 488,
+   "displayName": "Иванов Павел Борисович",
+   "racer": {
+    "id": "ivanov-pavel",
+    "numericId": "10829927"
+   },
+   "breakdown": {
+    "SHULZ GW": 488
+   }
+  },
+  {
+   "gender": "f",
+   "place": 78,
+   "totalPoints": 487,
+   "displayName": "Никитина Мария Михайловна",
+   "racer": {
+    "id": "nikitina-mariya",
+    "numericId": "885942"
+   },
+   "breakdown": {
+    "SHULZ GW": 487
+   }
+  },
+  {
+   "gender": "m",
+   "place": 409,
+   "totalPoints": 487,
+   "displayName": "Мякотин Егор",
+   "racer": {
+    "id": "myakotin-egor",
+    "numericId": "50329995"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 487
+   }
+  },
+  {
+   "gender": "f",
+   "place": 79,
+   "totalPoints": 486,
+   "displayName": "Мироненко Ирина",
+   "racer": {
+    "id": "mironenko-irina",
+    "numericId": "2815150"
+   },
+   "breakdown": {
+    "SHULZ GW": 486
+   }
+  },
+  {
+   "gender": "m",
+   "place": 410,
+   "totalPoints": 486,
+   "displayName": "Егубаев Анатолий",
+   "racer": {
+    "id": "egubaev-anatolii",
+    "numericId": "98400319"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 486
+   }
+  },
+  {
+   "gender": "m",
+   "place": 411,
+   "totalPoints": 486,
+   "displayName": "Сараев Кирилл Андреевич",
+   "racer": {
+    "id": "saraev-kirill",
+    "numericId": "68109626"
+   },
+   "breakdown": {
+    "SHULZ GW": 486
+   }
+  },
+  {
+   "gender": "m",
+   "place": 412,
+   "totalPoints": 484,
+   "displayName": "Осипов Сергей",
+   "racer": {
+    "id": "osipov-sergei",
+    "numericId": "81043260"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 484
+   }
+  },
+  {
+   "gender": "m",
+   "place": 413,
+   "totalPoints": 483,
+   "displayName": "Михайлов Илья Викторович",
+   "racer": {
+    "id": "mihailov-ilya",
+    "numericId": "22656018"
+   },
+   "breakdown": {
+    "SHULZ GW": 483
+   }
+  },
+  {
+   "gender": "m",
+   "place": 414,
+   "totalPoints": 482,
+   "displayName": "Миролюбов Павел",
+   "racer": {
+    "id": "mirolyubov-pavel",
+    "numericId": "47168427"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 482
+   }
+  },
+  {
+   "gender": "m",
+   "place": 415,
+   "totalPoints": 482,
+   "displayName": "Сухорослов Сергей Валерьевич",
+   "racer": {
+    "id": "suhoroslov-sergei",
+    "numericId": "74758031"
+   },
+   "breakdown": {
+    "SHULZ GW": 482
+   }
+  },
+  {
+   "gender": "m",
+   "place": 416,
+   "totalPoints": 481,
+   "displayName": "Кондратов Олег",
+   "racer": {
+    "id": "kondratov-oleg",
+    "numericId": "55238628"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 481
+   }
+  },
+  {
+   "gender": "m",
+   "place": 417,
+   "totalPoints": 481,
+   "displayName": "Червоткин Сергей Андреевич",
+   "racer": {
+    "id": "chervotkin-sergei",
+    "numericId": "94700530"
+   },
+   "breakdown": {
+    "SHULZ GW": 481
+   }
+  },
+  {
+   "gender": "m",
+   "place": 418,
+   "totalPoints": 480,
+   "displayName": "Кондаков Виталий Андреевич",
+   "racer": {
+    "id": "vitalii-kondakov",
+    "numericId": "93919583"
+   },
+   "breakdown": {
+    "SHULZ GW": 480
+   }
+  },
+  {
+   "gender": "m",
+   "place": 419,
+   "totalPoints": 480,
+   "displayName": "Попчинский Антон",
+   "racer": {
+    "id": "anton-popchinskii",
+    "numericId": "82864758"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 480
+   }
+  },
+  {
+   "gender": "m",
+   "place": 420,
+   "totalPoints": 479,
+   "displayName": "Василец Максим",
+   "racer": {
+    "id": "vasilets-maksim",
+    "numericId": "93599495"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 479
+   }
+  },
+  {
+   "gender": "m",
+   "place": 421,
+   "totalPoints": 478,
+   "displayName": "Баронас Ромуальдас-Игорь Витаутович",
+   "racer": {
+    "id": "baronas-romualdas-igor-bdivxv",
+    "numericId": "97670765"
+   },
+   "breakdown": {
+    "SHULZ GW": 478
+   }
+  },
+  {
+   "gender": "m",
+   "place": 422,
+   "totalPoints": 478,
+   "displayName": "Нуриахметов Ильдар",
+   "racer": {
+    "id": "nuriahmetov-ildar",
+    "numericId": "78832796"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 478
+   }
+  },
+  {
+   "gender": "m",
+   "place": 423,
+   "totalPoints": 477,
+   "displayName": "Есаков Дмитрий",
+   "racer": {
+    "id": "esakov-dmitrii",
+    "numericId": "69462126"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 477
+   }
+  },
+  {
+   "gender": "m",
+   "place": 424,
+   "totalPoints": 477,
+   "displayName": "Ткаченко Дмитрий",
+   "racer": {
+    "id": "tkachenko-dmitrii",
+    "numericId": "6264178"
+   },
+   "breakdown": {
+    "SHULZ GW": 477
+   }
+  },
+  {
+   "gender": "m",
+   "place": 425,
+   "totalPoints": 476,
+   "displayName": "Терлецкий Виталий",
+   "racer": {
+    "id": "terletskii-vitalii",
+    "numericId": "66869755"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 476
+   }
+  },
+  {
+   "gender": "m",
+   "place": 426,
+   "totalPoints": 476,
+   "displayName": "Урсегов Дмитрий Сергеевич",
+   "racer": {
+    "id": "ursegov-dmitrii",
+    "numericId": "91695501"
+   },
+   "breakdown": {
+    "SHULZ GW": 476
+   }
+  },
+  {
+   "gender": "m",
+   "place": 427,
+   "totalPoints": 475,
+   "displayName": "Гаврилов Антон",
+   "racer": {
+    "id": "gavrilov-anton",
+    "numericId": "7500998"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 475
+   }
+  },
+  {
+   "gender": "m",
+   "place": 428,
+   "totalPoints": 475,
+   "displayName": "Летуновский Максим Борисович",
+   "racer": {
+    "id": "letunovskii-maksim",
+    "numericId": "48182364"
+   },
+   "breakdown": {
+    "SHULZ GW": 475
+   }
+  },
+  {
+   "gender": "m",
+   "place": 429,
+   "totalPoints": 474,
+   "displayName": "Бурмистров Олег",
+   "racer": {
+    "id": "burmistrov-oleg",
+    "numericId": "94566715"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 474
+   }
+  },
+  {
+   "gender": "m",
+   "place": 430,
+   "totalPoints": 474,
+   "displayName": "Хмелевский Андрей",
+   "racer": {
+    "id": "hmelevskii-andrei",
+    "numericId": "65044219"
+   },
+   "breakdown": {
+    "SHULZ GW": 474
+   }
+  },
+  {
+   "gender": "m",
+   "place": 431,
+   "totalPoints": 473,
+   "displayName": "Ражабов Тимур",
+   "racer": {
+    "id": "razhabov-timur",
+    "numericId": "39982767"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 473
+   }
+  },
+  {
+   "gender": "m",
+   "place": 432,
+   "totalPoints": 473,
+   "displayName": "Чирков Андрей Валерьевич",
+   "racer": {
+    "id": "chirkov-andrei",
+    "numericId": "44116036"
+   },
+   "breakdown": {
+    "SHULZ GW": 473
+   }
+  },
+  {
+   "gender": "m",
+   "place": 433,
+   "totalPoints": 472,
+   "displayName": "Кутузов Дмитрий",
+   "racer": {
+    "id": "kutuzov-dmitrii",
+    "numericId": "25623064"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 472
+   }
+  },
+  {
+   "gender": "m",
+   "place": 434,
+   "totalPoints": 472,
+   "displayName": "Минайчев Владислав Андреевич",
+   "racer": {
+    "id": "vladislav-minaichev",
+    "numericId": "48998451"
+   },
+   "breakdown": {
+    "SHULZ GW": 472
+   }
+  },
+  {
+   "gender": "m",
+   "place": 435,
+   "totalPoints": 471,
+   "displayName": "Новиков Антон",
+   "racer": {
+    "id": "novikov-anton",
+    "numericId": "17521168"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 471
+   }
+  },
+  {
+   "gender": "m",
+   "place": 436,
+   "totalPoints": 471,
+   "displayName": "Путнев Виталий Анатольевич",
+   "racer": {
+    "id": "putnev-vitalii",
+    "numericId": "95192664"
+   },
+   "breakdown": {
+    "SHULZ GW": 471
+   }
+  },
+  {
+   "gender": "m",
+   "place": 437,
+   "totalPoints": 470,
+   "displayName": "Бадюл Валерий Викторович",
+   "racer": {
+    "id": "badyul-valerii",
+    "numericId": "60574139"
+   },
+   "breakdown": {
+    "SHULZ GW": 470
+   }
+  },
+  {
+   "gender": "m",
+   "place": 438,
+   "totalPoints": 470,
+   "displayName": "Вельмакин Виталий",
+   "racer": {
+    "id": "velmakin-vitalii",
+    "numericId": "8482324"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 470
+   }
+  },
+  {
+   "gender": "m",
+   "place": 439,
+   "totalPoints": 469,
+   "displayName": "Галимов Алексей",
+   "racer": {
+    "id": "galimov-aleksei",
+    "numericId": "3884432"
+   },
+   "breakdown": {
+    "SHULZ GW": 469
+   }
+  },
+  {
+   "gender": "m",
+   "place": 440,
+   "totalPoints": 469,
+   "displayName": "Синельщиков Никита",
+   "racer": {
+    "id": "sinelshchikov-nikita",
+    "numericId": "52463515"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 469
+   }
+  },
+  {
+   "gender": "m",
+   "place": 441,
+   "totalPoints": 468,
+   "displayName": "Максименко Максим",
+   "racer": {
+    "id": "maksimenko-maksim",
+    "numericId": "37238934"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 468
+   }
+  },
+  {
+   "gender": "m",
+   "place": 442,
+   "totalPoints": 468,
+   "displayName": "Прокопенков Павел Александрович",
+   "racer": {
+    "id": "prokopenkov-pavel",
+    "numericId": "25921410"
+   },
+   "breakdown": {
+    "SHULZ GW": 468
+   }
+  },
+  {
+   "gender": "m",
+   "place": 443,
+   "totalPoints": 467,
+   "displayName": "Копылов Филипп Федорович",
+   "racer": {
+    "id": "kopylov-filipp",
+    "numericId": "85544943"
+   },
+   "breakdown": {
+    "SHULZ GW": 467
+   }
+  },
+  {
+   "gender": "m",
+   "place": 444,
+   "totalPoints": 467,
+   "displayName": "Осадчий Алексей",
+   "racer": {
+    "id": "osadchii-aleksei",
+    "numericId": "71452177"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 467
+   }
+  },
+  {
+   "gender": "m",
+   "place": 445,
+   "totalPoints": 466,
+   "displayName": "Павлов Илья Андреевич",
+   "racer": {
+    "id": "pavlov-ilya",
+    "numericId": "34518724"
+   },
+   "breakdown": {
+    "SHULZ GW": 466
+   }
+  },
+  {
+   "gender": "m",
+   "place": 446,
+   "totalPoints": 465,
+   "displayName": "Карев Сергей",
+   "racer": {
+    "id": "karev-sergei",
+    "numericId": "29334984"
+   },
+   "breakdown": {
+    "SHULZ GW": 465
+   }
+  },
+  {
+   "gender": "m",
+   "place": 447,
+   "totalPoints": 464,
+   "displayName": "Белялов Дмитрий Викторович",
+   "racer": {
+    "id": "belyalov-dmitrii",
+    "numericId": "49292565"
+   },
+   "breakdown": {
+    "SHULZ GW": 464
+   }
+  },
+  {
+   "gender": "m",
+   "place": 448,
+   "totalPoints": 463,
+   "displayName": "Хоробров Святослав Владимирович",
+   "racer": {
+    "id": "horobrov-svyatoslav",
+    "numericId": "5486350"
+   },
+   "breakdown": {
+    "SHULZ GW": 463
+   }
+  },
+  {
+   "gender": "m",
+   "place": 449,
+   "totalPoints": 462,
+   "displayName": "Насонов Игорь Витальевич",
+   "racer": {
+    "id": "igor-nasonov",
+    "numericId": "67575667"
+   },
+   "breakdown": {
+    "SHULZ GW": 462
+   }
+  },
+  {
+   "gender": "m",
+   "place": 450,
+   "totalPoints": 461,
+   "displayName": "Потапов Андрей",
+   "racer": {
+    "id": "potapov-andrei",
+    "numericId": "4662225"
+   },
+   "breakdown": {
+    "SHULZ GW": 461
+   }
+  },
+  {
+   "gender": "m",
+   "place": 451,
+   "totalPoints": 460,
+   "displayName": "Дулов Сергей Сергеевич",
+   "racer": {
+    "id": "dulov-sergei",
+    "numericId": "54615669"
+   },
+   "breakdown": {
+    "SHULZ GW": 460
+   }
+  },
+  {
+   "gender": "m",
+   "place": 452,
+   "totalPoints": 459,
+   "displayName": "Казаков Михаил Фёдорович",
+   "racer": {
+    "id": "kazakov-mihail",
+    "numericId": "95949386"
+   },
+   "breakdown": {
+    "SHULZ GW": 459
+   }
+  },
+  {
+   "gender": "m",
+   "place": 453,
+   "totalPoints": 458,
+   "displayName": "Горезенков Кирилл Сергеевич",
+   "racer": {
+    "id": "gorezenkov-kirill",
+    "numericId": "40889152"
+   },
+   "breakdown": {
+    "SHULZ GW": 458
+   }
+  },
+  {
+   "gender": "m",
+   "place": 454,
+   "totalPoints": 457,
+   "displayName": "Гулин Евгений Олегович",
+   "racer": {
+    "id": "gulin-evgenii",
+    "numericId": "61341269"
+   },
+   "breakdown": {
+    "SHULZ GW": 457
+   }
+  },
+  {
+   "gender": "m",
+   "place": 455,
+   "totalPoints": 456,
+   "displayName": "Смирнов Дмитрий Антонович",
+   "racer": {
+    "id": "dmitrii-smirnov",
+    "numericId": "84606163"
+   },
+   "breakdown": {
+    "SHULZ GW": 456
+   }
+  },
+  {
+   "gender": "m",
+   "place": 456,
+   "totalPoints": 455,
+   "displayName": "Вышегородский Виталий Яковлевич",
+   "racer": {
+    "id": "vyshegorodskii-vitalii",
+    "numericId": "36165838"
+   },
+   "breakdown": {
+    "SHULZ GW": 455
+   }
+  },
+  {
+   "gender": "m",
+   "place": 457,
+   "totalPoints": 454,
+   "displayName": "Жуков Иван Денисович",
+   "racer": {
+    "id": "zhukov-ivan",
+    "numericId": "90133873"
+   },
+   "breakdown": {
+    "SHULZ GW": 454
+   }
+  },
+  {
+   "gender": "m",
+   "place": 458,
+   "totalPoints": 453,
+   "displayName": "Мязин Анатолий Владимирович",
+   "racer": {
+    "id": "myazin-anatolii",
+    "numericId": "84956285"
+   },
+   "breakdown": {
+    "SHULZ GW": 453
+   }
+  },
+  {
+   "gender": "m",
+   "place": 459,
+   "totalPoints": 452,
+   "displayName": "Семенов Александр Александрович",
+   "racer": {
+    "id": "semenov-aleksandr",
+    "numericId": "73864257"
+   },
+   "breakdown": {
+    "SHULZ GW": 452
+   }
+  },
+  {
+   "gender": "m",
+   "place": 460,
+   "totalPoints": 451,
+   "displayName": "Савушкин Никита Андреевич",
+   "racer": {
+    "id": "savushkin-nikita",
+    "numericId": "4228321"
+   },
+   "breakdown": {
+    "SHULZ GW": 451
+   }
+  },
+  {
+   "gender": "m",
+   "place": 461,
+   "totalPoints": 450,
+   "displayName": "Валуев Иван Юрьевич",
+   "racer": {
+    "id": "valuev-ivan",
+    "numericId": "65105839"
+   },
+   "breakdown": {
+    "SHULZ GW": 450
+   }
+  },
+  {
+   "gender": "m",
+   "place": 462,
+   "totalPoints": 449,
+   "displayName": "Салахутдинов Тимур",
+   "racer": {
+    "id": "salahutdinov-timur",
+    "numericId": "33812031"
+   },
+   "breakdown": {
+    "SHULZ GW": 449
+   }
+  },
+  {
+   "gender": "m",
+   "place": 463,
+   "totalPoints": 448,
+   "displayName": "Ананьев Пётр Алексеевич",
+   "racer": {
+    "id": "ananev-petr",
+    "numericId": "43222343"
+   },
+   "breakdown": {
+    "SHULZ GW": 448
+   }
+  },
+  {
+   "gender": "m",
+   "place": 464,
+   "totalPoints": 447,
+   "displayName": "Лаврухин Дмитрий Андреевич",
+   "racer": {
+    "id": "lavruhin-dmitrii",
+    "numericId": "26724616"
+   },
+   "breakdown": {
+    "SHULZ GW": 447
+   }
+  },
+  {
+   "gender": "m",
+   "place": 465,
+   "totalPoints": 446,
+   "displayName": "Морщакин Дмитрий Вячеславович",
+   "racer": {
+    "id": "morshchakin-dmitrii",
+    "numericId": "83473651"
+   },
+   "breakdown": {
+    "SHULZ GW": 446
+   }
+  },
+  {
+   "gender": "m",
+   "place": 466,
+   "totalPoints": 445,
+   "displayName": "Суарес-Сибиченков Алексей Хосевич",
+   "racer": {
+    "id": "suares-sibichenkov-aleksei",
+    "numericId": "78763040"
+   },
+   "breakdown": {
+    "SHULZ GW": 445
+   }
+  },
+  {
+   "gender": "m",
+   "place": 467,
+   "totalPoints": 444,
+   "displayName": "Михеев Павел",
+   "racer": {
+    "id": "miheev-pavel",
+    "numericId": "64915277"
+   },
+   "breakdown": {
+    "SHULZ GW": 444
+   }
+  },
+  {
+   "gender": "m",
+   "place": 468,
+   "totalPoints": 443,
+   "displayName": "Егоров Илья Владимирович",
+   "racer": {
+    "id": "egorov-ilya",
+    "numericId": "55255906"
+   },
+   "breakdown": {
+    "SHULZ GW": 443
+   }
+  },
+  {
+   "gender": "m",
+   "place": 469,
+   "totalPoints": 442,
+   "displayName": "Дербин Николай Алексеевич",
+   "racer": {
+    "id": "derbin-nikolai",
+    "numericId": "73087605"
+   },
+   "breakdown": {
+    "SHULZ GW": 442
+   }
+  },
+  {
+   "gender": "m",
+   "place": 470,
+   "totalPoints": 441,
+   "displayName": "Волобуев Егор Юрьевич",
+   "racer": {
+    "id": "volobuev-egor",
+    "numericId": "83443656"
+   },
+   "breakdown": {
+    "SHULZ GW": 441
+   }
+  },
+  {
+   "gender": "m",
+   "place": 471,
+   "totalPoints": 440,
+   "displayName": "Паульс Павел Евгеньевич",
+   "racer": {
+    "id": "pauls-pavel",
+    "numericId": "82609552"
+   },
+   "breakdown": {
+    "SHULZ GW": 440
+   }
+  },
+  {
+   "gender": "m",
+   "place": 472,
+   "totalPoints": 439,
+   "displayName": "Нестеров Пётр Владимирович",
+   "racer": {
+    "id": "nesterov-petr",
+    "numericId": "67953572"
+   },
+   "breakdown": {
+    "SHULZ GW": 439
+   }
+  },
+  {
+   "gender": "m",
+   "place": 473,
+   "totalPoints": 438,
+   "displayName": "Седачев Александр Николаевич",
+   "racer": {
+    "id": "aleksandr-sedachev",
+    "numericId": "57794808"
+   },
+   "breakdown": {
+    "SHULZ GW": 438
+   }
+  },
+  {
+   "gender": "m",
+   "place": 474,
+   "totalPoints": 437,
+   "displayName": "Власов Евгений Владиславович",
+   "racer": {
+    "id": "vlasov-evgenii",
+    "numericId": "379688"
+   },
+   "breakdown": {
+    "SHULZ GW": 437
+   }
+  },
+  {
+   "gender": "m",
+   "place": 475,
+   "totalPoints": 436,
+   "displayName": "Бемов Дмитрий Александрович",
+   "racer": {
+    "id": "bemov-dmitrii",
+    "numericId": "35493217"
+   },
+   "breakdown": {
+    "SHULZ GW": 436
+   }
+  },
+  {
+   "gender": "m",
+   "place": 476,
+   "totalPoints": 435,
+   "displayName": "Камилатов Николай Васильевич",
+   "racer": {
+    "id": "kamilatov-nikolai",
+    "numericId": "97340516"
+   },
+   "breakdown": {
+    "SHULZ GW": 435
+   }
+  },
+  {
+   "gender": "f",
+   "place": 80,
+   "totalPoints": 320,
+   "displayName": "Колесникова Екатерина",
+   "racer": {
+    "id": "kolesnikova-ekaterina",
+    "numericId": "46882323"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 320
+   }
+  },
+  {
+   "gender": "m",
+   "place": 477,
+   "totalPoints": 320,
+   "displayName": "Ронжин Кирилл",
+   "racer": {
+    "id": "ronzhin-kirill",
+    "numericId": "61038918"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 320
+   }
+  },
+  {
+   "gender": "f",
+   "place": 81,
+   "totalPoints": 319,
+   "displayName": "Тарасова Ольга",
+   "racer": {
+    "id": "tarasova-olga",
+    "numericId": "41534231"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 319
+   }
+  },
+  {
+   "gender": "m",
+   "place": 478,
+   "totalPoints": 319,
+   "displayName": "Головинский Дмитрий",
+   "racer": {
+    "id": "golovinskii-dmitrii",
+    "numericId": "96779367"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 319
+   }
+  },
+  {
+   "gender": "f",
+   "place": 82,
+   "totalPoints": 318,
+   "displayName": "Бруева Александра",
+   "racer": {
+    "id": "brueva-aleksandra",
+    "numericId": "59684175"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 318
+   }
+  },
+  {
+   "gender": "m",
+   "place": 479,
+   "totalPoints": 318,
+   "displayName": "Воронов Никита",
+   "racer": {
+    "id": "voronov-nikita",
+    "numericId": "29052001"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 318
+   }
+  },
+  {
+   "gender": "f",
+   "place": 83,
+   "totalPoints": 317,
+   "displayName": "Вакка Кристина",
+   "racer": {
+    "id": "vakka-kristina",
+    "numericId": "7715636"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 317
+   }
+  },
+  {
+   "gender": "m",
+   "place": 480,
+   "totalPoints": 317,
+   "displayName": "Жулябин Георгий",
+   "racer": {
+    "id": "zhulyabin-georgii",
+    "numericId": "8075107"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 317
+   }
+  },
+  {
+   "gender": "f",
+   "place": 84,
+   "totalPoints": 316,
+   "displayName": "Борисевич Ирина",
+   "racer": {
+    "id": "irina-9oraqc",
+    "numericId": "9445345"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 316
+   }
+  },
+  {
+   "gender": "f",
+   "place": 85,
+   "totalPoints": 315,
+   "displayName": "Шелюбская Ольга",
+   "racer": {
+    "id": "shelyubskaya-olga",
+    "numericId": "22974951"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 315
+   }
+  },
+  {
+   "gender": "m",
+   "place": 481,
+   "totalPoints": 315,
+   "displayName": "Захаров Юрий",
+   "racer": {
+    "id": "zaharov-yurii",
+    "numericId": "9187033"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 315
+   }
+  },
+  {
+   "gender": "f",
+   "place": 86,
+   "totalPoints": 314,
+   "displayName": "Маркович Анна",
+   "racer": {
+    "id": "anna-0cctrs",
+    "numericId": "92152541"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 314
+   }
+  },
+  {
+   "gender": "f",
+   "place": 87,
+   "totalPoints": 313,
+   "displayName": "Гетманская Валентина",
+   "racer": {
+    "id": "getmanskaya-valentina",
+    "numericId": "73938623"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 313
+   }
+  },
+  {
+   "gender": "m",
+   "place": 482,
+   "totalPoints": 313,
+   "displayName": "Меер Игорь",
+   "racer": {
+    "id": "meer-igor",
+    "numericId": "48411117"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 313
+   }
+  },
+  {
+   "gender": "f",
+   "place": 88,
+   "totalPoints": 312,
+   "displayName": "Кудрявцева Екатерина",
+   "racer": {
+    "id": "kudryavtseva-ekaterina",
+    "numericId": "19627933"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 312
+   }
+  },
+  {
+   "gender": "m",
+   "place": 483,
+   "totalPoints": 312,
+   "displayName": "Тарасов Виктор",
+   "racer": {
+    "id": "tarasov-viktor",
+    "numericId": "88932888"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 312
+   }
+  },
+  {
+   "gender": "f",
+   "place": 89,
+   "totalPoints": 311,
+   "displayName": "Царева Мария",
+   "racer": {
+    "id": "tsareva-mariya",
+    "numericId": "29206166"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 311
+   }
+  },
+  {
+   "gender": "m",
+   "place": 484,
+   "totalPoints": 311,
+   "displayName": "Регин Евгений",
+   "racer": {
+    "id": "regin-evgenii",
+    "numericId": "26052"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 311
+   }
+  },
+  {
+   "gender": "f",
+   "place": 90,
+   "totalPoints": 310,
+   "displayName": "Димитрова Кристина",
+   "racer": {
+    "id": "dimitrova-kristina",
+    "numericId": "91351628"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 310
+   }
+  },
+  {
+   "gender": "m",
+   "place": 485,
+   "totalPoints": 310,
+   "displayName": "Востриков Алексей",
+   "racer": {
+    "id": "vostrikov-aleksei",
+    "numericId": "90065558"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 310
+   }
+  },
+  {
+   "gender": "f",
+   "place": 91,
+   "totalPoints": 309,
+   "displayName": "Короткова Наталья",
+   "racer": {
+    "id": "korotkova-natalya",
+    "numericId": "62155023"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 309
+   }
+  },
+  {
+   "gender": "m",
+   "place": 486,
+   "totalPoints": 309,
+   "displayName": "Трубин Антон",
+   "racer": {
+    "id": "trubin-anton",
+    "numericId": "86360470"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 309
+   }
+  },
+  {
+   "gender": "f",
+   "place": 92,
+   "totalPoints": 308,
+   "displayName": "Голубева Анастасия",
+   "racer": {
+    "id": "golubeva-anastasiya",
+    "numericId": "31499467"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 308
+   }
+  },
+  {
+   "gender": "m",
+   "place": 487,
+   "totalPoints": 308,
+   "displayName": "Астапов Александр",
+   "racer": {
+    "id": "astapov-aleksandr",
+    "numericId": "40999311"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 308
+   }
+  },
+  {
+   "gender": "f",
+   "place": 93,
+   "totalPoints": 307,
+   "displayName": "Беренцева Надежда",
+   "racer": {
+    "id": "berentseva-nadezhda",
+    "numericId": "68868244"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 307
+   }
+  },
+  {
+   "gender": "f",
+   "place": 94,
+   "totalPoints": 306,
+   "displayName": "Ионова Мария",
+   "racer": {
+    "id": "mariya-ionova",
+    "numericId": "36013221"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 306
+   }
+  },
+  {
+   "gender": "m",
+   "place": 488,
+   "totalPoints": 306,
+   "displayName": "Шевченко Матвей",
+   "racer": {
+    "id": "shevchenko-matvei",
+    "numericId": "67676488"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 306
+   }
+  },
+  {
+   "gender": "f",
+   "place": 95,
+   "totalPoints": 305,
+   "displayName": "Павлова Алина",
+   "racer": {
+    "id": "pavlova-alina",
+    "numericId": "18964803"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 305
+   }
+  },
+  {
+   "gender": "m",
+   "place": 489,
+   "totalPoints": 305,
+   "displayName": "Корольчак Андрей",
+   "racer": {
+    "id": "korolchak-andrei",
+    "numericId": "66226667"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 305
+   }
+  },
+  {
+   "gender": "f",
+   "place": 96,
+   "totalPoints": 304,
+   "displayName": "Максимова Екатерина",
+   "racer": {
+    "id": "maksimova-ekaterina",
+    "numericId": "89358316"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 304
+   }
+  },
+  {
+   "gender": "m",
+   "place": 490,
+   "totalPoints": 304,
+   "displayName": "Новиков Станислав",
+   "racer": {
+    "id": "novikov-stanislav",
+    "numericId": "27655950"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 304
+   }
+  },
+  {
+   "gender": "f",
+   "place": 97,
+   "totalPoints": 303,
+   "displayName": "Сыч Екатерина",
+   "racer": {
+    "id": "sych-ekaterina",
+    "numericId": "82375166"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 303
+   }
+  },
+  {
+   "gender": "m",
+   "place": 491,
+   "totalPoints": 303,
+   "displayName": "Рыбкин Сергей",
+   "racer": {
+    "id": "rybkin-sergei",
+    "numericId": "62518984"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 303
+   }
+  },
+  {
+   "gender": "f",
+   "place": 98,
+   "totalPoints": 302,
+   "displayName": "Комарова Мария",
+   "racer": {
+    "id": "komarova-mariya",
+    "numericId": "94918953"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 302
+   }
+  },
+  {
+   "gender": "m",
+   "place": 492,
+   "totalPoints": 302,
+   "displayName": "Федукин Константин",
+   "racer": {
+    "id": "fedukin-konstantin",
+    "numericId": "52914901"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 302
+   }
+  },
+  {
+   "gender": "f",
+   "place": 99,
+   "totalPoints": 301,
+   "displayName": "Полянская Ульяна",
+   "racer": {
+    "id": "polyanskaya-ulyana",
+    "numericId": "64403846"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 301
+   }
+  },
+  {
+   "gender": "m",
+   "place": 493,
+   "totalPoints": 301,
+   "displayName": "Горощенко Михаил",
+   "racer": {
+    "id": "goroshchenko-mihail",
+    "numericId": "26786070"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 301
+   }
+  },
+  {
+   "gender": "f",
+   "place": 100,
+   "totalPoints": 300,
+   "displayName": "Рабжинова Наталья",
+   "racer": {
+    "id": "rabzhinova-natalya",
+    "numericId": "35250917"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 300
+   }
+  },
+  {
+   "gender": "m",
+   "place": 494,
+   "totalPoints": 300,
+   "displayName": "Дроздов Руслан",
+   "racer": {
+    "id": "drozdov-ruslan",
+    "numericId": "34890256"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 300
+   }
+  },
+  {
+   "gender": "f",
+   "place": 101,
+   "totalPoints": 299,
+   "displayName": "Рабжинова Надежда",
+   "racer": {
+    "id": "rabzhinova-nadezhda",
+    "numericId": "13016755"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 299
+   }
+  },
+  {
+   "gender": "m",
+   "place": 495,
+   "totalPoints": 299,
+   "displayName": "Цирульников Евгений",
+   "racer": {
+    "id": "tsirulnikov-evgenii",
+    "numericId": "5329043"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 299
+   }
+  },
+  {
+   "gender": "f",
+   "place": 102,
+   "totalPoints": 298,
+   "displayName": "Сухова Дарья",
+   "racer": {
+    "id": "suhova-darya",
+    "numericId": "21748525"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 298
+   }
+  },
+  {
+   "gender": "m",
+   "place": 496,
+   "totalPoints": 298,
+   "displayName": "Колесников Серго",
+   "racer": {
+    "id": "kolesnikov-sergo",
+    "numericId": "39364255"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 298
+   }
+  },
+  {
+   "gender": "f",
+   "place": 103,
+   "totalPoints": 297,
+   "displayName": "Сулейманова Султана",
+   "racer": {
+    "id": "suleimanova-sultana",
+    "numericId": "4272761"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 297
+   }
+  },
+  {
+   "gender": "m",
+   "place": 497,
+   "totalPoints": 297,
+   "displayName": "Урзов Александр",
+   "racer": {
+    "id": "urzov-aleksandr",
+    "numericId": "99729195"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 297
+   }
+  },
+  {
+   "gender": "f",
+   "place": 104,
+   "totalPoints": 296,
+   "displayName": "Каландадзе Алёна",
+   "racer": {
+    "id": "kalandadze-alena",
+    "numericId": "20415843"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 296
+   }
+  },
+  {
+   "gender": "m",
+   "place": 498,
+   "totalPoints": 296,
+   "displayName": "Трофимов Владимир",
+   "racer": {
+    "id": "trofimov-vladimir",
+    "numericId": "73961319"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 296
+   }
+  },
+  {
+   "gender": "f",
+   "place": 105,
+   "totalPoints": 295,
+   "displayName": "Гаврикова Елена",
+   "racer": {
+    "id": "gavrikova-elena",
+    "numericId": "69803479"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 295
+   }
+  },
+  {
+   "gender": "m",
+   "place": 499,
+   "totalPoints": 295,
+   "displayName": "Ямбиков Виктор",
+   "racer": {
+    "id": "yambikov-viktor",
+    "numericId": "96743600"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 295
+   }
+  },
+  {
+   "gender": "f",
+   "place": 106,
+   "totalPoints": 294,
+   "displayName": "Лысенко Вероника",
+   "racer": {
+    "id": "lysenko-veronika",
+    "numericId": "96468640"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 294
+   }
+  },
+  {
+   "gender": "m",
+   "place": 500,
+   "totalPoints": 294,
+   "displayName": "Elgin George",
+   "racer": {
+    "id": "elgin-george",
+    "numericId": "65476120"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 294
+   }
+  },
+  {
+   "gender": "f",
+   "place": 107,
+   "totalPoints": 293,
+   "displayName": "Александрова Елена",
+   "racer": {
+    "id": "aleksandrova-elena",
+    "numericId": "8171615"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 293
+   }
+  },
+  {
+   "gender": "m",
+   "place": 501,
+   "totalPoints": 293,
+   "displayName": "Хурамшин Артём",
+   "racer": {
+    "id": "huramshin-artem",
+    "numericId": "95871300"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 293
+   }
+  },
+  {
+   "gender": "f",
+   "place": 108,
+   "totalPoints": 292,
+   "displayName": "Насирова Виктория",
+   "racer": {
+    "id": "nasirova-viktoriya",
+    "numericId": "44393560"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 292
+   }
+  },
+  {
+   "gender": "m",
+   "place": 502,
+   "totalPoints": 292,
+   "displayName": "Просвирнин Юрий",
+   "racer": {
+    "id": "prosvirnin-yurii",
+    "numericId": "13529060"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 292
+   }
+  },
+  {
+   "gender": "m",
+   "place": 503,
+   "totalPoints": 291,
+   "displayName": "Сычёв Дмитрий",
+   "racer": {
+    "id": "sychev-dmitrii",
+    "numericId": "28541791"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 291
+   }
+  },
+  {
+   "gender": "m",
+   "place": 504,
+   "totalPoints": 290,
+   "displayName": "Некрасов Александр",
+   "racer": {
+    "id": "nekrasov-aleksandr",
+    "numericId": "93412796"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 290
+   }
+  },
+  {
+   "gender": "m",
+   "place": 505,
+   "totalPoints": 289,
+   "displayName": "Кондаков Павел",
+   "racer": {
+    "id": "kondakov-pavel",
+    "numericId": "75986924"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 289
+   }
+  },
+  {
+   "gender": "m",
+   "place": 506,
+   "totalPoints": 288,
+   "displayName": "Егоров Сергей",
+   "racer": {
+    "id": "egorov-sergei",
+    "numericId": "72920802"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 288
+   }
+  },
+  {
+   "gender": "m",
+   "place": 507,
+   "totalPoints": 287,
+   "displayName": "Воропаев Алексей",
+   "racer": {
+    "id": "voropaev-aleksei",
+    "numericId": "50047597"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 287
+   }
+  },
+  {
+   "gender": "m",
+   "place": 508,
+   "totalPoints": 286,
+   "displayName": "Гринёв Станислав",
+   "racer": {
+    "id": "grinev-stanislav",
+    "numericId": "54355653"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 286
+   }
+  },
+  {
+   "gender": "m",
+   "place": 509,
+   "totalPoints": 285,
+   "displayName": "Громов Денис",
+   "racer": {
+    "id": "gromov-denis",
+    "numericId": "11258309"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 285
+   }
+  },
+  {
+   "gender": "m",
+   "place": 510,
+   "totalPoints": 284,
+   "displayName": "Ассельборн Андрей",
+   "racer": {
+    "id": "asselborn-andrei",
+    "numericId": "60356871"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 284
+   }
+  },
+  {
+   "gender": "m",
+   "place": 511,
+   "totalPoints": 283,
+   "displayName": "Виряльченков Никита",
+   "racer": {
+    "id": "viryalchenkov-nikita",
+    "numericId": "8263916"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 283
+   }
+  },
+  {
+   "gender": "m",
+   "place": 512,
+   "totalPoints": 282,
+   "displayName": "Бовбас Антон",
+   "racer": {
+    "id": "bovbas-anton",
+    "numericId": "41795595"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 282
+   }
+  },
+  {
+   "gender": "m",
+   "place": 513,
+   "totalPoints": 281,
+   "displayName": "Кукасов Давид",
+   "racer": {
+    "id": "kukasov-david",
+    "numericId": "22941183"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 281
+   }
+  },
+  {
+   "gender": "m",
+   "place": 514,
+   "totalPoints": 280,
+   "displayName": "Борисов Геннадий",
+   "racer": {
+    "id": "borisov-gennadii",
+    "numericId": "25781740"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 280
+   }
+  },
+  {
+   "gender": "m",
+   "place": 515,
+   "totalPoints": 279,
+   "displayName": "Сыч Андрей",
+   "racer": {
+    "id": "sych-andrei",
+    "numericId": "99240266"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 279
+   }
+  },
+  {
+   "gender": "m",
+   "place": 516,
+   "totalPoints": 278,
+   "displayName": "Петров Леонид",
+   "racer": {
+    "id": "petrov-leonid",
+    "numericId": "94487217"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 278
+   }
+  },
+  {
+   "gender": "m",
+   "place": 517,
+   "totalPoints": 277,
+   "displayName": "Линник Андрей",
+   "racer": {
+    "id": "linnik-andrei",
+    "numericId": "95750074"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 277
+   }
+  },
+  {
+   "gender": "m",
+   "place": 518,
+   "totalPoints": 276,
+   "displayName": "Милосердов Максим",
+   "racer": {
+    "id": "miloserdov-maksim",
+    "numericId": "45984632"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 276
+   }
+  },
+  {
+   "gender": "m",
+   "place": 519,
+   "totalPoints": 275,
+   "displayName": "Громов Алексей",
+   "racer": {
+    "id": "gromov-aleksei",
+    "numericId": "30247589"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 275
+   }
+  },
+  {
+   "gender": "m",
+   "place": 520,
+   "totalPoints": 274,
+   "displayName": "Фесенко Максим",
+   "racer": {
+    "id": "fesenko-maksim",
+    "numericId": "7056275"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 274
+   }
+  },
+  {
+   "gender": "m",
+   "place": 521,
+   "totalPoints": 273,
+   "displayName": "Мигушев Никита",
+   "racer": {
+    "id": "migushev-nikita",
+    "numericId": "71421363"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 273
+   }
+  },
+  {
+   "gender": "m",
+   "place": 522,
+   "totalPoints": 272,
+   "displayName": "Шмаров Виталий",
+   "racer": {
+    "id": "shmarov-vitalii",
+    "numericId": "15983484"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 272
+   }
+  },
+  {
+   "gender": "m",
+   "place": 523,
+   "totalPoints": 271,
+   "displayName": "Климов Димитрий",
+   "racer": {
+    "id": "klimov-dimitrii",
+    "numericId": "57906342"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 271
+   }
+  },
+  {
+   "gender": "m",
+   "place": 524,
+   "totalPoints": 270,
+   "displayName": "Скрипников Кирилл",
+   "racer": {
+    "id": "skripnikov-kirill",
+    "numericId": "37961503"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 270
+   }
+  },
+  {
+   "gender": "m",
+   "place": 525,
+   "totalPoints": 269,
+   "displayName": "Александр Никулин",
+   "racer": {
+    "id": "aleksandr-nikulin",
+    "numericId": "60684166"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 269
+   }
+  },
+  {
+   "gender": "m",
+   "place": 526,
+   "totalPoints": 268,
+   "displayName": "Лазарев Михаил",
+   "racer": {
+    "id": "lazarev-mihail",
+    "numericId": "40865105"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 268
+   }
+  },
+  {
+   "gender": "m",
+   "place": 527,
+   "totalPoints": 267,
+   "displayName": "Исаев Константин",
+   "racer": {
+    "id": "isaev-konstantin",
+    "numericId": "80352003"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 267
+   }
+  },
+  {
+   "gender": "m",
+   "place": 528,
+   "totalPoints": 266,
+   "displayName": "Дмитриев Никита",
+   "racer": {
+    "id": "dmitriev-nikita",
+    "numericId": "82383986"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 266
+   }
+  },
+  {
+   "gender": "m",
+   "place": 529,
+   "totalPoints": 265,
+   "displayName": "Алимпиев Илья",
+   "racer": {
+    "id": "alimpiev-ilya",
+    "numericId": "87882480"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 265
+   }
+  },
+  {
+   "gender": "m",
+   "place": 530,
+   "totalPoints": 264,
+   "displayName": "Телегин Никита",
+   "racer": {
+    "id": "telegin-nikita",
+    "numericId": "95177613"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 264
+   }
+  },
+  {
+   "gender": "m",
+   "place": 531,
+   "totalPoints": 263,
+   "displayName": "Малина Дмитрий",
+   "racer": {
+    "id": "malina-dmitrii",
+    "numericId": "40053930"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 263
+   }
+  },
+  {
+   "gender": "m",
+   "place": 532,
+   "totalPoints": 262,
+   "displayName": "Лопатка Владимир",
+   "racer": {
+    "id": "lopatka-vladimir",
+    "numericId": "57477310"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 262
+   }
+  },
+  {
+   "gender": "m",
+   "place": 533,
+   "totalPoints": 261,
+   "displayName": "Беренцев Евгений",
+   "racer": {
+    "id": "berentsev-evgenii",
+    "numericId": "1068113"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 261
+   }
+  },
+  {
+   "gender": "m",
+   "place": 534,
+   "totalPoints": 259,
+   "displayName": "Борискин Родион",
+   "racer": {
+    "id": "boriskin-rodion",
+    "numericId": "66801196"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 259
+   }
+  },
+  {
+   "gender": "m",
+   "place": 535,
+   "totalPoints": 258,
+   "displayName": "Бурцев Александр",
+   "racer": {
+    "id": "burtsev-aleksandr",
+    "numericId": "63128254"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 258
+   }
+  },
+  {
+   "gender": "m",
+   "place": 536,
+   "totalPoints": 257,
+   "displayName": "Шилов Александр",
+   "racer": {
+    "id": "shilov-aleksandr",
+    "numericId": "38642017"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 257
+   }
+  },
+  {
+   "gender": "m",
+   "place": 537,
+   "totalPoints": 256,
+   "displayName": "Волков Максим",
+   "racer": {
+    "id": "volkov-maksim",
+    "numericId": "39764763"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 256
+   }
+  },
+  {
+   "gender": "m",
+   "place": 538,
+   "totalPoints": 255,
+   "displayName": "Зимин Максим",
+   "racer": {
+    "id": "zimin-maksim",
+    "numericId": "59900850"
+   },
+   "breakdown": {
+    "СПОРТМАРАФОН": 255
+   }
+  }
+ ]
+}
