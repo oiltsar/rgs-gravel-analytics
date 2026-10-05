@@ -107,9 +107,13 @@ def build() -> dict:
                    FROM fct_result r JOIN dim_venue v ON v.event_id = r.event_id
                    WHERE r.status <> 'dns' GROUP BY ALL) GROUP BY 1 ORDER BY 1""").round(4)
 
-    # домашний регион гонщика = регион, где он проехал больше этапов за сезон
-    rating_2026 = ("Fury Road", "Моддер / Ардор", "SHULZ Gravel Weekend", "Царь Грейдер", "Gravel Instinct", "Спортмарафон Фест")
-    home = q(f"""
+    # где ездят гонщики: только Северо-Запад / только Центр / оба; полный зачёт — по рейтингу сайта (4+ гонки с очками)
+    from gravel.transform import name_keys
+    raw = ROOT / "data" / "raw"
+    ranking26 = json.loads((raw / "rankings_2026.json").read_text(encoding="utf-8"))["entries"]
+    full_keys = sorted({name_keys(e["displayName"])[0] for e in ranking26 if sum(v > 0 for v in e["breakdown"].values()) >= 4})
+    con.execute("CREATE OR REPLACE TEMP TABLE full26 AS SELECT UNNEST(?::VARCHAR[]) AS name_key", [full_keys])
+    home = q("""
         WITH st AS (
             SELECT DISTINCT r.year, r.rider_id, e.event_name, v.macro_region
             FROM fct_result r JOIN dim_event e ON e.event_id = r.event_id JOIN dim_venue v ON v.event_id = r.event_id
@@ -118,23 +122,23 @@ def build() -> dict:
         per AS (
             SELECT year, rider_id,
                    COUNT(*) FILTER (WHERE macro_region = 'Северо-Запад') AS nw,
-                   COUNT(*) FILTER (WHERE macro_region = 'Центр')        AS c,
-                   COUNT(*) FILTER (WHERE year = 2026 AND event_name IN {rating_2026}) AS rated
+                   COUNT(*) FILTER (WHERE macro_region = 'Центр')        AS c
             FROM st GROUP BY ALL
         )
-        SELECT year,
-               CASE WHEN nw > c THEN 'Северо-Запад' WHEN c > nw THEN 'Центр' ELSE 'поровну' END AS home,
-               COUNT(*)                                   AS riders,
-               COUNT(*) FILTER (WHERE rated >= 4)         AS full_standing,
-               COUNT(*) FILTER (WHERE GREATEST(nw, c) >= 2 AND nw <> c) AS own2
-        FROM per GROUP BY ALL ORDER BY 1, 2""")
+        SELECT p.year,
+               CASE WHEN c = 0 THEN 'только Северо-Запад' WHEN nw = 0 THEN 'только Центр' ELSE 'оба региона' END AS grp,
+               COUNT(*)                                                       AS riders,
+               COUNT(*) FILTER (WHERE p.year = 2026 AND f.name_key IS NOT NULL) AS full_standing,
+               COUNT(*) FILTER (WHERE nw >= 2)                                AS nw2,
+               COUNT(*) FILTER (WHERE c >= 2)                                 AS c2
+        FROM per p JOIN dim_rider d ON d.rider_id = p.rider_id LEFT JOIN full26 f ON f.name_key = d.name_key
+        GROUP BY ALL ORDER BY 1, 2""")
 
     # состав рейтинга по годам — из ключей API рейтингов сайта
     key_to_event = {"ЦГ": "Царь Грейдер", "ЦГ180": "Царь Грейдер", "ЦГ250": "Царь Грейдер", "FURY ROAD": "Fury Road", "FR": "Fury Road",
                     "ПОКРОВА": "Покрова", "ПКРВ": "Покрова", "СПОРТМАРАФОН": "Спортмарафон Фест", "SMF": "Спортмарафон Фест",
                     "MODDER": "Моддер / Ардор", "ARD": "Моддер / Ардор", "А": "Моддер / Ардор", "SHULZ GW": "SHULZ Gravel Weekend",
                     "SGW": "SHULZ Gravel Weekend", "Ш": "SHULZ Gravel Weekend", "GRAVEL INSTINCT": "Gravel Instinct", "GI": "Gravel Instinct"}
-    raw = ROOT / "data" / "raw"
     rating = {y: sorted({key_to_event[k] for e in json.loads((raw / f"rankings_{y}.json").read_text(encoding="utf-8"))["entries"]
                          for k in e["breakdown"]}) for y in (2024, 2025, 2026)}
     gender_dist = q("""SELECT CASE WHEN d.is_long THEN 'длинная' ELSE 'короткая' END AS distance,
