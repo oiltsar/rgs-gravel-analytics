@@ -5,3 +5,6 @@ data/gravel.duckdb
 .DS_Store
 .virtual_documents/
 .claude/
+
+# Выгрузки с протоколами (ФИО), в публичный репозиторий не кладём
+exports/

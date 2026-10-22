@@ -1,0 +1,36 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
+@page { size: 1080px 1350px; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+/* стиль gravelseries.ru: бумага, чёрная тушь, тонкие чёрные линейки, PT Sans Narrow заглавными */
+:root { --bg: #f5f5f3; --paper: #ffffff; --ink: #000000; --ink2: #444444; --ink3: #74746f; --acc: #000000; --line: #000000; --quiet: #c9c9c4; }
+html, body { width: 1080px; height: 1350px; background: var(--bg); color: var(--ink); font-family: "PT Sans", "Helvetica Neue", sans-serif; }
+.card { width: 1080px; height: 1350px; padding: 84px 84px 64px; display: grid; grid-template-rows: auto 1fr auto; gap: 40px; position: relative; overflow: hidden; }
+.eyebrow { font-family: "PT Sans Narrow", "PT Sans", sans-serif; font-size: 26px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink3); }
+h1 { font-family: "PT Sans Narrow", "Arial Narrow", sans-serif; font-weight: 700; text-transform: uppercase; font-size: 92px; line-height: .92; margin-top: 18px; }
+.big { font-family: "PT Sans Narrow", sans-serif; font-weight: 700; line-height: .85; }
+.foot { display: flex; justify-content: space-between; align-items: end; font-size: 22px; color: var(--ink3); border-top: 2px solid var(--line); padding-top: 22px; }
+.foot b { color: var(--ink); font-family: "PT Sans Narrow", sans-serif; font-size: 30px; text-transform: uppercase; letter-spacing: .02em; }
+</style></head><body>
+<style>
+.hero { display: grid; gap: 10px; align-content: start; }
+.hero .big { font-size: 230px; color: var(--acc); letter-spacing: -.02em; }
+.hero p { font-size: 40px; line-height: 1.15; }
+.bars { display: flex; gap: 26px; align-items: flex-end; height: 330px; margin-top: 28px; }
+.b { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 10px; }
+.b i, .b span, .b em { flex-shrink: 0; }
+.b span { font-family: "PT Sans Narrow"; font-weight: 700; font-size: 40px; }
+.b i { display: block; width: 100%; border: 2px solid var(--ink); background: repeating-linear-gradient(135deg, var(--quiet) 0 10px, var(--paper) 10px 20px); }
+.b em { font-style: normal; font-size: 28px; color: var(--ink2); }
+.row { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 26px; font-size: 30px; color: var(--ink2); border-top: 1px solid var(--ink); padding-top: 22px; }
+.row div:nth-child(2) { text-align: center; } .row div:nth-child(3) { text-align: right; }
+.row b { display: block; font-family: "PT Sans Narrow"; font-size: 64px; color: var(--ink); line-height: 1; }
+</style>
+<div class="card">
+  <div><div class="eyebrow">Сезон 2026</div><h1>Нас стало<br>в 3,8 раза больше</h1></div>
+  <div>
+    <div class="hero"><div class="big">1 793</div><p>гонщика вышли на старт этапов серии в 2026 году</p></div>
+    <div class="bars"><div class="b"><span>468</span><i style="height:63px;"></i><em>2023</em></div><div class="b"><span>643</span><i style="height:86px;"></i><em>2024</em></div><div class="b"><span>1 315</span><i style="height:176px;"></i><em>2025</em></div><div class="b"><span>1 793</span><i style="height:240px;background:var(--ink)"></i><em>2026</em></div></div>
+    <div class="row"><div><b>2 730</b>стартов</div><div><b>7</b>этапов</div><div><b>2</b>региона</div></div>
+  </div>
+  <div class="foot"><b>Русская гравийная серия</b><span>по протоколам gravelseries.ru</span></div>
+</div></body></html>

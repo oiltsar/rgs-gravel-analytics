@@ -1,0 +1,38 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
+@page { size: 1080px 1350px; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+/* стиль gravelseries.ru: бумага, чёрная тушь, тонкие чёрные линейки, PT Sans Narrow заглавными */
+:root { --bg: #f5f5f3; --paper: #ffffff; --ink: #000000; --ink2: #444444; --ink3: #74746f; --acc: #000000; --line: #000000; --quiet: #c9c9c4; }
+html, body { width: 1080px; height: 1350px; background: var(--bg); color: var(--ink); font-family: "PT Sans", "Helvetica Neue", sans-serif; }
+.card { width: 1080px; height: 1350px; padding: 84px 84px 64px; display: grid; grid-template-rows: auto 1fr auto; gap: 40px; position: relative; overflow: hidden; }
+.eyebrow { font-family: "PT Sans Narrow", "PT Sans", sans-serif; font-size: 26px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink3); }
+h1 { font-family: "PT Sans Narrow", "Arial Narrow", sans-serif; font-weight: 700; text-transform: uppercase; font-size: 92px; line-height: .92; margin-top: 18px; }
+.big { font-family: "PT Sans Narrow", sans-serif; font-weight: 700; line-height: .85; }
+.foot { display: flex; justify-content: space-between; align-items: end; font-size: 22px; color: var(--ink3); border-top: 2px solid var(--line); padding-top: 22px; }
+.foot b { color: var(--ink); font-family: "PT Sans Narrow", sans-serif; font-size: 30px; text-transform: uppercase; letter-spacing: .02em; }
+</style></head><body>
+<style>
+.km .big { font-size: 200px; color: var(--acc); letter-spacing: -.02em; white-space: nowrap; }
+.km .big small { font-size: 110px; }
+.km p { font-size: 46px; line-height: 1.15; margin-top: 14px; }
+.earth { display: flex; justify-content: space-between; margin: 44px 0 10px; }
+.earth i { width: 132px; height: 132px; border-radius: 50%; border: 5px solid var(--ink); display: block; position: relative; background: var(--paper); }
+.earth i::after { content: ""; position: absolute; inset: 26px 8px; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); border-radius: 50%; opacity: .5; }
+.earth i.part { border-style: dashed; opacity: .45; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 48px; margin-top: 64px; }
+.facts div { font-size: 32px; color: var(--ink2); line-height: 1.25; border-left: 6px solid var(--ink); padding-left: 22px; }
+.facts b { display: block; font-family: "PT Sans Narrow"; font-size: 110px; color: var(--ink); line-height: 1; margin-bottom: 6px; }
+</style>
+<div class="card">
+  <div><div class="eyebrow">Сезон 2026</div><h1>Вместе — шесть раз<br>вокруг Земли</h1></div>
+  <div class="km">
+    <div class="big">249 000 <small>км</small></div>
+    <p>проехали все финишёры этапов серии за сезон</p>
+    <div class="earth"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="facts">
+      <div><b>689</b>гонщиков вернулись после сезона 2025</div>
+      <div><b>348</b>женщин на старте — в 4 раза больше, чем в 2023</div>
+    </div>
+  </div>
+  <div class="foot"><b>Русская гравийная серия</b><span>по протоколам gravelseries.ru</span></div>
+</div></body></html>
