@@ -172,8 +172,11 @@ gravelseries.ru API ──► extract.py ──► data/raw/*.json
 ```bash
 uv sync          # окружение
 make all         # extract → transform → load → notebook → dashboard
-make presentation
+make presentation   # PDF из slides.html, нужен Chrome/Chromium (make presentation CHROME=/путь/к/chrome)
 ```
+
+Нужны Python ≥ 3.13 и [uv](https://docs.astral.sh/uv/). `make all` с нуля скачивает протоколы заново и пересчитывает всё
+за несколько минут (проверено на чистом клоне 03.11.2026: цифры совпадают с опубликованными).
 
 ## Ограничения
 

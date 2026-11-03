@@ -24,6 +24,11 @@ dashboard:        ## собрать данные для интерактивно
 clean:
 	rm -rf data/processed/* data/gravel.duckdb
 
-presentation:     ## PDF-презентация из presentation/slides.html (нужен Google Chrome)
-	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
+CHROME ?= $(shell command -v google-chrome chromium chromium-browser 2>/dev/null | head -1)
+ifeq ($(CHROME),)
+CHROME := /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+endif
+
+presentation:     ## PDF-презентация из presentation/slides.html (нужен Chrome/Chromium; путь можно задать: make presentation CHROME=...)
+	"$(CHROME)" --headless=new --no-pdf-header-footer \
 		--virtual-time-budget=8000 --print-to-pdf="$(CURDIR)/presentation/Presentation_RGS.pdf" "file://$(CURDIR)/presentation/slides.html"
